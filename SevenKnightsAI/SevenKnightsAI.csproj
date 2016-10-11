@@ -186,6 +186,7 @@
     <Compile Include="Classes\Mappings\ShopPurchaseCompletePopupPM.cs" />
     <Compile Include="Classes\Mappings\SocialSelectPM.cs" />
     <Compile Include="Classes\Mappings\SpecialQuestPM.cs" />
+    <Compile Include="Classes\Mappings\StatusBoardPM.cs" />
     <Compile Include="Classes\Mappings\TapToPlayPM.cs" />
     <Compile Include="Classes\Mappings\TowerFightPM.cs" />
     <Compile Include="Classes\Mappings\TowerLostPM.cs" />

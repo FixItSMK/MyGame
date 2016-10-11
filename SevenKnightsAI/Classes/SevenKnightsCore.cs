@@ -1760,6 +1760,7 @@ namespace SevenKnightsAI.Classes
             bool flag = false;
             bool flag2 = false;
             bool flag3 = false;
+            bool hottimeloop = true;
             this.Log("Initializing AI...");
             this.BlueStacks = new BlueStacks();
             string errorMessage;
@@ -1925,6 +1926,7 @@ namespace SevenKnightsAI.Classes
                                     this.IdleCounter = 0;
                                     switch (scene.SceneType)
                                     {
+
                                         case SceneType._ANDROID_POPUP:
                                             if (this.AIProfiles.ST_ReconnectInterruptEnable)
                                             {
@@ -1995,7 +1997,12 @@ namespace SevenKnightsAI.Classes
                                             this.UpdateRuby(scene.SceneType);
                                             this.UpdateHonor(scene.SceneType);
                                             this.UpdateTopaz(scene.SceneType);
-                                            if (this.AISettings.RS_CollectLuckyChest && this.MatchMapping(LobbyPM.MaysLuckyChestAvailable_1, 4) && this.MatchMapping(LobbyPM.MaysLuckyChestAvailable_2, 4))
+                                            if((this.AISettings.AD_HottimeEnable) && this.MatchMapping(LobbyPM.StatusBoardAvailable, 2) && hottimeloop == true)
+                                            {
+                                                this.WeightedClick(LobbyPM.StatusBoard, 1.0, 1.0, 1, 0, "left");
+                                                hottimeloop = false;
+                                            }
+                                            else if (this.AISettings.RS_CollectLuckyChest && this.MatchMapping(LobbyPM.MaysLuckyChestAvailable_1, 4) && this.MatchMapping(LobbyPM.MaysLuckyChestAvailable_2, 4))
                                             {
                                                 this.WeightedClick(LobbyPM.MaysLuckyChestButton, 1.0, 1.0, 1, 0, "left");
                                             }
@@ -2270,6 +2277,30 @@ namespace SevenKnightsAI.Classes
                                                 this.WeightedClick(SharedPM.Full_ProceedButton, 1.0, 1.0, 1, 0, "left");
                                             }
                                             SevenKnightsCore.Sleep(500);
+                                            break;
+
+                                        case SceneType.STATUS_BOARD:
+                                            if(this.MatchMapping(StatusBoardPM.ContentsTabSelect, 2) && this.MatchMapping(StatusBoardPM.HottimeRedIcon, 2))
+                                            {
+                                               this.WeightedClick(StatusBoardPM.HottimeTab, 1.0, 1.0, 1, 0, "left");
+                                               SevenKnightsCore.Sleep(500);
+                                                }
+                                            else if (this.MatchMapping(StatusBoardPM.HottimeTabSelect, 2) && (this.MatchMapping(StatusBoardPM.ActiveButtonColor, 2)))
+                                            {
+                                                this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
+                                            }
+                                            this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
+                                            SevenKnightsCore.Sleep(500);
+                                            this.WeightedClick(StatusBoardPM.ClosButton, 1.0, 1.0, 1, 0, "left");
+                                            break;
+
+                                        case SceneType.HOTTIME__CONFIRM_POPUP:
+                                            SevenKnightsCore.Sleep(500);
+                                            this.WeightedClick(StatusBoardPM.OKButton, 1.0, 1.0, 1, 0, "left");
+                                            //if (this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2) && this.MatchMapping(StatusBoardPM.NoRedCloss, 2))
+                                            //{
+                                                
+                                            //}
                                             break;
 
                                         case SceneType.ADVENTURE_READY:
@@ -2815,24 +2846,32 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.RAID_AWAKENED_LOBBY:
-                                            if (this.CurrentObjective == Objective.RAID)
+                                            if (this.AISettings.ARD_Enable)
                                             {
-                                                if (this.AISettings.ARD_Enable)
-                                                {
-                                                    this.WeightedClick(RaidLobbyPM.AwakenedRaidEnter, 1.0, 1.0, 1, 0, "left");
-                                                }
-                                                else
-                                                {
-                                                    this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
-                                                }
+                                                this.WeightedClick(RaidLobbyPM.AwakenedRaidEnter, 1.0, 1.0, 1, 0, "left");
                                             }
                                             else
                                             {
+                                                this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
                                             }
+                                            //if (this.CurrentObjective == Objective.RAID /*|| this.CurrentObjective == Objective.ADVENTURE */)
+                                            //{
+                                            //    if (this.AISettings.ARD_Enable)
+                                            //    {
+                                            //        this.WeightedClick(RaidLobbyPM.AwakenedRaidEnter, 1.0, 1.0, 1, 0, "left");
+                                            //    }
+                                            //    else
+                                            //    {
+                                            //        this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
+                                            //    }
+                                            //}
+                                            //else
+                                            //{
+                                            //}
                                             break;
 
                                         case SceneType.RAID_AWAKENED_READY:
-                                            if (this.CurrentObjective == Objective.RAID && this.AISettings.ARD_Enable && (!this.AISettings.RD_EnableDragonLimit || this.ParseEntred(0, 0) < this.AISettings.RD_DragonLimit))
+                                            if (this.AISettings.ARD_Enable && (!this.AISettings.RD_EnableDragonLimit || this.ParseEntred(0, 0) < this.AISettings.RD_DragonLimit))
                                             {
                                                 this.WeightedClick(RaidReadyPM.AwakenedReadyButton, 1.0, 1.0, 1, 0, "left");
                                             }
@@ -2841,6 +2880,15 @@ namespace SevenKnightsAI.Classes
                                                 this.Escape();
                                             }
                                             break;
+                                        //if (this.CurrentObjective == Objective.RAID && this.AISettings.ARD_Enable && (!this.AISettings.RD_EnableDragonLimit || this.ParseEntred(0, 0) < this.AISettings.RD_DragonLimit))
+                                        //{
+                                        //    this.WeightedClick(RaidReadyPM.AwakenedReadyButton, 1.0, 1.0, 1, 0, "left");
+                                        //}
+                                        //else
+                                        //{
+                                        //    this.Escape();
+                                        //}
+                                        //break;
 
                                         case SceneType.ENTER_RAID_AGAIN_POPUP:
                                             this.DoneRaid();
@@ -4468,6 +4516,17 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.ADVENTURE_FIGHT);
                     return result;
                 }
+                if (this.MatchMapping(StatusBoardPM.LeftTabCon, 2) && this.MatchMapping(StatusBoardPM.RightTabCol, 2))
+                {
+                    Scene result = new Scene(SceneType.STATUS_BOARD);
+                    return result;
+                }
+                if (this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2))
+                {
+                    Scene result = new Scene(SceneType.HOTTIME__CONFIRM_POPUP);
+                    return result;
+                }
+
                 if (this.ExpectedFightScene(SceneType.RAID_FIGHT) && this.MatchMapping(TowerFightPM.PauseButton, 2) && this.MatchMapping(TowerFightPM.ChatButton, 2) && (this.MatchMapping(RaidFightPM.DragonIcon, 2)|| (this.MatchMapping(RaidFightPM.DragonAwakeye, 2))))
                 {
                     Scene result = new Scene(SceneType.RAID_FIGHT);

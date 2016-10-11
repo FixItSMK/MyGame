@@ -101,6 +101,8 @@ namespace SevenKnightsAI.Classes
         ADS_CLOSE,
         BLUESTACK_HOME,
         RAID_AWAKENED_LOBBY,
-        RAID_AWAKENED_READY
+        RAID_AWAKENED_READY,
+        STATUS_BOARD,
+        HOTTIME__CONFIRM_POPUP
     }
 }

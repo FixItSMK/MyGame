@@ -94,9 +94,6 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AwakenedRaidEnter = new PixelMapping
         {
-            //X = 806,
-            //Y = 420,
-            //Color = 16710091,
             X = 801,
             Y = 432,
             Color = 0,
@@ -105,9 +102,6 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AwakenedRaidTab = new PixelMapping
         {
-            //X = 154,
-            //Y = 86,
-            //Color = 16305253,
             X = 154,
             Y = 86,
             Color = 0,

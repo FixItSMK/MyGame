@@ -30,6 +30,9 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "AD_Enable")]
         public bool AD_Enable;
 
+        [XmlElement(ElementName = "AD_HottimeEnable")]
+        public bool AD_HottimeEnable;
+
         [XmlElement(ElementName = "AD_EnableLimit")]
         public bool AD_EnableLimit;
 
@@ -285,6 +288,7 @@ namespace SevenKnightsAI.Classes
         public AISettings()
         {
             this.AD_Enable = true;
+            this.AD_HottimeEnable = false;
             this.AD_EnableLimit = false;
             this.AD_Limit = 0;
             this.AD_Stage = 0;
@@ -366,6 +370,12 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.AD_Enable = (bool)dictionary["AD_Enable"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.AD_HottimeEnable = (bool)dictionary["AD_HottimeEnable"];
                 }
                 catch (Exception)
                 { }

@@ -658,9 +658,6 @@ namespace SevenKnightsAI
                     this.AISettings.RD_Enable = @checked;
                     return;
 
-                //case 4:
-                //    this.AISettings.ARD_Enable = @checked;
-                //    return;
 
                 default:
                     return;
@@ -744,6 +741,7 @@ namespace SevenKnightsAI
                 this._skillButtons[i] = new List<Button>();
             }
             this.AD_enableCheckBox.Checked = this.AISettings.AD_Enable;
+            this.AD_EnHottime_Checkbox.Checked = this.AISettings.AD_HottimeEnable;
             this.AD_limitCheckBox.Checked = this.AISettings.AD_EnableLimit;
             this.AD_limitNumericBox.Value = this.AISettings.AD_Limit;
             this.AD_worldComboBox.SelectedIndex = (int)this.AISettings.AD_World;
@@ -1876,7 +1874,19 @@ namespace SevenKnightsAI
             this.AISettings.AD_CheckingHeroes = checkBox.Checked;
         }
 
+        private void ARD_enableCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.ARD_Enable = checkBox.Checked;
+        }
+        private void AD_EnHottime_Checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_HottimeEnable = checkBox.Checked;
+        }
+
         #endregion Private Methods
+
 
     }
 }

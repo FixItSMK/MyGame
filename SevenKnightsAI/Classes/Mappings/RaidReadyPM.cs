@@ -49,17 +49,20 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AwakenBlueIcon = new PixelMapping
         {
-            X = 601,
-            Y = 27,
-            Color = 4227735,
+            X = 591,
+            Y = 15,
+            Color = 703981,
             Type = MappingType.ANCHOR
         };
 
+
+
+        // Awaken หน้ากดเริ่มตีเข้าสู Flight
         public static readonly PixelMapping AwakenDragonImg = new PixelMapping
         {
-            X = 589,
-            Y = 116,
-            Color = 13056810,
+            X = 612,
+            Y = 13,
+            Color = 1228784,
             Type = MappingType.ANCHOR
         };
 
