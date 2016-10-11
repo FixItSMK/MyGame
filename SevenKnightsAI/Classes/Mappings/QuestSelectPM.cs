@@ -24,9 +24,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping QuestIcon = new PixelMapping
         {
-            X = 576,
-            Y = 274,
-            Color = 14796387,
+            X = 554,
+            Y = 253,
+            Color = 15382115,
             Type = MappingType.ANCHOR
         };
 
@@ -48,9 +48,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping SpecialQuestIcon = new PixelMapping
         {
-            X = 400,
-            Y = 265,
-            Color = 12153660,
+            X = 394,
+            Y = 261,
+            Color = 13739614,
             Type = MappingType.ANCHOR
         };
 

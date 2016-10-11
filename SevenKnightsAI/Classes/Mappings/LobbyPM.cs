@@ -204,9 +204,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping QuestAvailable = new PixelMapping
         {
-            X = 91,
+            X = 93,
             Y = 451,
-            Color = 7809025,
+            Color = 13051905,
             Type = MappingType.ANCHOR
         };
 
