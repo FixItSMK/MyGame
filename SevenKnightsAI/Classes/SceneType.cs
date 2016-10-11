@@ -80,6 +80,7 @@ namespace SevenKnightsAI.Classes
         LOOT_HERO,
         LOOT_ITEM,
         SHOP,
+        SHOP_LOBBY,
         SHOP_BUY_POPUP,
         SHOP_BUY_FAILED_POPUP,
         SHOP_PURCHASE_COMPLETE_POPUP,

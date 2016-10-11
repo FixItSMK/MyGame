@@ -158,14 +158,14 @@
             this.AR_useRubyCheckBox = new System.Windows.Forms.CheckBox();
             this.AR_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.raidTab = new System.Windows.Forms.TabPage();
-            this.ARD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_DragonLimit_lbl = new System.Windows.Forms.Label();
             this.RD_DragonLimitNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.RD_StopOnDragonFound_Checkbox = new System.Windows.Forms.CheckBox();
             this.RD_mainPanel = new System.Windows.Forms.Panel();
+            this.ARD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_limitLabel = new System.Windows.Forms.Label();
             this.RD_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.RD_limitCheckBox = new System.Windows.Forms.CheckBox();
+            this.RD_StopOnDragonFound_Checkbox = new System.Windows.Forms.CheckBox();
             this.RD_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.RD_masteryComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -431,7 +431,7 @@
             // AD_EnHottime_Checkbox
             // 
             this.AD_EnHottime_Checkbox.AutoSize = true;
-            this.AD_EnHottime_Checkbox.Location = new System.Drawing.Point(9, 54);
+            this.AD_EnHottime_Checkbox.Location = new System.Drawing.Point(24, 54);
             this.AD_EnHottime_Checkbox.Name = "AD_EnHottime_Checkbox";
             this.AD_EnHottime_Checkbox.Size = new System.Drawing.Size(95, 17);
             this.AD_EnHottime_Checkbox.TabIndex = 27;
@@ -451,7 +451,7 @@
             // AD_StopOnLV30_Checkbox
             // 
             this.AD_StopOnLV30_Checkbox.AutoSize = true;
-            this.AD_StopOnLV30_Checkbox.Location = new System.Drawing.Point(117, 31);
+            this.AD_StopOnLV30_Checkbox.Location = new System.Drawing.Point(125, 31);
             this.AD_StopOnLV30_Checkbox.Name = "AD_StopOnLV30_Checkbox";
             this.AD_StopOnLV30_Checkbox.Size = new System.Drawing.Size(101, 17);
             this.AD_StopOnLV30_Checkbox.TabIndex = 25;
@@ -462,7 +462,7 @@
             // AD_continuousCheckBox
             // 
             this.AD_continuousCheckBox.AutoSize = true;
-            this.AD_continuousCheckBox.Location = new System.Drawing.Point(117, 54);
+            this.AD_continuousCheckBox.Location = new System.Drawing.Point(360, 54);
             this.AD_continuousCheckBox.Name = "AD_continuousCheckBox";
             this.AD_continuousCheckBox.Size = new System.Drawing.Size(128, 17);
             this.AD_continuousCheckBox.TabIndex = 5;
@@ -473,7 +473,7 @@
             // AD_CheckingHeroes_Checkbox
             // 
             this.AD_CheckingHeroes_Checkbox.AutoSize = true;
-            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(117, 7);
+            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(239, 31);
             this.AD_CheckingHeroes_Checkbox.Name = "AD_CheckingHeroes_Checkbox";
             this.AD_CheckingHeroes_Checkbox.Size = new System.Drawing.Size(146, 17);
             this.AD_CheckingHeroes_Checkbox.TabIndex = 26;
@@ -484,7 +484,7 @@
             // AD_StopOnFullItems_Checkbox
             // 
             this.AD_StopOnFullItems_Checkbox.AutoSize = true;
-            this.AD_StopOnFullItems_Checkbox.Location = new System.Drawing.Point(364, 31);
+            this.AD_StopOnFullItems_Checkbox.Location = new System.Drawing.Point(239, 52);
             this.AD_StopOnFullItems_Checkbox.Name = "AD_StopOnFullItems_Checkbox";
             this.AD_StopOnFullItems_Checkbox.Size = new System.Drawing.Size(120, 17);
             this.AD_StopOnFullItems_Checkbox.TabIndex = 25;
@@ -504,7 +504,7 @@
             // AD_StopOnFullHeroes_Checkbox
             // 
             this.AD_StopOnFullHeroes_Checkbox.AutoSize = true;
-            this.AD_StopOnFullHeroes_Checkbox.Location = new System.Drawing.Point(235, 31);
+            this.AD_StopOnFullHeroes_Checkbox.Location = new System.Drawing.Point(125, 53);
             this.AD_StopOnFullHeroes_Checkbox.Name = "AD_StopOnFullHeroes_Checkbox";
             this.AD_StopOnFullHeroes_Checkbox.Size = new System.Drawing.Size(112, 17);
             this.AD_StopOnFullHeroes_Checkbox.TabIndex = 25;
@@ -1333,7 +1333,7 @@
             // AD_elementHeroesCheckBox
             // 
             this.AD_elementHeroesCheckBox.AutoSize = true;
-            this.AD_elementHeroesCheckBox.Location = new System.Drawing.Point(9, 31);
+            this.AD_elementHeroesCheckBox.Location = new System.Drawing.Point(24, 31);
             this.AD_elementHeroesCheckBox.Name = "AD_elementHeroesCheckBox";
             this.AD_elementHeroesCheckBox.Size = new System.Drawing.Size(86, 17);
             this.AD_elementHeroesCheckBox.TabIndex = 13;
@@ -2082,17 +2082,6 @@
             this.raidTab.Text = "Raid";
             this.raidTab.UseVisualStyleBackColor = true;
             // 
-            // ARD_enableCheckBox
-            // 
-            this.ARD_enableCheckBox.AutoSize = true;
-            this.ARD_enableCheckBox.Location = new System.Drawing.Point(23, 3);
-            this.ARD_enableCheckBox.Name = "ARD_enableCheckBox";
-            this.ARD_enableCheckBox.Size = new System.Drawing.Size(120, 17);
-            this.ARD_enableCheckBox.TabIndex = 31;
-            this.ARD_enableCheckBox.Text = "Enable Raid Awake";
-            this.ARD_enableCheckBox.UseVisualStyleBackColor = true;
-            this.ARD_enableCheckBox.CheckedChanged += new System.EventHandler(this.ARD_enableCheckBox_CheckedChanged);
-            // 
             // RD_DragonLimit_lbl
             // 
             this.RD_DragonLimit_lbl.AutoSize = true;
@@ -2116,17 +2105,6 @@
             0});
             this.RD_DragonLimitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
             // 
-            // RD_StopOnDragonFound_Checkbox
-            // 
-            this.RD_StopOnDragonFound_Checkbox.AutoSize = true;
-            this.RD_StopOnDragonFound_Checkbox.Location = new System.Drawing.Point(23, 26);
-            this.RD_StopOnDragonFound_Checkbox.Name = "RD_StopOnDragonFound_Checkbox";
-            this.RD_StopOnDragonFound_Checkbox.Size = new System.Drawing.Size(144, 17);
-            this.RD_StopOnDragonFound_Checkbox.TabIndex = 29;
-            this.RD_StopOnDragonFound_Checkbox.Text = "Pause On Dragon Found";
-            this.RD_StopOnDragonFound_Checkbox.UseVisualStyleBackColor = true;
-            this.RD_StopOnDragonFound_Checkbox.CheckedChanged += new System.EventHandler(this.RD_StopOnDragonFound_Checkbox_CheckedChanged);
-            // 
             // RD_mainPanel
             // 
             this.RD_mainPanel.Controls.Add(this.ARD_enableCheckBox);
@@ -2139,6 +2117,17 @@
             this.RD_mainPanel.Name = "RD_mainPanel";
             this.RD_mainPanel.Size = new System.Drawing.Size(487, 255);
             this.RD_mainPanel.TabIndex = 15;
+            // 
+            // ARD_enableCheckBox
+            // 
+            this.ARD_enableCheckBox.AutoSize = true;
+            this.ARD_enableCheckBox.Location = new System.Drawing.Point(23, 3);
+            this.ARD_enableCheckBox.Name = "ARD_enableCheckBox";
+            this.ARD_enableCheckBox.Size = new System.Drawing.Size(120, 17);
+            this.ARD_enableCheckBox.TabIndex = 31;
+            this.ARD_enableCheckBox.Text = "Enable Raid Awake";
+            this.ARD_enableCheckBox.UseVisualStyleBackColor = true;
+            this.ARD_enableCheckBox.CheckedChanged += new System.EventHandler(this.ARD_enableCheckBox_CheckedChanged);
             // 
             // RD_limitLabel
             // 
@@ -2174,6 +2163,17 @@
             this.RD_limitCheckBox.UseVisualStyleBackColor = true;
             this.RD_limitCheckBox.Visible = false;
             this.RD_limitCheckBox.CheckedChanged += new System.EventHandler(this.limitCheckBox_CheckedChanged);
+            // 
+            // RD_StopOnDragonFound_Checkbox
+            // 
+            this.RD_StopOnDragonFound_Checkbox.AutoSize = true;
+            this.RD_StopOnDragonFound_Checkbox.Location = new System.Drawing.Point(23, 26);
+            this.RD_StopOnDragonFound_Checkbox.Name = "RD_StopOnDragonFound_Checkbox";
+            this.RD_StopOnDragonFound_Checkbox.Size = new System.Drawing.Size(144, 17);
+            this.RD_StopOnDragonFound_Checkbox.TabIndex = 29;
+            this.RD_StopOnDragonFound_Checkbox.Text = "Pause On Dragon Found";
+            this.RD_StopOnDragonFound_Checkbox.UseVisualStyleBackColor = true;
+            this.RD_StopOnDragonFound_Checkbox.CheckedChanged += new System.EventHandler(this.RD_StopOnDragonFound_Checkbox_CheckedChanged);
             // 
             // RD_skillGroupBox
             // 
@@ -2762,7 +2762,6 @@
             this.RS_buyKeysGroupBox.Controls.Add(this.RS_buyKeyHonorsNumericBox);
             this.RS_buyKeysGroupBox.Controls.Add(this.RS_buyKeyHonorsComboBox);
             this.RS_buyKeysGroupBox.Controls.Add(this.RS_buyKeyHonorsCheckBox);
-            this.RS_buyKeysGroupBox.Enabled = false;
             this.RS_buyKeysGroupBox.Location = new System.Drawing.Point(183, 219);
             this.RS_buyKeysGroupBox.Name = "RS_buyKeysGroupBox";
             this.RS_buyKeysGroupBox.Size = new System.Drawing.Size(296, 71);

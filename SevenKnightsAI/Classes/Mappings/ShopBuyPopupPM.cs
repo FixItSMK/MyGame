@@ -6,8 +6,8 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping BuyButton = new PixelMapping
         {
-            X = 650,
-            Y = 422,
+            X = 529,
+            Y = 410,
             Color = 0,
             Type = MappingType.BUTTON
         };
@@ -38,17 +38,17 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping RedCross = new PixelMapping
         {
-            X = 323,
-            Y = 418,
-            Color = 13712649,
+            X = 324,
+            Y = 416,
+            Color = 14302728,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping YellowTick = new PixelMapping
         {
-            X = 519,
-            Y = 423,
-            Color = 16756754,
+            X = 523,
+            Y = 419,
+            Color = 16762151,
             Type = MappingType.ANCHOR
         };
     }

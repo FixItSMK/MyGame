@@ -297,13 +297,13 @@ namespace SevenKnightsAI.Classes
             this.AD_SkillType = SkillType.Both;
             this.AD_StopOnFullHeroes = true;
             this.AD_StopOnFullItems = true;
-            this.RD_StopOnDragonFound = true;
-            this.AD_StopOnLV30 = true;
-            this.AD_CheckingHeroes = true;
+            this.RD_StopOnDragonFound = false;
+            this.AD_StopOnLV30 = false;
+            this.AD_CheckingHeroes = false;
             this.AD_Wave1Loop = false;
             this.AD_Wave2Loop = false;
             this.AD_Wave3Loop = false;
-            this.GB_WaitForKeys = true;
+            this.GB_WaitForKeys = false;
             this.GC_Enable = true;
             this.GC_EnableLimit = false;
             this.GC_Limit = 0;
@@ -317,7 +317,7 @@ namespace SevenKnightsAI.Classes
             this.AR_UseRubyAmount = 0;
             this.RD_Enable = true;
             this.RD_EnableLimit = false;
-            this.RD_EnableDragonLimit = false;
+            this.RD_EnableDragonLimit = true;
             this.RD_DragonLimit = 1;
             this.RD_Limit = 0;
             this.RD_SkillType = SkillType.Both;

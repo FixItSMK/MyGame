@@ -690,9 +690,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping ShopPopup_DimmedBG = new PixelMapping
         {
-            X = 116,
-            Y = 335,
-            Color = 65793,
+            X = 60,
+            Y = 24,
+            Color = 3871492,
             Type = MappingType.ANCHOR
         };
 

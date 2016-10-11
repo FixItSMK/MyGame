@@ -2925,6 +2925,17 @@ namespace SevenKnightsAI.Classes
                                             this.Escape();
                                             break;
 
+                                        case SceneType.SHOP_LOBBY:
+                                            if (this.CurrentObjective == Objective.BUY_KEYS)
+                                            {
+                                                this.WeightedClick(ShopPM.CommonShop, 1.0, 1.0, 1, 0, "left");
+                                            }
+                                            else
+                                            {
+                                                this.Escape();
+                                            }
+                                            break;
+
                                         case SceneType.SHOP:
                                             this.UpdateAdventureKeys(scene.SceneType);
                                             this.UpdateGold(scene.SceneType);
@@ -4541,7 +4552,14 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.TOWER_FIGHT);
                     return result;
                 }
-                if (this.MatchMapping(ShopPM.CharacterShirt, 3) && this.MatchMapping(ShopPM.ContentsShopIcon, 2))
+                // เพิ่มตรวจสอบหน้า Shop Lobby ที่เป็นรูป 3 คน 3 Shop
+                if (this.MatchMapping(ShopPM.ShopCommon, 2) && this.MatchMapping(ShopPM.ShopPackge, 2))
+                {
+                    Scene result = new Scene(SceneType.SHOP_LOBBY);
+                    return result;
+                }
+                // ตรวจสอบหน้า Shop ที่ตำแหน่งใหม่
+                if (this.MatchMapping(ShopPM.borderleft, 2) && this.MatchMapping(ShopPM.Mimic, 2))
                 {
                     Scene result = new Scene(SceneType.SHOP);
                     return result;
@@ -4551,7 +4569,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.SHOP_BUY_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(SharedPM.ShopPopup_DimmedBG, 2) && this.MatchMapping(ShopPurchaseCompletePopupPM.PopupBorderLeft, 2) && this.MatchMapping(ShopPurchaseCompletePopupPM.YellowTick, 2))
+                if (this.MatchMapping(SharedPM.ShopPopup_DimmedBG, 2) && this.MatchMapping(ShopPurchaseCompletePopupPM.PopupBorderLeft, 2) && this.MatchMapping(ShopPurchaseCompletePopupPM.YellowTick, 2) && this.MatchMapping(ShopPurchaseCompletePopupPM.ShopBGMiMic, 2))
                 {
                     Scene result = new Scene(SceneType.SHOP_PURCHASE_COMPLETE_POPUP);
                     return result;
