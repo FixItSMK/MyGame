@@ -7,9 +7,18 @@ namespace SevenKnightsAI.Classes.Mappings
         //จุดที่ใช้ตรวจสอบว่าใช่หน้า Shop ไหม
         public static readonly PixelMapping borderleft = new PixelMapping
         {
-            X = 20,
-            Y = 495,
-            Color = 3539456,
+            X = 259,
+            Y = 157,
+            Color = 12661028,
+            Type = MappingType.ANCHOR
+        };
+
+        //จุดที่ใช้ตรวจสอบว่าใช่หน้า Shop ไหม
+        public static readonly PixelMapping Mimic = new PixelMapping
+        {
+            X = 829,
+            Y = 89,
+            Color = 10310986,
             Type = MappingType.ANCHOR
         };
 
@@ -34,16 +43,6 @@ namespace SevenKnightsAI.Classes.Mappings
             X = 145,
             Y = 221,
             Color = 16053492,
-            Type = MappingType.ANCHOR
-        };
-
-
-        //จุดที่ใช้ตรวจสอบว่าใช่หน้า Shop ไหม
-        public static readonly PixelMapping Mimic = new PixelMapping
-        {
-            X = 826,
-            Y = 96,
-            Color = 12083846,
             Type = MappingType.ANCHOR
         };
 
