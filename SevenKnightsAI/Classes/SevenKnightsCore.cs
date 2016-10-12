@@ -289,7 +289,6 @@ namespace SevenKnightsAI.Classes
             bool flag;
             if (this.IsBuyKeysHonors())
             {
-                this.Log(string.Format("Buy with honors ({0})", this.KeysBoughtHonors + 1), this.COLOR_BUY_KEYS);
                 flag = true;
             }
             else
@@ -300,7 +299,6 @@ namespace SevenKnightsAI.Classes
                     this.DoneBuyKeys();
                     return;
                 }
-                this.Log(string.Format("Buy with rubies ({0})", this.KeysBoughtRubies + 1), this.COLOR_BUY_KEYS);
                 flag = false;
             }
             if (flag || (!flag && this.AISettings.RS_BuyKeyRubiesType == BuyKeyRubiesType.Key5Ruby10))
@@ -329,20 +327,26 @@ namespace SevenKnightsAI.Classes
                     }
                 }
             }
-            SevenKnightsCore.Sleep(300);
+            SevenKnightsCore.Sleep(700);
             PixelMapping mapping;
             if (flag)
             {
                 int rS_BuyKeyHonorsType = (int)this.AISettings.RS_BuyKeyHonorsType;
                 mapping = array[rS_BuyKeyHonorsType];
+                this.Log(string.Format("Buy with honors ({0})", this.KeysBoughtHonors + 1), this.COLOR_BUY_KEYS);
+                SevenKnightsCore.Sleep(700);
+                this.KeysBoughtHonors++;
             }
             else
             {
                 int rS_BuyKeyRubiesType = (int)this.AISettings.RS_BuyKeyRubiesType;
                 mapping = array2[rS_BuyKeyRubiesType];
+                this.Log(string.Format("Buy with rubies ({0})", this.KeysBoughtRubies + 1), this.COLOR_BUY_KEYS);
+                SevenKnightsCore.Sleep(700);
+                this.KeysBoughtRubies++;
             }
             this.WeightedClick(mapping, 1.0, 1.0, 1, 0, "left");
-            SevenKnightsCore.Sleep(300);
+            SevenKnightsCore.Sleep(700);
             this.CaptureFrame();
             scene = this.SceneSearch();
             if (scene != null && scene.SceneType == SceneType.SHOP_BUY_FAILED_POPUP)
@@ -367,14 +371,6 @@ namespace SevenKnightsAI.Classes
             }
             this.Log("Keys bought", this.COLOR_BUY_KEYS);
             this.WeightedClick(ShopPurchaseCompletePopupPM.OkButton, 1.0, 1.0, 1, 0, "left");
-            if (flag)
-            {
-                this.KeysBoughtHonors++;
-            }
-            else
-            {
-                this.KeysBoughtRubies++;
-            }
             SevenKnightsCore.Sleep(500);
             this.DoneBuyKeys();
         }
