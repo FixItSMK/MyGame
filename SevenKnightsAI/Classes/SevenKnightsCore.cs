@@ -4555,7 +4555,7 @@ namespace SevenKnightsAI.Classes
                     return result;
                 }
                 // ตรวจสอบหน้า Shop ที่ตำแหน่งใหม่
-                if (this.MatchMapping(ShopPM.borderleft, 2) && this.MatchMapping(ShopPM.Mimic, 2))
+                if ((this.MatchMapping(ShopPM.borderleft, 2) || this.MatchMapping(ShopPM.Homeborderleft, 2)) && (this.MatchMapping(ShopPM.Mimic, 2) || this.MatchMapping(ShopPM.HomeMimic, 2)))
                 {
                     Scene result = new Scene(SceneType.SHOP);
                     return result;
