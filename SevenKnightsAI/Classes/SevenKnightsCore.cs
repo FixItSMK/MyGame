@@ -4528,6 +4528,13 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.STATUS_BOARD);
                     return result;
                 }
+                // Out Off Key
+                if (this.MatchMapping(OutOfKeysOfferPM.BuyButtonBorder, 2) && this.MatchMapping(OutOfKeysOfferPM.RedCross, 2) && this.MatchMapping(OutOfKeysOfferPM.StartBG, 2))
+                {
+                    Scene result = new Scene(SceneType.OUT_OF_KEYS_OFFER);
+                    return result;
+                }
+                // ฮอททาม
                 if (this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2))
                 {
                     Scene result = new Scene(SceneType.HOTTIME__CONFIRM_POPUP);
@@ -4549,7 +4556,7 @@ namespace SevenKnightsAI.Classes
                     return result;
                 }
                 // เพิ่มตรวจสอบหน้า Shop Lobby ที่เป็นรูป 3 คน 3 Shop
-                if (this.MatchMapping(ShopPM.ShopCommon, 2) && this.MatchMapping(ShopPM.ShopPackge, 2))
+                if (this.MatchMapping(ShopPM.ShopCommon, 2) && this.MatchMapping(ShopPM.ShopPackge, 2) /*&& this.MatchMapping(ShopPM.DimmedBG, 2)*/)
                 {
                     Scene result = new Scene(SceneType.SHOP_LOBBY);
                     return result;
@@ -4800,11 +4807,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.LOOT_HERO);
                     return result;
                 }
-                if (this.MatchMapping(OutOfKeysOfferPM.BuyButtonBorder, 2) && this.MatchMapping(OutOfKeysOfferPM.RedCross, 2) && this.MatchMapping(OutOfKeysOfferPM.DimmedBG, 2))
-                {
-                    Scene result = new Scene(SceneType.OUT_OF_KEYS_OFFER);
-                    return result;
-                }
+                
                 if (this.MatchMapping(OutOfKeysPopupPM.PopupBorder, 3) && this.MatchMapping(OutOfKeysPopupPM.NoButtonBorder, 3) && this.MatchMapping(OutOfKeysPopupPM.DimmedBG, 2))
                 {
                     Scene result = new Scene(SceneType.OUT_OF_KEYS_POPUP);

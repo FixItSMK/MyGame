@@ -14,17 +14,17 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping BuyButtonBorder = new PixelMapping
         {
-            X = 532,
-            Y = 398,
-            Color = 16759838,
+            X = 594,
+            Y = 407,
+            Color = 7875596,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping DimmedBG = new PixelMapping
+        public static readonly PixelMapping StartBG = new PixelMapping
         {
-            X = 60,
-            Y = 27,
-            Color = 3805699,
+            X = 632,
+            Y = 525,
+            Color = 2362627,
             Type = MappingType.ANCHOR
         };
 
@@ -38,9 +38,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping RedCross = new PixelMapping
         {
-            X = 316,
-            Y = 393,
-            Color = 14433544,
+            X = 315,
+            Y = 394,
+            Color = 14171656,
             Type = MappingType.ANCHOR
         };
 
