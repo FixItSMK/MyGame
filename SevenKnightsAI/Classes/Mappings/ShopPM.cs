@@ -6,39 +6,17 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping borderleft = new PixelMapping
         {
-            //ที่ทำงาน
-            X = 323,
-            Y = 143,
-            Color = 4311087,
+            X = 282,
+            Y = 126,
+            Color = 16642027,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping Homeborderleft = new PixelMapping
-        {
-            // ที่ห้อง
-            X = 259,
-            Y = 157,
-            Color = 12661028,
-            Type = MappingType.ANCHOR
-        };
-
-        //จุดที่ใช้ตรวจสอบว่าใช่หน้า Shop ไหม
         public static readonly PixelMapping Mimic = new PixelMapping
         {
-            //ที่ทำงาน
-            X = 828,
-            Y = 90,
-            Color = 11162967,
-            Type = MappingType.ANCHOR
-        };
-
-        //จุดที่ใช้ตรวจสอบว่าใช่หน้า Shop ไหม
-        public static readonly PixelMapping HomeMimic = new PixelMapping
-        {
-            // ที่ห้อง
-            X = 829,
-            Y = 89,
-            Color = 10310986,
+            X = 863,
+            Y = 125,
+            Color = 7355957,
             Type = MappingType.ANCHOR
         };
 
@@ -68,8 +46,8 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping KeyTab = new PixelMapping
         {
-            X = 110,
-            Y = 90,
+            X = 111,
+            Y = 77,
             Color = 0,
             Type = MappingType.BUTTON
         };
@@ -158,9 +136,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping KeyTabSelected = new PixelMapping
         {
-            X = 110,
-            Y = 68,
-            Color = 13797636,
+            X = 165,
+            Y = 63,
+            Color = 13995013,
             Type = MappingType.ANCHOR
         };
 

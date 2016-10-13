@@ -4555,7 +4555,7 @@ namespace SevenKnightsAI.Classes
                     return result;
                 }
                 // ตรวจสอบหน้า Shop ที่ตำแหน่งใหม่
-                if ((this.MatchMapping(ShopPM.borderleft, 2) || this.MatchMapping(ShopPM.Homeborderleft, 2)) && (this.MatchMapping(ShopPM.Mimic, 2) || this.MatchMapping(ShopPM.HomeMimic, 2)))
+                if (this.MatchMapping(ShopPM.borderleft, 2) && this.MatchMapping(ShopPM.Mimic, 2))
                 {
                     Scene result = new Scene(SceneType.SHOP);
                     return result;
@@ -5963,12 +5963,12 @@ namespace SevenKnightsAI.Classes
                 ArenaStartPM.Key_3,
                 ArenaStartPM.Key_4
             };
-            int num = 0;
+            int num = 5;
             for (int i = 0; i < keyPMs.Length; i++)
             {
                 if (this.MatchMapping(keyPMs[i], 5))
                 {
-                    num = i + 1;
+                    num = i - 1;
                     //break;
                 }
             }
