@@ -5963,12 +5963,12 @@ namespace SevenKnightsAI.Classes
                 ArenaStartPM.Key_3,
                 ArenaStartPM.Key_4
             };
-            int num = 5;
+            int num = 0;
             for (int i = 0; i < keyPMs.Length; i++)
             {
                 if (this.MatchMapping(keyPMs[i], 5))
                 {
-                    num = i - 1;
+                    num = i + 1;
                     //break;
                 }
             }
