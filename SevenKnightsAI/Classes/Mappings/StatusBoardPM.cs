@@ -71,6 +71,15 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 4072212,
             Type = MappingType.ANCHOR
         };
+
+        public static readonly PixelMapping ActiveBG = new PixelMapping
+        {
+            X = 766,
+            Y = 523,
+            Color = 2428163,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly PixelMapping StatusBar = new PixelMapping
         {
             X = 198,

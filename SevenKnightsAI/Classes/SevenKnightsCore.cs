@@ -2292,11 +2292,10 @@ namespace SevenKnightsAI.Classes
 
                                         case SceneType.HOTTIME__CONFIRM_POPUP:
                                             SevenKnightsCore.Sleep(500);
-                                            this.WeightedClick(StatusBoardPM.OKButton, 1.0, 1.0, 1, 0, "left");
-                                            //if (this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2) && this.MatchMapping(StatusBoardPM.NoRedCloss, 2))
-                                            //{
-                                                
-                                            //}
+                                            if (this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2) && this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ActiveBG, 2))
+                                            {
+                                                this.WeightedClick(StatusBoardPM.OKButton, 1.0, 1.0, 1, 0, "left");
+                                            }
                                             break;
 
                                         case SceneType.ADVENTURE_READY:
@@ -2518,8 +2517,8 @@ namespace SevenKnightsAI.Classes
 
                                         case SceneType.ARENA_READY:
                                             this.UpdateArenaKeys();
-                                            this.UpdateRuby(scene.SceneType);
-                                            this.UpdateHonor(scene.SceneType);
+                                            //this.UpdateRuby(scene.SceneType);
+                                            //this.UpdateHonor(scene.SceneType);
                                             if (this.CurrentObjective == Objective.ARENA)
                                             {
                                                 if (this.ArenaKeys > 0 || this.ArenaUseRuby())
@@ -2539,8 +2538,8 @@ namespace SevenKnightsAI.Classes
 
                                         case SceneType.ARENA_START:
                                             this.UpdateArenaKeys();
-                                            this.UpdateRuby(scene.SceneType);
-                                            this.UpdateHonor(scene.SceneType);
+                                            //this.UpdateRuby(scene.SceneType);
+                                            //this.UpdateHonor(scene.SceneType);
                                             if (this.CurrentObjective == Objective.ARENA)
                                             {
                                                 bool flag5 = this.ArenaUseRuby();
@@ -2933,10 +2932,10 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.SHOP:
-                                            this.UpdateAdventureKeys(scene.SceneType);
-                                            this.UpdateGold(scene.SceneType);
-                                            this.UpdateRuby(scene.SceneType);
-                                            this.UpdateHonor(scene.SceneType);
+                                            //this.UpdateAdventureKeys(scene.SceneType);
+                                            //this.UpdateGold(scene.SceneType);
+                                            //this.UpdateRuby(scene.SceneType);
+                                            //this.UpdateHonor(scene.SceneType);
                                             if (this.CurrentObjective == Objective.BUY_KEYS)
                                             {
                                                 this.BuyKeys();
