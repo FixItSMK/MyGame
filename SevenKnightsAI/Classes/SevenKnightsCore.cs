@@ -3098,9 +3098,9 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.FRIENDS:
-                                            this.UpdateAdventureKeys(scene.SceneType);
-                                            this.UpdateGold(scene.SceneType);
-                                            this.UpdateHonor(scene.SceneType);
+                                            //this.UpdateAdventureKeys(scene.SceneType);
+                                            //this.UpdateGold(scene.SceneType);
+                                            //this.UpdateHonor(scene.SceneType);
                                             if (this.CurrentObjective == Objective.SEND_HONORS && this.IsSendHonorsEnabled())
                                             {
                                                 this.SendHonors();
@@ -5956,52 +5956,106 @@ namespace SevenKnightsAI.Classes
             }
         }
 
+        //private void UpdateArenaKeys()
+        //{
+        //    PixelMapping[] keyPMs =
+        //    {
+        //        ArenaStartPM.Key_0,
+        //        ArenaStartPM.Key_1,
+        //        ArenaStartPM.Key_2,
+        //        ArenaStartPM.Key_3,
+        //        ArenaStartPM.Key_4
+        //    };
+        //    int num = 0;
+        //    for (int i = 0; i < keyPMs.Length; i++)
+        //    {
+        //        if (this.MatchMapping(keyPMs[i], 5))
+        //        {
+        //            num = i + 1;
+        //            //break;
+        //        }
+        //    }
+        //    if (num < 5)
+        //    {
+        //        Bitmap image = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, ArenaStartPM.R_Time);
+        //        using (Page page = this.Tesseractor.Engine.Process(image, null))
+        //        {
+        //            string text = page.GetText();
+        //            Utility.FilterAscii(text);
+        //            if (text.Length >= 5)
+        //            {
+        //                string s = text.Substring(0, 2);
+        //                string s2 = text.Substring(3, 2);
+        //                int minutes;
+        //                int.TryParse(s, out minutes);
+        //                int seconds;
+        //                int.TryParse(s2, out seconds);
+        //                TimeSpan arenaKeyTime = new TimeSpan(0, minutes, seconds);
+        //                this.ArenaKeyTime = arenaKeyTime;
+        //            }
+        //            else
+        //            {
+        //                this.ArenaKeyTime = TimeSpan.MaxValue;
+        //            }
+        //        }
+        //    }
+        //    this.ArenaKeys = num;
+        //    this.ReportKeys(Objective.ARENA);
+        //}
         private void UpdateArenaKeys()
         {
-            PixelMapping[] keyPMs =
+            PixelMapping[] array = new PixelMapping[]
             {
                 ArenaStartPM.Key_0,
                 ArenaStartPM.Key_1,
                 ArenaStartPM.Key_2,
                 ArenaStartPM.Key_3,
-                ArenaStartPM.Key_4
+                ArenaStartPM.Key_4,
+                ArenaStartPM.Key_5
             };
-            int num = 0;
-            for (int i = 0; i < keyPMs.Length; i++)
+            int num = -1;
+            for (int i = 0; i < 6; i++)
             {
-                if (this.MatchMapping(keyPMs[i], 5))
+                if (this.MatchMapping(array[i], 5))
                 {
-                    num = i + 1;
-                    //break;
+                    num = i;
+                    break;
                 }
             }
-            if (num < 5)
+            if (num != -1)
             {
-                Bitmap image = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, ArenaStartPM.R_Time);
-                using (Page page = this.Tesseractor.Engine.Process(image, null))
+                if (num < 5)
                 {
-                    string text = page.GetText();
-                    Utility.FilterAscii(text);
-                    if (text.Length >= 5)
+                    Bitmap image = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, ArenaStartPM.R_Time);
+                    using (Page page = this.Tesseractor.Engine.Process(image, null))
                     {
-                        string s = text.Substring(0, 2);
-                        string s2 = text.Substring(3, 2);
-                        int minutes;
-                        int.TryParse(s, out minutes);
-                        int seconds;
-                        int.TryParse(s2, out seconds);
-                        TimeSpan arenaKeyTime = new TimeSpan(0, minutes, seconds);
-                        this.ArenaKeyTime = arenaKeyTime;
-                    }
-                    else
-                    {
-                        this.ArenaKeyTime = TimeSpan.MaxValue;
+                        string text = page.GetText();
+                        Utility.FilterAscii(text);
+                        if (text.Length >= 2)
+                        {
+                            string s = text.Substring(0, 2);
+                            string s2 = text.Substring(3, 2);
+                            int minutes;
+                            int.TryParse(s, out minutes);
+                            int seconds;
+                            int.TryParse(s2, out seconds);
+                            TimeSpan arenaKeyTime = new TimeSpan(0, minutes, seconds);
+                            this.ArenaKeyTime = arenaKeyTime;
+                        }
+                        else
+                        {
+                            this.ArenaKeyTime = TimeSpan.MaxValue;
+                        }
+                        goto IL_164;
                     }
                 }
+                this.ArenaKeyTime = TimeSpan.MaxValue;
+            IL_164:
+                this.ArenaKeys = num;
+                this.ReportKeys(Objective.ARENA);
             }
-            this.ArenaKeys = num;
-            this.ReportKeys(Objective.ARENA);
         }
+
 
         private void UpdateGold(SceneType sceneType)
         {
