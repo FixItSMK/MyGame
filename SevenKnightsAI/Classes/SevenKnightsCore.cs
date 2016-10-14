@@ -4561,7 +4561,7 @@ namespace SevenKnightsAI.Classes
                     return result;
                 }
                 // ตรวจสอบหน้า Shop ที่ตำแหน่งใหม่
-                if (this.MatchMapping(ShopPM.borderleft, 2) && this.MatchMapping(ShopPM.Mimic, 2))
+                if (this.MatchMapping(ShopPM.BoderRight, 2) && this.MatchMapping(ShopPM.Borderleft, 2))
                 {
                     Scene result = new Scene(SceneType.SHOP);
                     return result;
@@ -5743,7 +5743,7 @@ namespace SevenKnightsAI.Classes
                     else
                     {
                         this.WeightedClick(SendHonorConfirmPopupPM.HonorsGiftButton, 1.0, 1.0, 1, 0, "left");
-                        SevenKnightsCore.Sleep(500);
+                        SevenKnightsCore.Sleep(1000);
                         this.CaptureFrame();
                         while (!this.Worker.CancellationPending && this.MatchMapping(SendHonorSendingPopupPM.RedCross, 3))
                         {

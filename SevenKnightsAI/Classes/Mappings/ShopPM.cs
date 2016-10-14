@@ -4,15 +4,15 @@ namespace SevenKnightsAI.Classes.Mappings
 {
     internal static class ShopPM
     {
-        public static readonly PixelMapping borderleft = new PixelMapping
+        public static readonly PixelMapping Borderleft = new PixelMapping
         {
-            X = 229,
-            Y = 64,
-            Color = 15445442,
+            X = 209,
+            Y = 62,
+            Color = 1774092,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping Mimic = new PixelMapping
+        public static readonly PixelMapping BoderRight = new PixelMapping
         {
             X = 920,
             Y = 228,
