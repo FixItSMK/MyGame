@@ -3157,6 +3157,10 @@ namespace SevenKnightsAI.Classes
                                         case SceneType.EVENT_PACKAGE_CLOSE_POPUP:
                                             this.WeightedClick(Popup3PM.EvenCloseOKButton, 1.0, 1.0, 1, 0, "left");
                                             break;
+
+                                        case SceneType.ARENA_WEEK_REWARD:
+                                            this.Escape();
+                                            break;
                                     }
                                 }
                             }
@@ -5002,6 +5006,11 @@ namespace SevenKnightsAI.Classes
                 if (this.MatchMapping(Popup3PM.DragonFaceBG, 2) && this.MatchMapping(Popup3PM.EvenCloseCancle, 2))
                 {
                     Scene result = new Scene(SceneType.MAY_LUCKY_BOX_CLOSE_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.ArenaAregon, 2) && this.MatchMapping(Popup3PM.ArenaAregonOK, 2))
+                {
+                    Scene result = new Scene(SceneType.ARENA_WEEK_REWARD);
                     return result;
                 }
             }

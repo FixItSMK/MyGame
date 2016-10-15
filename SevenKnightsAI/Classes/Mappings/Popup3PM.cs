@@ -198,5 +198,22 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 0,
             Type = MappingType.BUTTON
         };
+
+        public static readonly PixelMapping ArenaAregon = new PixelMapping
+        {
+            X = 145,
+            Y = 86,
+            Color = 16044468,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ArenaAregonOK = new PixelMapping
+        {
+            X = 820,
+            Y = 488,
+            Color = 16758553,
+            Type = MappingType.ANCHOR
+        };
+
     }
 }
