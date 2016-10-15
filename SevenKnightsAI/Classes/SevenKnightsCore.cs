@@ -2517,8 +2517,8 @@ namespace SevenKnightsAI.Classes
 
                                         case SceneType.ARENA_READY:
                                             this.UpdateArenaKeys();
-                                            //this.UpdateRuby(scene.SceneType);
-                                            //this.UpdateHonor(scene.SceneType);
+                                            this.UpdateRuby(scene.SceneType);
+                                            this.UpdateHonor(scene.SceneType);
                                             if (this.CurrentObjective == Objective.ARENA)
                                             {
                                                 if (this.ArenaKeys > 0 || this.ArenaUseRuby())
@@ -2538,8 +2538,8 @@ namespace SevenKnightsAI.Classes
 
                                         case SceneType.ARENA_START:
                                             this.UpdateArenaKeys();
-                                            //this.UpdateRuby(scene.SceneType);
-                                            //this.UpdateHonor(scene.SceneType);
+                                            this.UpdateRuby(scene.SceneType);
+                                            this.UpdateHonor(scene.SceneType);
                                             if (this.CurrentObjective == Objective.ARENA)
                                             {
                                                 bool flag5 = this.ArenaUseRuby();
@@ -3124,6 +3124,38 @@ namespace SevenKnightsAI.Classes
 
                                         case SceneType.SEND_HONOR_FULL_POPUP:
                                             this.Escape();
+                                            break;
+
+                                        case SceneType.RACHEL_SPECIAL_PACK_POPUP:
+                                            this.Escape();
+                                            break;
+
+                                        case SceneType.RACHEL_SPECIAL_PACK_CLOSE_POPUP:
+                                            this.WeightedClick(Popup3PM.SPrachelCloseOKButton, 1.0, 1.0, 1, 0, "left");
+                                            break;
+
+                                        case SceneType.ALICE_PRO_PACK_POPUP:
+                                            this.Escape();
+                                            break;
+
+                                        case SceneType.ALICE_PRO_PACK_CLOSE_POPUP:
+                                            this.WeightedClick(Popup3PM.AliceProCloseOKButton, 1.0, 1.0, 1, 0, "left");
+                                            break;
+
+                                        case SceneType.MAY_LUCKY_BOX_POPUP:
+                                            this.Escape();
+                                            break;
+
+                                        case SceneType.MAY_LUCKY_BOX_CLOSE_POPUP:
+                                            this.WeightedClick(Popup3PM.MayCloseOKButton, 1.0, 1.0, 1, 0, "left");
+                                            break;
+
+                                        case SceneType.EVENT_PACKAGE_POPUP:
+                                            this.Escape();
+                                            break;
+
+                                        case SceneType.EVENT_PACKAGE_CLOSE_POPUP:
+                                            this.WeightedClick(Popup3PM.EvenCloseOKButton, 1.0, 1.0, 1, 0, "left");
                                             break;
                                     }
                                 }
@@ -4937,12 +4969,41 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.POPUP_2);
                     return result;
                 }
+                if (this.MatchMapping(Popup3PM.SPrachelNo, 2) && this.MatchMapping(Popup3PM.SPrachelBuy, 2) && this.MatchMapping(Popup3PM.SPrachel, 2))
+                {
+                    Scene result = new Scene(SceneType.RACHEL_SPECIAL_PACK_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.SPrachelCloseOK, 2) && this.MatchMapping(Popup3PM.SPrachelCloseCancle, 2) && this.MatchMapping(Popup3PM.SPrachelBG, 2))
+                {
+                    Scene result = new Scene(SceneType.RACHEL_SPECIAL_PACK_CLOSE_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.AliceProColse, 2) && this.MatchMapping(Popup3PM.AliceProPurchase, 2))
+                {
+                    Scene result = new Scene(SceneType.ALICE_PRO_PACK_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.AliceProCloseOK, 2) && this.MatchMapping(Popup3PM.AliceProCloseCancle, 2) && this.MatchMapping(Popup3PM.AliceProBG, 2))
+                {
+                    Scene result = new Scene(SceneType.ALICE_PRO_PACK_CLOSE_POPUP);
+                    return result;
+                }
                 if (this.MatchMapping(WifiWarningPopupPM.LeftBorder, 2) && this.MatchMapping(WifiWarningPopupPM.RightBorder, 2) && this.MatchMapping(WifiWarningPopupPM.YellowTick, 2))
                 {
                     Scene result = new Scene(SceneType.WIFI_WARNING_POPUP);
                     return result;
                 }
-               
+                if (this.MatchMapping(Popup3PM.EvenBoderRight, 2) && this.MatchMapping(Popup3PM.DragonFace, 2))
+                {
+                    Scene result = new Scene(SceneType.MAY_LUCKY_BOX_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.DragonFaceBG, 2) && this.MatchMapping(Popup3PM.EvenCloseCancle, 2))
+                {
+                    Scene result = new Scene(SceneType.MAY_LUCKY_BOX_CLOSE_POPUP);
+                    return result;
+                }
             }
             catch
             {
