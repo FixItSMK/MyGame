@@ -1993,7 +1993,7 @@ namespace SevenKnightsAI.Classes
                                             this.UpdateRuby(scene.SceneType);
                                             this.UpdateHonor(scene.SceneType);
                                             this.UpdateTopaz(scene.SceneType);
-                                            if((this.AISettings.AD_HottimeEnable) && this.MatchMapping(LobbyPM.StatusBoardAvailable, 2) && hottimeloop == true)
+                                            if(this.AISettings.AD_HottimeEnable && hottimeloop == true)
                                             {
                                                 this.WeightedClick(LobbyPM.StatusBoard, 1.0, 1.0, 1, 0, "left");
                                                 hottimeloop = false;
@@ -2276,22 +2276,34 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.STATUS_BOARD:
-                                            if(this.MatchMapping(StatusBoardPM.ContentsTabSelect, 2) && this.MatchMapping(StatusBoardPM.HottimeRedIcon, 2))
+                                            if (this.MatchMapping(StatusBoardPM.ContentsTabSelect, 2) && this.MatchMapping(StatusBoardPM.HottimeRedIcon, 2))
                                             {
-                                               this.WeightedClick(StatusBoardPM.HottimeTab, 1.0, 1.0, 1, 0, "left");
-                                               SevenKnightsCore.Sleep(500);
-                                                }
-                                            else if (this.MatchMapping(StatusBoardPM.HottimeTabSelect, 2) && (this.MatchMapping(StatusBoardPM.ActiveButtonColor, 2)))
+                                                this.WeightedClick(StatusBoardPM.HottimeTab, 1.0, 1.0, 1, 0, "left");
+                                                SevenKnightsCore.Sleep(500);
+                                            }
+                                            if (this.MatchMapping(StatusBoardPM.HottimeTabSelect, 2))
                                             {
                                                 this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
                                             }
-                                            this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
                                             SevenKnightsCore.Sleep(500);
-                                            this.WeightedClick(StatusBoardPM.ClosButton, 1.0, 1.0, 1, 0, "left");
+                                            this.Escape();
                                             break;
 
+                                        //if(this.MatchMapping(StatusBoardPM.ContentsTabSelect, 2) && this.MatchMapping(StatusBoardPM.HottimeRedIcon, 2))
+                                        //{
+                                        //   this.WeightedClick(StatusBoardPM.HottimeTab, 1.0, 1.0, 1, 0, "left");
+                                        //   SevenKnightsCore.Sleep(500);
+                                        //    }
+                                        //else if (this.MatchMapping(StatusBoardPM.HottimeTabSelect, 2) && (this.MatchMapping(StatusBoardPM.ActiveButtonColor, 2)))
+                                        //{
+                                        //    this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
+                                        //}
+                                        //this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
+                                        //SevenKnightsCore.Sleep(500);
+                                        //this.WeightedClick(StatusBoardPM.ClosButton, 1.0, 1.0, 1, 0, "left");
+                                        //break;
+
                                         case SceneType.HOTTIME__CONFIRM_POPUP:
-                                            SevenKnightsCore.Sleep(500);
                                             if (this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2) && this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ActiveBG, 2))
                                             {
                                                 this.WeightedClick(StatusBoardPM.OKButton, 1.0, 1.0, 1, 0, "left");
@@ -2841,28 +2853,15 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.RAID_AWAKENED_LOBBY:
-                                            if (this.AISettings.ARD_Enable)
+                                            if (this.AISettings.ARD_Enable && this.AISettings.RD_Enable)
                                             {
                                                 this.WeightedClick(RaidLobbyPM.AwakenedRaidEnter, 1.0, 1.0, 1, 0, "left");
                                             }
                                             else
                                             {
-                                                this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
+                                                //this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
+                                                this.Escape();
                                             }
-                                            //if (this.CurrentObjective == Objective.RAID /*|| this.CurrentObjective == Objective.ADVENTURE */)
-                                            //{
-                                            //    if (this.AISettings.ARD_Enable)
-                                            //    {
-                                            //        this.WeightedClick(RaidLobbyPM.AwakenedRaidEnter, 1.0, 1.0, 1, 0, "left");
-                                            //    }
-                                            //    else
-                                            //    {
-                                            //        this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
-                                            //    }
-                                            //}
-                                            //else
-                                            //{
-                                            //}
                                             break;
 
                                         case SceneType.RAID_AWAKENED_READY:
@@ -2875,15 +2874,6 @@ namespace SevenKnightsAI.Classes
                                                 this.Escape();
                                             }
                                             break;
-                                        //if (this.CurrentObjective == Objective.RAID && this.AISettings.ARD_Enable && (!this.AISettings.RD_EnableDragonLimit || this.ParseEntred(0, 0) < this.AISettings.RD_DragonLimit))
-                                        //{
-                                        //    this.WeightedClick(RaidReadyPM.AwakenedReadyButton, 1.0, 1.0, 1, 0, "left");
-                                        //}
-                                        //else
-                                        //{
-                                        //    this.Escape();
-                                        //}
-                                        //break;
 
                                         case SceneType.ENTER_RAID_AGAIN_POPUP:
                                             this.DoneRaid();
@@ -4873,16 +4863,16 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.SEND_HONOR_FULL_POPUP);
                     return result;
                 }
-                //if (this.MatchMapping(SharedPM.Friends_DimmedBG_1, 2) && this.MatchMapping(SharedPM.Friends_DimmedBG_2, 2) && this.MatchMapping(SharedPM.Friends_PopupBorder, 2) && this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2))
-                //{
-                //    Scene result = new Scene(SceneType.SEND_HONOR_CONFIRM_POPUP);
-                //    return result;
-                //}
-                if (this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2))
+                if (this.MatchMapping(SharedPM.Friends_DimmedBG_1, 2) && this.MatchMapping(SharedPM.Friends_DimmedBG_2, 2) && this.MatchMapping(SharedPM.Friends_PopupBorder, 2) && this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2))
                 {
                     Scene result = new Scene(SceneType.SEND_HONOR_CONFIRM_POPUP);
                     return result;
                 }
+                //if (this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2))
+                //{
+                //    Scene result = new Scene(SceneType.SEND_HONOR_CONFIRM_POPUP);
+                //    return result;
+                //}
                 if (this.MatchMapping(TowerStartPM.KeyBoxBorder, 2) && this.MatchMapping(TowerStartPM.StartKey, 5))
                 {
                     Scene result = new Scene(SceneType.TOWER_START);
@@ -5826,7 +5816,7 @@ namespace SevenKnightsAI.Classes
                         scene = this.SceneSearch();
                         if (scene == null || scene.SceneType != SceneType.SEND_HONOR_FAILED_POPUP || scene.SceneType != SceneType.SEND_HONOR_FULL_POPUP || scene.SceneType != SceneType.SEND_HONOR_CONFIRM_POPUP)
                         {
-                            SevenKnightsCore.Sleep(300);
+                            SevenKnightsCore.Sleep(1000);
                             this.Escape();
                         }
                         else
