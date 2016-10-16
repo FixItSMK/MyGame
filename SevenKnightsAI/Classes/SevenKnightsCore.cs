@@ -5760,6 +5760,7 @@ namespace SevenKnightsAI.Classes
                 this.AISettings.RS_SendHonorsFacebook,
                 this.AISettings.RS_SendHonorsInGame
             };
+
             this.Log("Start sending honors", this.COLOR_HONOR);
             this.PushNote("Sending honors", "AI is sending honors to friends.");
             List<int> list = new List<int>();
