@@ -3161,6 +3161,7 @@ namespace SevenKnightsAI.Classes
                                         case SceneType.ARENA_WEEK_REWARD:
                                             this.Escape();
                                             break;
+
                                     }
                                 }
                             }
@@ -4973,6 +4974,11 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.POPUP_2);
                     return result;
                 }
+                if (this.MatchMapping(WifiWarningPopupPM.LeftBorder, 2) && this.MatchMapping(WifiWarningPopupPM.RightBorder, 2) && this.MatchMapping(WifiWarningPopupPM.YellowTick, 2))
+                {
+                    Scene result = new Scene(SceneType.WIFI_WARNING_POPUP);
+                    return result;
+                }
                 if (this.MatchMapping(Popup3PM.SPrachelNo, 2) && this.MatchMapping(Popup3PM.SPrachelBuy, 2) && this.MatchMapping(Popup3PM.SPrachel, 2))
                 {
                     Scene result = new Scene(SceneType.RACHEL_SPECIAL_PACK_POPUP);
@@ -4993,17 +4999,12 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.ALICE_PRO_PACK_CLOSE_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(WifiWarningPopupPM.LeftBorder, 2) && this.MatchMapping(WifiWarningPopupPM.RightBorder, 2) && this.MatchMapping(WifiWarningPopupPM.YellowTick, 2))
-                {
-                    Scene result = new Scene(SceneType.WIFI_WARNING_POPUP);
-                    return result;
-                }
-                if (this.MatchMapping(Popup3PM.EvenBoderRight, 2) && this.MatchMapping(Popup3PM.DragonFace, 2))
+                if (this.MatchMapping(Popup3PM.MayBoderleft, 2) && this.MatchMapping(Popup3PM.MayFace, 2))
                 {
                     Scene result = new Scene(SceneType.MAY_LUCKY_BOX_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(Popup3PM.DragonFaceBG, 2) && this.MatchMapping(Popup3PM.EvenCloseCancle, 2))
+                if (this.MatchMapping(Popup3PM.MayFaceBG, 2) && this.MatchMapping(Popup3PM.MayCloseCancle, 2))
                 {
                     Scene result = new Scene(SceneType.MAY_LUCKY_BOX_CLOSE_POPUP);
                     return result;
@@ -5011,6 +5012,16 @@ namespace SevenKnightsAI.Classes
                 if (this.MatchMapping(Popup3PM.ArenaAregon, 2) && this.MatchMapping(Popup3PM.ArenaAregonOK, 2))
                 {
                     Scene result = new Scene(SceneType.ARENA_WEEK_REWARD);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.EvenBoderRight, 2) && this.MatchMapping(Popup3PM.DragonFace, 2))
+                {
+                    Scene result = new Scene(SceneType.EVENT_PACKAGE_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.DragonFaceBG, 2) && this.MatchMapping(Popup3PM.EvenCloseCancle, 2))
+                {
+                    Scene result = new Scene(SceneType.EVENT_PACKAGE_CLOSE_POPUP);
                     return result;
                 }
             }
