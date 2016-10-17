@@ -79,7 +79,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 400,
             Y = 22,
-            Color = 9405048,
+            Color = 9602427,
             Type = MappingType.ANCHOR
         };
 
@@ -87,7 +87,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 425,
             Y = 21,
-            Color = 7431001,
+            Color = 7365465,
             Type = MappingType.ANCHOR
         };
 
@@ -103,7 +103,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 471,
             Y = 22,
-            Color = 6905171,
+            Color = 7036500,
             Type = MappingType.ANCHOR
         };
 
@@ -111,7 +111,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 497,
             Y = 22,
-            Color = 8944754,  
+            Color = 9141876,  
             Type = MappingType.ANCHOR
         };
 
