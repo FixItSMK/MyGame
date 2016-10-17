@@ -2285,20 +2285,6 @@ namespace SevenKnightsAI.Classes
                                             this.Escape();
                                             break;
 
-                                        //if(this.MatchMapping(StatusBoardPM.ContentsTabSelect, 2) && this.MatchMapping(StatusBoardPM.HottimeRedIcon, 2))
-                                        //{
-                                        //   this.WeightedClick(StatusBoardPM.HottimeTab, 1.0, 1.0, 1, 0, "left");
-                                        //   SevenKnightsCore.Sleep(500);
-                                        //    }
-                                        //else if (this.MatchMapping(StatusBoardPM.HottimeTabSelect, 2) && (this.MatchMapping(StatusBoardPM.ActiveButtonColor, 2)))
-                                        //{
-                                        //    this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
-                                        //}
-                                        //this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
-                                        //SevenKnightsCore.Sleep(500);
-                                        //this.WeightedClick(StatusBoardPM.ClosButton, 1.0, 1.0, 1, 0, "left");
-                                        //break;
-
                                         case SceneType.HOTTIME__CONFIRM_POPUP:
                                             if (this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2) && this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ActiveBG, 2))
                                             {
@@ -6013,52 +5999,6 @@ namespace SevenKnightsAI.Classes
             }
         }
 
-        //private void UpdateArenaKeys()
-        //{
-        //    PixelMapping[] keyPMs =
-        //    {
-        //        ArenaStartPM.Key_0,
-        //        ArenaStartPM.Key_1,
-        //        ArenaStartPM.Key_2,
-        //        ArenaStartPM.Key_3,
-        //        ArenaStartPM.Key_4
-        //    };
-        //    int num = 0;
-        //    for (int i = 0; i < keyPMs.Length; i++)
-        //    {
-        //        if (this.MatchMapping(keyPMs[i], 5))
-        //        {
-        //            num = i + 1;
-        //            //break;
-        //        }
-        //    }
-        //    if (num < 5)
-        //    {
-        //        Bitmap image = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, ArenaStartPM.R_Time);
-        //        using (Page page = this.Tesseractor.Engine.Process(image, null))
-        //        {
-        //            string text = page.GetText();
-        //            Utility.FilterAscii(text);
-        //            if (text.Length >= 5)
-        //            {
-        //                string s = text.Substring(0, 2);
-        //                string s2 = text.Substring(3, 2);
-        //                int minutes;
-        //                int.TryParse(s, out minutes);
-        //                int seconds;
-        //                int.TryParse(s2, out seconds);
-        //                TimeSpan arenaKeyTime = new TimeSpan(0, minutes, seconds);
-        //                this.ArenaKeyTime = arenaKeyTime;
-        //            }
-        //            else
-        //            {
-        //                this.ArenaKeyTime = TimeSpan.MaxValue;
-        //            }
-        //        }
-        //    }
-        //    this.ArenaKeys = num;
-        //    this.ReportKeys(Objective.ARENA);
-        //}
         private void UpdateArenaKeys()
         {
             PixelMapping[] array = new PixelMapping[]
@@ -6112,7 +6052,6 @@ namespace SevenKnightsAI.Classes
                 this.ReportKeys(Objective.ARENA);
             }
         }
-
 
         private void UpdateGold(SceneType sceneType)
         {
