@@ -2279,13 +2279,9 @@ namespace SevenKnightsAI.Classes
                                             if (this.MatchMapping(StatusBoardPM.ContentsTabSelect, 2) && this.MatchMapping(StatusBoardPM.HottimeRedIcon, 2))
                                             {
                                                 this.WeightedClick(StatusBoardPM.HottimeTab, 1.0, 1.0, 1, 0, "left");
-                                                SevenKnightsCore.Sleep(500);
-                                            }
-                                            if (this.MatchMapping(StatusBoardPM.HottimeTabSelect, 2))
-                                            {
+                                                SevenKnightsCore.Sleep(1000);
                                                 this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
                                             }
-                                            SevenKnightsCore.Sleep(500);
                                             this.Escape();
                                             break;
 
@@ -2307,6 +2303,7 @@ namespace SevenKnightsAI.Classes
                                             if (this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2) && this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ActiveBG, 2))
                                             {
                                                 this.WeightedClick(StatusBoardPM.OKButton, 1.0, 1.0, 1, 0, "left");
+                                                this.Log("Active Hottime",this.COLOR_HONOR);
                                             }
                                             break;
 
