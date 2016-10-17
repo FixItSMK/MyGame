@@ -6,17 +6,17 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping DimmedBG_1 = new PixelMapping
         {
-            X = 580,
-            Y = 476,
-            Color = 4140557,
+            X = 903,
+            Y = 33,
+            Color = 4931097,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping DimmedBG_2 = new PixelMapping
         {
-            X = 606,
-            Y = 480,
-            Color = 4140557,
+            X = 59,
+            Y = 25,
+            Color = 3871492,
             Type = MappingType.ANCHOR
         };
 
@@ -142,24 +142,24 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping NoButton = new PixelMapping
         {
-            X = 380,
-            Y = 398,
+            X = 379,
+            Y = 390,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping RedCross = new PixelMapping
         {
-            X = 315,
-            Y = 396,
-            Color = 13449994,
+            X = 314,
+            Y = 392,
+            Color = 14695688,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping SellButton = new PixelMapping
         {
-            X = 600,
-            Y = 398,
+            X = 584,
+            Y = 393,
             Color = 0,
             Type = MappingType.BUTTON
         };
@@ -218,6 +218,46 @@ namespace SevenKnightsAI.Classes.Mappings
             Y = 399,
             Color = 16758810,
             Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping BackSellLobby = new PixelMapping
+        {
+            X = 60,
+            Y = 25,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping GoldSellIcon = new PixelMapping
+        {
+            X = 64,
+            Y = 449,
+            Color = 16767868,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping SellLobbyButton = new PixelMapping
+        {
+            X = 232,
+            Y = 506,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping SellText = new PixelMapping
+        {
+            X = 113,
+            Y = 26,
+            Color = 5189641,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping SoldOKButton = new PixelMapping
+        {
+            X = 491,
+            Y = 389,
+            Color = 0,
+            Type = MappingType.BUTTON
         };
     }
 }

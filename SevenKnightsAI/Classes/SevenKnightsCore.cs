@@ -2266,7 +2266,7 @@ namespace SevenKnightsAI.Classes
                                                 {
                                                     this.ChangeObjective(Objective.SELL_HEROES);
                                                 }
-                                                this.WeightedClick(SharedPM.Full_SellButton, 1.0, 1.0, 1, 0, "left");
+                                                this.WeightedClick(SharedPM.Full_NoButton, 1.0, 1.0, 1, 0, "left");
                                             }
                                             else
                                             {
@@ -4549,7 +4549,7 @@ namespace SevenKnightsAI.Classes
                     return result;
                 }
 
-                if (this.ExpectedFightScene(SceneType.RAID_FIGHT) && this.MatchMapping(TowerFightPM.PauseButton, 2) && this.MatchMapping(TowerFightPM.ChatButton, 2) && (this.MatchMapping(RaidFightPM.DragonIcon, 2)|| (this.MatchMapping(RaidFightPM.DragonAwakeye, 2))))
+                if (this.ExpectedFightScene(SceneType.RAID_FIGHT) && this.MatchMapping(TowerFightPM.PauseButton, 2) && this.MatchMapping(TowerFightPM.ChatButton, 2) && (this.MatchMapping(RaidFightPM.DragonIcon, 2) || (this.MatchMapping(RaidFightPM.DragonAwakeye, 2))))
                 {
                     Scene result = new Scene(SceneType.RAID_FIGHT);
                     return result;
@@ -4815,7 +4815,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.LOOT_HERO);
                     return result;
                 }
-                
+
                 if (this.MatchMapping(OutOfKeysPopupPM.PopupBorder, 3) && this.MatchMapping(OutOfKeysPopupPM.NoButtonBorder, 3) && this.MatchMapping(OutOfKeysPopupPM.DimmedBG, 2))
                 {
                     Scene result = new Scene(SceneType.OUT_OF_KEYS_POPUP);
@@ -4984,6 +4984,11 @@ namespace SevenKnightsAI.Classes
                 if (this.MatchMapping(Popup3PM.ArenaAregon, 2) && this.MatchMapping(Popup3PM.ArenaAregonOK, 2))
                 {
                     Scene result = new Scene(SceneType.ARENA_WEEK_REWARD);
+                    return result;
+                }
+                if (this.MatchMapping(SellHeroConfirmPopupPM.GoldSellIcon, 2, false) && this.MatchMapping(SellHeroConfirmPopupPM.SellText, 2, false))
+                {
+                    Scene result = new Scene(SceneType.SELL_HERO_LOBBY);
                     return result;
                 }
             }
@@ -5521,30 +5526,33 @@ namespace SevenKnightsAI.Classes
                 {
                     this.WeightedClick(HeroJoinPM.SellButton, 1.0, 1.0, 1, 0, "left");
                     SevenKnightsCore.Sleep(500);
+                    this.WeightedClick(SellHeroConfirmPopupPM.SellLobbyButton, 1.0, 1.0, 1, 0, "left");
+                    SevenKnightsCore.Sleep(500);
                     this.CaptureFrame();
                     scene = this.SceneSearch();
                     if (scene != null && scene.SceneType != SceneType.SELL_HERO_CONFIRM_POPUP)
                     {
+                        this.Log("Stop Sell Hero.");
                         this.DoneSellHeroes(-1);
                         return;
                     }
-                    int num4 = -1;
-                    for (int i = 5; i >= 0; i--)
-                    {
-                        if (this.MatchMapping(array[i], 8))
-                        {
-                            num4 = i + 1;
-                            break;
-                        }
-                    }
-                    int num5 = this.AISettings.RS_SellHeroStars;
-                    if (num4 == -1 || num4 > num5)
-                    {
-                        this.WeightedClick(SellHeroConfirmPopupPM.NoButton, 1.0, 1.0, 1, 0, "left");
-                        SevenKnightsCore.Sleep(500);
-                        this.DoneSellHeroes(num2);
-                        return;
-                    }
+                    //int num4 = -1;
+                    //for (int i = 5; i >= 0; i--)
+                    //{
+                    //    if (this.MatchMapping(array[i], 8))
+                    //    {
+                    //        num4 = i + 1;
+                    //        break;
+                    //    }
+                    //}
+                    //int num5 = this.AISettings.RS_SellHeroStars;
+                    //if (num4 == -1 || num4 > num5)
+                    //{
+                    //    this.WeightedClick(SellHeroConfirmPopupPM.NoButton, 1.0, 1.0, 1, 0, "left");
+                    //    SevenKnightsCore.Sleep(500);
+                    //    this.DoneSellHeroes(num2);
+                    //    return;
+                    //}
                     PixelMapping[][] array4 = array3;
                     for (int j = 0; j < array4.Length; j++)
                     {
@@ -5561,6 +5569,10 @@ namespace SevenKnightsAI.Classes
                     num2++;
                     this.Log(string.Format("-- Hero sold ({0})", num2), this.COLOR_SELL_HEROES);
                     this.WeightedClick(SellHeroConfirmPopupPM.SellButton, 1.0, 1.0, 1, 0, "left");
+                    SevenKnightsCore.Sleep(500);
+                    this.WeightedClick(SellHeroConfirmPopupPM.SoldOKButton, 1.0, 1.0, 1, 0, "left");
+                    SevenKnightsCore.Sleep(500);
+                    this.WeightedClick(SellHeroConfirmPopupPM.BackSellLobby, 1.0, 1.0, 1, 0, "left");
                     this.LongSleep(2000, 1000);
                 }
                 else
