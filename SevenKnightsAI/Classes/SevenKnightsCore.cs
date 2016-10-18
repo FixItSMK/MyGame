@@ -1993,7 +1993,7 @@ namespace SevenKnightsAI.Classes
                                             this.UpdateRuby(scene.SceneType);
                                             this.UpdateHonor(scene.SceneType);
                                             this.UpdateTopaz(scene.SceneType);
-                                            if((this.AISettings.AD_HottimeEnable) && this.MatchMapping(LobbyPM.StatusBoardAvailable, 2) && hottimeloop == true)
+                                            if (this.AISettings.AD_HottimeEnable && hottimeloop == true)
                                             {
                                                 this.WeightedClick(LobbyPM.StatusBoard, 1.0, 1.0, 1, 0, "left");
                                                 hottimeloop = false;
@@ -2290,7 +2290,7 @@ namespace SevenKnightsAI.Classes
                                             this.WeightedClick(StatusBoardPM.ClosButton, 1.0, 1.0, 1, 0, "left");
                                             break;
 
-                                        case SceneType.HOTTIME__CONFIRM_POPUP:
+                                        case SceneType.HOTTIME_CONFIRM_POPUP:
                                             SevenKnightsCore.Sleep(500);
                                             if (this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2) && this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ActiveBG, 2))
                                             {
@@ -2841,7 +2841,7 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.RAID_AWAKENED_LOBBY:
-                                            if (this.AISettings.ARD_Enable)
+                                            if (this.AISettings.ARD_Enable && this.AISettings.RD_Enable)
                                             {
                                                 this.WeightedClick(RaidLobbyPM.AwakenedRaidEnter, 1.0, 1.0, 1, 0, "left");
                                             }
@@ -2849,20 +2849,6 @@ namespace SevenKnightsAI.Classes
                                             {
                                                 this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
                                             }
-                                            //if (this.CurrentObjective == Objective.RAID /*|| this.CurrentObjective == Objective.ADVENTURE */)
-                                            //{
-                                            //    if (this.AISettings.ARD_Enable)
-                                            //    {
-                                            //        this.WeightedClick(RaidLobbyPM.AwakenedRaidEnter, 1.0, 1.0, 1, 0, "left");
-                                            //    }
-                                            //    else
-                                            //    {
-                                            //        this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
-                                            //    }
-                                            //}
-                                            //else
-                                            //{
-                                            //}
                                             break;
 
                                         case SceneType.RAID_AWAKENED_READY:
@@ -2875,15 +2861,6 @@ namespace SevenKnightsAI.Classes
                                                 this.Escape();
                                             }
                                             break;
-                                        //if (this.CurrentObjective == Objective.RAID && this.AISettings.ARD_Enable && (!this.AISettings.RD_EnableDragonLimit || this.ParseEntred(0, 0) < this.AISettings.RD_DragonLimit))
-                                        //{
-                                        //    this.WeightedClick(RaidReadyPM.AwakenedReadyButton, 1.0, 1.0, 1, 0, "left");
-                                        //}
-                                        //else
-                                        //{
-                                        //    this.Escape();
-                                        //}
-                                        //break;
 
                                         case SceneType.ENTER_RAID_AGAIN_POPUP:
                                             this.DoneRaid();
@@ -4573,7 +4550,7 @@ namespace SevenKnightsAI.Classes
                 // ฮอททาม
                 if (this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2))
                 {
-                    Scene result = new Scene(SceneType.HOTTIME__CONFIRM_POPUP);
+                    Scene result = new Scene(SceneType.HOTTIME_CONFIRM_POPUP);
                     return result;
                 }
 
@@ -4592,7 +4569,7 @@ namespace SevenKnightsAI.Classes
                     return result;
                 }
                 // เพิ่มตรวจสอบหน้า Shop Lobby ที่เป็นรูป 3 คน 3 Shop
-                if (this.MatchMapping(ShopPM.ShopCommon, 2) && this.MatchMapping(ShopPM.ShopPackge, 2) /*&& this.MatchMapping(ShopPM.DimmedBG, 2)*/)
+                if (this.MatchMapping(ShopPM.ShopCommon, 2) && this.MatchMapping(ShopPM.ShopPackge, 2))
                 {
                     Scene result = new Scene(SceneType.SHOP_LOBBY);
                     return result;
@@ -4843,7 +4820,6 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.LOOT_HERO);
                     return result;
                 }
-                
                 if (this.MatchMapping(OutOfKeysPopupPM.PopupBorder, 3) && this.MatchMapping(OutOfKeysPopupPM.NoButtonBorder, 3) && this.MatchMapping(OutOfKeysPopupPM.DimmedBG, 2))
                 {
                     Scene result = new Scene(SceneType.OUT_OF_KEYS_POPUP);
@@ -5771,7 +5747,7 @@ namespace SevenKnightsAI.Classes
                 this.AISettings.RS_SendHonorsFacebook,
                 this.AISettings.RS_SendHonorsInGame
             };
-
+            SevenKnightsCore.Sleep(500);
             this.Log("Start sending honors", this.COLOR_HONOR);
             this.PushNote("Sending honors", "AI is sending honors to friends.");
             List<int> list = new List<int>();
