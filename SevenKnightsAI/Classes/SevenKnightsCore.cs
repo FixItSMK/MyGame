@@ -4855,7 +4855,7 @@ namespace SevenKnightsAI.Classes
                 //    Scene result = new Scene(SceneType.SEND_HONOR_CONFIRM_POPUP);
                 //    return result;
                 //}
-                if (this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2))
+                if (this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2) && this.MatchMapping(StatusBoardPM.ActiveBG, 2))
                 {
                     Scene result = new Scene(SceneType.SEND_HONOR_CONFIRM_POPUP);
                     return result;
