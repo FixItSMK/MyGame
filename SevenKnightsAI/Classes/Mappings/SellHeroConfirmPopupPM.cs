@@ -148,6 +148,22 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BUTTON
         };
 
+        public static readonly PixelMapping YesButton = new PixelMapping
+        {
+            X = 580,
+            Y = 400,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping FinaLeah = new PixelMapping
+        {
+            X = 650,
+            Y = 395,
+            Color = 2048133,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly PixelMapping RedCross = new PixelMapping
         {
             X = 314,

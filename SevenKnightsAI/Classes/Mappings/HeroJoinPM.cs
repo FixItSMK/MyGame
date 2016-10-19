@@ -29,6 +29,13 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 14859344,
             Type = MappingType.BOTH
         };
+        public static readonly PixelMapping KeyLockButton = new PixelMapping
+        {
+            X = 594,
+            Y = 473,
+            Color = 8219196,
+            Type = MappingType.ANCHOR
+        };
 
         #endregion Public Fields
     }

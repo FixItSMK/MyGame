@@ -104,7 +104,7 @@ namespace SevenKnightsAI.Classes
         RAID_AWAKENED_LOBBY,
         RAID_AWAKENED_READY,
         STATUS_BOARD,
-        HOTTIME__CONFIRM_POPUP,
+        HOTTIME_CONFIRM_POPUP,
         RACHEL_SPECIAL_PACK_POPUP,
         RACHEL_SPECIAL_PACK_CLOSE_POPUP,
         ALICE_PRO_PACK_POPUP,
@@ -114,6 +114,7 @@ namespace SevenKnightsAI.Classes
         EVENT_PACKAGE_POPUP,
         EVENT_PACKAGE_CLOSE_POPUP,
         ARENA_WEEK_REWARD,
+        DAILY_QUEST_COMPLETE,
         SELL_HERO_LOBBY
     }
 }
