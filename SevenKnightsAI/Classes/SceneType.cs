@@ -115,6 +115,8 @@ namespace SevenKnightsAI.Classes
         EVENT_PACKAGE_CLOSE_POPUP,
         ARENA_WEEK_REWARD,
         DAILY_QUEST_COMPLETE,
-        SELL_HERO_LOBBY
+        SELL_HERO_LOBBY,
+        EXCLUSIVE_POPUP,
+        ELEMENT_POPUP
     }
 }

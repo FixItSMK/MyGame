@@ -2824,13 +2824,12 @@ namespace SevenKnightsAI.Classes
                                             }
                                             else
                                             {
-                                                //this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
                                                 this.Escape();
                                             }
                                             break;
 
                                         case SceneType.RAID_AWAKENED_READY:
-                                            if (this.AISettings.ARD_Enable && (!this.AISettings.RD_EnableDragonLimit || this.ParseEntred(0, 0) < this.AISettings.RD_DragonLimit))
+                                            if (this.AISettings.RD_Enable && this.AISettings.ARD_Enable && (!this.AISettings.RD_EnableDragonLimit || this.ParseEntred(0, 0) < this.AISettings.RD_DragonLimit))
                                             {
                                                 this.WeightedClick(RaidReadyPM.AwakenedReadyButton, 1.0, 1.0, 1, 0, "left");
                                             }
@@ -3137,6 +3136,14 @@ namespace SevenKnightsAI.Classes
                                                 this.WeightedClick(StatusBoardPM.OKButton, 1.0, 1.0, 1, 0, "left");
                                                 this.Log("Active Hottime", this.COLOR_HONOR);
                                             }
+                                            break;
+
+                                        case SceneType.EXCLUSIVE_POPUP:
+                                            this.WeightedClick(Popup3PM.MayCloseOKButton, 1.0, 1.0, 1, 0, "left");
+                                            break;
+
+                                        case SceneType.ELEMENT_POPUP:
+                                            this.WeightedClick(Popup3PM.MayCloseOKButton, 1.0, 1.0, 1, 0, "left");
                                             break;
 
                                     }
@@ -4645,7 +4652,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.OUT_OF_LUCKY_BOX_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(RaidLobbyPM.AwakenedShard, 2, false) && this.MatchMapping(RaidLobbyPM.AwakenedRaidEntermap, 2, false))
+                if (this.MatchMapping(RaidLobbyPM.AwakenedShard, 2, false) && this.MatchMapping(RaidLobbyPM.AwakenedRaidEnter, 2, false))
                 {
                     Scene result = new Scene(SceneType.RAID_AWAKENED_LOBBY);
                     return result;
@@ -5000,6 +5007,16 @@ namespace SevenKnightsAI.Classes
                 if (this.MatchMapping(QuestRewardsPopupPM.QuestIcon, 2) && this.MatchMapping(QuestRewardsPopupPM.AragonPic, 2))
                 {
                     Scene result = new Scene(SceneType.DAILY_QUEST_COMPLETE);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.ViewMoreBG, 2) && this.MatchMapping(Popup3PM.ExclusiveTick, 2))
+                {
+                    Scene result = new Scene(SceneType.EXCLUSIVE_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.ElementBG, 2) && this.MatchMapping(Popup3PM.ElementTick, 2))
+                {
+                    Scene result = new Scene(SceneType.ELEMENT_POPUP);
                     return result;
                 }
             }
