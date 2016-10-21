@@ -3063,11 +3063,7 @@
             this.RS_heroStarsComboBox.FormattingEnabled = true;
             this.RS_heroStarsComboBox.Items.AddRange(new object[] {
             "★",
-            "★★",
-            "★★★",
-            "★★★★",
-            "★★★★★",
-            "★★★★★★"});
+            "★★"});
             this.RS_heroStarsComboBox.Location = new System.Drawing.Point(235, 18);
             this.RS_heroStarsComboBox.Name = "RS_heroStarsComboBox";
             this.RS_heroStarsComboBox.Size = new System.Drawing.Size(78, 21);
