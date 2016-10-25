@@ -79,39 +79,39 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 400,
             Y = 22,
-            Color = 9602427,
+            Color = 9405048,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Key_1 = new PixelMapping
         {
-            X = 425,
+            X = 423,
             Y = 21,
-            Color = 7365465,
+            Color = 7760222,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Key_2 = new PixelMapping
         {
-            X = 451,
+            X = 448,
             Y = 22,
-            Color = 7365465,
+            Color = 8352361,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Key_3 = new PixelMapping
         {
-            X = 471,
+            X = 473,
             Y = 22,
-            Color = 7036500,
+            Color = 8155238,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Key_4 = new PixelMapping
         {
-            X = 497,
-            Y = 22,
-            Color = 9141876,  
+            X = 496,
+            Y = 21,
+            Color = 6970450,  
             Type = MappingType.ANCHOR
         };
 
@@ -119,7 +119,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 497,
             Y = 22,
-            Color = 6751490,
+            Color = 7012608,
             Type = MappingType.ANCHOR
         };
 

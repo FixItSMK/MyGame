@@ -339,7 +339,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 751,
             Y = 28,
-            Color = 4012075,
+            Color = 4207374,
             Type = MappingType.ANCHOR
         };
 
@@ -385,7 +385,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Full_SellButton = new PixelMapping
         {
-            X = 628,
+            X = 594,
             Y = 395,
             Color = 0,
             Type = MappingType.BUTTON

@@ -8,18 +8,10 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping StatusBoard = new PixelMapping
         {
-            X = 910,
-            Y = 100,
+            X = 902,
+            Y = 93,
             Color = 0,
             Type = MappingType.BUTTON
-        };
-
-        public static readonly PixelMapping StatusBoardAvailable = new PixelMapping
-        {
-            X = 874,
-            Y = 74,
-            Color = 13051905,
-            Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping MasteryButton = new PixelMapping

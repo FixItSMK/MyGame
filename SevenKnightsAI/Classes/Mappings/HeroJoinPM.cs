@@ -25,9 +25,16 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly PixelMapping SellButton = new PixelMapping
         {
             X = 594,
-            Y = 481,
-            Color = 16049282,
+            Y = 473,
+            Color = 14859344,
             Type = MappingType.BOTH
+        };
+        public static readonly PixelMapping KeyLockButton = new PixelMapping
+        {
+            X = 210,
+            Y = 480,
+            Color = 8680526,
+            Type = MappingType.ANCHOR
         };
 
         #endregion Public Fields

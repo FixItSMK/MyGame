@@ -177,9 +177,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping DragonFaceBG = new PixelMapping
         {
-            X = 98,
-            Y = 234,
-            Color = 4539720,
+            X = 155,
+            Y = 147,
+            Color = 4867383,
             Type = MappingType.ANCHOR
         };
 
@@ -215,5 +215,34 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping ViewMoreBG = new PixelMapping
+        {
+            X = 143,
+            Y = 473,
+            Color = 400183,
+            Type = MappingType.ANCHOR
+        };
+        public static readonly PixelMapping ExclusiveTick = new PixelMapping
+        {
+            X = 530,
+            Y = 422,
+            Color = 16759324,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ElementBG = new PixelMapping
+        {
+            X = 187,
+            Y = 416,
+            Color = 400440,
+            Type = MappingType.ANCHOR
+        };
+        public static readonly PixelMapping ElementTick = new PixelMapping
+        {
+            X = 529,
+            Y = 420,
+            Color = 16761637,
+            Type = MappingType.ANCHOR
+        };
     }
 }

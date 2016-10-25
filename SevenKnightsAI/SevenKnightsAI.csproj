@@ -132,6 +132,7 @@
     <Compile Include="Classes\Mappings\HeroesSameTeamPopupPM.cs" />
     <Compile Include="Classes\Mappings\HeroJoinPM.cs" />
     <Compile Include="Classes\Mappings\HeroRemovePM.cs" />
+    <Compile Include="Classes\Mappings\HeroStar.cs" />
     <Compile Include="Classes\Mappings\InboxCollectFailedPopupPM.cs" />
     <Compile Include="Classes\Mappings\InboxPM.cs" />
     <Compile Include="Classes\Mappings\InboxRewardsPopupPM.cs" />

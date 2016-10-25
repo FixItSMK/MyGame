@@ -2942,7 +2942,6 @@
             this.RS_sellingGroupBox.Controls.Add(this.RS_heroStarsComboBox);
             this.RS_sellingGroupBox.Controls.Add(this.RS_sellHeroesCheckBox);
             this.RS_sellingGroupBox.Controls.Add(this.RS_sellItemsCheckBox);
-            this.RS_sellingGroupBox.Enabled = false;
             this.RS_sellingGroupBox.Location = new System.Drawing.Point(9, 8);
             this.RS_sellingGroupBox.Name = "RS_sellingGroupBox";
             this.RS_sellingGroupBox.Size = new System.Drawing.Size(470, 75);
@@ -2962,6 +2961,7 @@
             // 
             // RS_itemAmountRadioButton
             // 
+            this.RS_itemAmountRadioButton.Enabled = false;
             this.RS_itemAmountRadioButton.Location = new System.Drawing.Point(46, 4);
             this.RS_itemAmountRadioButton.Name = "RS_itemAmountRadioButton";
             this.RS_itemAmountRadioButton.Size = new System.Drawing.Size(61, 17);
@@ -2974,6 +2974,7 @@
             // RS_itemAllRadioButton
             // 
             this.RS_itemAllRadioButton.AutoSize = true;
+            this.RS_itemAllRadioButton.Enabled = false;
             this.RS_itemAllRadioButton.Location = new System.Drawing.Point(3, 4);
             this.RS_itemAllRadioButton.Name = "RS_itemAllRadioButton";
             this.RS_itemAllRadioButton.Size = new System.Drawing.Size(36, 17);
@@ -3020,6 +3021,7 @@
             // 
             // RS_itemAmountNumericBox
             // 
+            this.RS_itemAmountNumericBox.Enabled = false;
             this.RS_itemAmountNumericBox.Location = new System.Drawing.Point(428, 47);
             this.RS_itemAmountNumericBox.Name = "RS_itemAmountNumericBox";
             this.RS_itemAmountNumericBox.Size = new System.Drawing.Size(37, 20);
@@ -3039,6 +3041,7 @@
             // RS_itemStarsComboBox
             // 
             this.RS_itemStarsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RS_itemStarsComboBox.Enabled = false;
             this.RS_itemStarsComboBox.FormattingEnabled = true;
             this.RS_itemStarsComboBox.Items.AddRange(new object[] {
             "★",
@@ -3060,11 +3063,7 @@
             this.RS_heroStarsComboBox.FormattingEnabled = true;
             this.RS_heroStarsComboBox.Items.AddRange(new object[] {
             "★",
-            "★★",
-            "★★★",
-            "★★★★",
-            "★★★★★",
-            "★★★★★★"});
+            "★★"});
             this.RS_heroStarsComboBox.Location = new System.Drawing.Point(235, 18);
             this.RS_heroStarsComboBox.Name = "RS_heroStarsComboBox";
             this.RS_heroStarsComboBox.Size = new System.Drawing.Size(78, 21);
@@ -3087,6 +3086,7 @@
             // RS_sellItemsCheckBox
             // 
             this.RS_sellItemsCheckBox.AutoSize = true;
+            this.RS_sellItemsCheckBox.Enabled = false;
             this.RS_sellItemsCheckBox.Location = new System.Drawing.Point(7, 48);
             this.RS_sellItemsCheckBox.Name = "RS_sellItemsCheckBox";
             this.RS_sellItemsCheckBox.Size = new System.Drawing.Size(207, 17);

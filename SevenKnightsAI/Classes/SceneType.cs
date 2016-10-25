@@ -113,6 +113,10 @@ namespace SevenKnightsAI.Classes
         MAY_LUCKY_BOX_CLOSE_POPUP,
         EVENT_PACKAGE_POPUP,
         EVENT_PACKAGE_CLOSE_POPUP,
-        ARENA_WEEK_REWARD
+        ARENA_WEEK_REWARD,
+        DAILY_QUEST_COMPLETE,
+        SELL_HERO_LOBBY,
+        EXCLUSIVE_POPUP,
+        ELEMENT_POPUP
     }
 }

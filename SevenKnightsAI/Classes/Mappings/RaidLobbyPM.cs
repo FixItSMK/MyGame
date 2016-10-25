@@ -94,10 +94,10 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AwakenedRaidEnter = new PixelMapping
         {
-            X = 801,
-            Y = 432,
-            Color = 0,
-            Type = MappingType.BUTTON
+            X = 804,
+            Y = 448,
+            Color = 8268811,
+            Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping AwakenedRaidTab = new PixelMapping
@@ -110,23 +110,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AwakenedShard = new PixelMapping
         {
-            X = 483,
-            Y = 353,
-            Color = 16777198,
-            Type = MappingType.ANCHOR
-        };
-        //public static readonly PixelMapping DragonEscense = new PixelMapping
-        //{
-        //    X = 237,
-        //    Y = 362,
-        //    Color = 11180346,
-        //    Type = MappingType.ANCHOR
-        //};
-        public static readonly PixelMapping AwakenedRaidEntermap = new PixelMapping
-        {
-            X = 802,
-            Y = 410,
-            Color = 4006419,
+            X = 480,
+            Y = 319,
+            Color = 16643809,
             Type = MappingType.ANCHOR
         };
 

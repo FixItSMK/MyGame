@@ -95,6 +95,7 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 0,
             Type = MappingType.BUTTON
         };
+
         public static readonly PixelMapping ConfirmOKtick = new PixelMapping
         {
             X = 530,
@@ -102,6 +103,7 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 16759838,
             Type = MappingType.ANCHOR
         };
+
         public static readonly PixelMapping NoRedCloss = new PixelMapping
         {
             X = 315,
@@ -109,6 +111,14 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 14171656,
             Type = MappingType.ANCHOR
         };
+
+        public static readonly PixelMapping HottimeBG = new PixelMapping
+        {
+            X = 315,
+            Y = 394,
+            Color = 14171656,
+        };
+
         public static readonly PixelMapping OKButton = new PixelMapping
         {
             X = 540,
@@ -116,6 +126,7 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 0,
             Type = MappingType.BUTTON
         };
+
         public static readonly PixelMapping ClosButton = new PixelMapping
         {
             X = 860,
