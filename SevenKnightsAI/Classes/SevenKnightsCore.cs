@@ -2192,7 +2192,7 @@ namespace SevenKnightsAI.Classes
                                                     world = worldStageFromSequencer.Item1;
                                                     stage = worldStageFromSequencer.Item2;
                                                 }
-                                                if (world == World.MoonlitIsle || world == World.WesternEmpire || world == World.EasternEmpire)
+                                                if (world == World.MoonlitIsle || world == World.WesternEmpire || world == World.EasternEmpire || world == World.DarkSanctuary)
                                                 {
                                                     if (this.MatchMapping(MapSelectPM.DifficultyBoxBorderLeft, 2) && this.MatchMapping(MapSelectPM.DifficultyBoxBorderRight, 2))
                                                     {
@@ -5298,6 +5298,11 @@ namespace SevenKnightsAI.Classes
                 {
                     MapSelectPM.World10_2Anchor_1,
                     MapSelectPM.World10_2Anchor_2
+                },
+                new PixelMapping[]
+                {
+                    MapSelectPM.World11_1Anchor_1,
+                    MapSelectPM.World11_1Anchor_2
                 }
             };
             PixelMapping[][] stages = new PixelMapping[][]
@@ -5355,6 +5360,14 @@ namespace SevenKnightsAI.Classes
                     MapSelectPM.World10_2Stage8,
                     MapSelectPM.World10_2Stage9,
                     MapSelectPM.World10_2Stage10
+                },
+                new PixelMapping[]
+                {
+                    MapSelectPM.World11_1Stage1,
+                    MapSelectPM.World11_1Stage2,
+                    MapSelectPM.World11_1Stage3,
+                    MapSelectPM.World11_1Stage4,
+                    MapSelectPM.World11_1Stage5,
                 }
             };
             int pageDestIndex = array.Length + 1;
@@ -5412,6 +5425,14 @@ namespace SevenKnightsAI.Classes
                 else if (stage < 10)
                 {
                     pageDestIndex = 8;
+                }
+            }
+            else if (world == World.DarkSanctuary)
+            {
+                stageMapping = stages[3][stage];
+                if (stage < 5)
+                {
+                    pageDestIndex = 9;
                 }
             }
             else
@@ -5717,7 +5738,7 @@ namespace SevenKnightsAI.Classes
                 }
                 if (this.MatchMapping(HeroesPM.LastRow_1, 3) && this.MatchMapping(HeroesPM.LastRow_2, 3))   //มุมบนซ้าย และมุมบนขวาตัวที่ 1 เป็นตามค่า
                 {
-                    flag = true;                                                                                // ให้ค่า flag เป็นจริง
+                    flag = true;                                                                            // ให้ค่า flag เป็นจริง
                 }
                 if (!this.AISettings.RS_SellHeroAll && num2 >= this.AISettings.RS_SellHeroAmount)           // ถ้าไม่ใช่ขายทั้งหมด และ Num2 มากกว่าหรือเท่ากับจำนวนที่ตั้งไว้
                 {
@@ -5731,7 +5752,7 @@ namespace SevenKnightsAI.Classes
                      || this.MatchMapping(HeroStar.Star1Loca3R1, 2) || this.MatchMapping(HeroStar.Star1Loca4R1, 2))
                 {
                     monstar = 1;
-                    this.Log("มีมอนเตอร์ 1 ดาวในแถวแรก");
+                    this.Log("มีมอนเตอร์ 1 ดาวในแถว");
                 }
                 else if (this.MatchMapping(HeroStar.Star2Loca1, 2) || this.MatchMapping(HeroStar.Star2Loca2, 2)
                      || this.MatchMapping(HeroStar.Star2Loca3, 2) || this.MatchMapping(HeroStar.Star2Loca4, 2)
@@ -5743,12 +5764,12 @@ namespace SevenKnightsAI.Classes
                      || this.MatchMapping(HeroStar.Star2Loca3R5, 2) || this.MatchMapping(HeroStar.Star2Loca4R5, 2))
                 {
                     monstar = 2;
-                    this.Log("มีมอนเตอร์ 2 ดาวในแถวแรก");
+                    this.Log("มีมอนเตอร์ 2 ดาวในแถว");
                 }
                 else
                 {
                     monstar = 3;
-                    this.Log("ไม่มีมอนเตอร์ 1 หรือ 2 ดาวในแถวแรก");
+                    this.Log("ไม่มีมอนเตอร์ 1 หรือ 2 ดาวในแถว");
                 }
 
                 /************************************************************************************/
@@ -5756,7 +5777,7 @@ namespace SevenKnightsAI.Classes
                 if (monstar <= this.AISettings.RS_SellHeroStars)
                 {
                         //ตรวจเวล 30
-                        this.Log("Location 1");
+                        //this.Log("Location 1");
                         SevenKnightsCore.Sleep(500);
                         this.WeightedClick(array2[num], 1.0, 1.0, 1, 0, "left");                                    // คลิกการ์ดตัวแรก array2[]
                         SevenKnightsCore.Sleep(this.AIProfiles.ST_Delay);
@@ -5764,58 +5785,58 @@ namespace SevenKnightsAI.Classes
                         scene = this.SceneSearch();
                     if (scene != null && scene.SceneType != SceneType.HERO_JOIN && scene.SceneType != SceneType.HERO_REMOVE)
                     {
-                        this.Log("Location 1.1");
+                       // this.Log("Location 1.1");
                         this.DoneSellHeroes(-1);
                         return;
                     }
                     if (this.IsHeroLevel30() && this.MatchMapping(HeroJoinPM.KeyLockButton, 2)
                             && this.MatchMapping(HeroJoinPM.SellButton, 2))                                     //ถ้า Hero เวล 30 และ อยู่ในหน้ามีปุ่มกดขาย และไม่ล๊อก
+                    {
+                        this.WeightedClick(HeroJoinPM.SellButton, 1.0, 1.0, 1, 0, "left");                  // กดที่ปุ่มขาย
+                        SevenKnightsCore.Sleep(500);
+                        this.WeightedClick(SellHeroConfirmPopupPM.SellLobbyButton, 1.0, 1.0, 1, 0, "left"); // กดปุ่มขายแถบยาวหน้าขายหลายตัว
+                        SevenKnightsCore.Sleep(500);
+                        this.CaptureFrame();                                                                // ตรวจสอบหน้า
+                        scene = this.SceneSearch();
+                        if (scene != null && scene.SceneType != SceneType.SELL_HERO_CONFIRM_POPUP)          // ถ้าไม่เป็นหน้าว่าง และ ไม่ใช่หน้า SELL_HERO_CONFIRM_POPUP
                         {
-                            this.WeightedClick(HeroJoinPM.SellButton, 1.0, 1.0, 1, 0, "left");                  // กดที่ปุ่มขาย
-                            SevenKnightsCore.Sleep(500);
-                            this.WeightedClick(SellHeroConfirmPopupPM.SellLobbyButton, 1.0, 1.0, 1, 0, "left"); // กดปุ่มขายแถบยาวหน้าขายหลายตัว
-                            SevenKnightsCore.Sleep(500);
-                            this.CaptureFrame();                                                                // ตรวจสอบหน้า
-                            scene = this.SceneSearch();
-                            if (scene != null && scene.SceneType != SceneType.SELL_HERO_CONFIRM_POPUP)
-                            {
-                                this.Log("Stop Sell Hero.");
-                                this.DoneSellHeroes(-1);
-                                return;
-                            }
-                            PixelMapping[][] array4 = array3;
-                            for (int j = 0; j < array4.Length; j++)
-                            {
-                                PixelMapping[] array5 = array4[j];
-                                if (this.MatchMapping(array5[0], 5) && this.MatchMapping(array5[1], 5) && this.MatchMapping(array5[2], 5))
-                                {
-                                    this.Log("-- Found element hero, skipping..", this.COLOR_SELL_HEROES);
-                                    this.WeightedClick(SellHeroConfirmPopupPM.NoButton, 1.0, 1.0, 1, 0, "left");
-                                    SevenKnightsCore.Sleep(300);
-                                    this.Escape();
-                                    SevenKnightsCore.Sleep(500);
-                                }
-                            }
-                            num2++;
-                            this.Log(string.Format("-- Hero sold ({0})", num2), this.COLOR_SELL_HEROES);
-                            this.WeightedClick(SellHeroConfirmPopupPM.SellButton, 1.0, 1.0, 1, 0, "left");
-                            SevenKnightsCore.Sleep(1500);
-                            this.WeightedClick(SellHeroConfirmPopupPM.SoldOKButton, 1.0, 1.0, 1, 0, "left");
-                            SevenKnightsCore.Sleep(1000);
-                            this.WeightedClick(SellHeroConfirmPopupPM.BackSellLobby, 1.0, 1.0, 1, 0, "left");
-                            this.LongSleep(2000, 1000);
+                            this.Log("Stop Sell Hero.");
+                            this.DoneSellHeroes(-1);
+                            return;
                         }
+                        PixelMapping[][] array4 = array3;
+                        for (int j = 0; j < array4.Length; j++)
+                        {
+                            PixelMapping[] array5 = array4[j];
+                            if (this.MatchMapping(array5[0], 5) && this.MatchMapping(array5[1], 5) && this.MatchMapping(array5[2], 5))
+                            {
+                                this.Log("-- Found element hero, skipping..", this.COLOR_SELL_HEROES);
+                                this.WeightedClick(SellHeroConfirmPopupPM.NoButton, 1.0, 1.0, 1, 0, "left");
+                                SevenKnightsCore.Sleep(300);
+                                this.Escape();
+                                SevenKnightsCore.Sleep(500);
+                            }
+                        }                    
+                        num2++;
+                        this.WeightedClick(SellHeroConfirmPopupPM.SellButton, 1.0, 1.0, 1, 0, "left");
+                        SevenKnightsCore.Sleep(1500);
+                        this.WeightedClick(SellHeroConfirmPopupPM.SoldOKButton, 1.0, 1.0, 1, 0, "left");
+                        this.Log(string.Format("-- Hero sold ({0})", num2), this.COLOR_SELL_HEROES);
+                        SevenKnightsCore.Sleep(1000);
+                        this.WeightedClick(SellHeroConfirmPopupPM.BackSellLobby, 1.0, 1.0, 1, 0, "left");
+                        this.LongSleep(2000, 1000);
+                    }
                     else
                     {
                         num = num + 1;
                         this.Escape();
-                        this.Log("Location 1.3");
+                       // this.Log("Location 1.3");
                         SevenKnightsCore.Sleep(500);
                     }
                     if (!flag)
                     {
                         num %= 4;
-                        this.Log("Location 1.4");
+                       // this.Log("Location 1.4");
                     }
                     if (num == 0)
                     {
@@ -5824,7 +5845,7 @@ namespace SevenKnightsAI.Classes
                     }
                     if (flag && num >= array2.Length)
                     {
-                        this.Log("Location 1.5");
+                       // this.Log("Location 1.5");
                         this.DoneSellHeroes(num2);
                         return;
                     }

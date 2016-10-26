@@ -650,7 +650,8 @@
             "7 - Purgatory",
             "8 - Moonlit Isle",
             "9 - Western Empire",
-            "10 - Eastern Empire"});
+            "10 - Eastern Empire",
+            "11 - Dark Sanctuary"});
             this.AD_worldComboBox.Location = new System.Drawing.Point(72, 8);
             this.AD_worldComboBox.Name = "AD_worldComboBox";
             this.AD_worldComboBox.Size = new System.Drawing.Size(127, 21);

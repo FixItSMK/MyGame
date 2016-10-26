@@ -1295,6 +1295,62 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BUTTON
         };
 
+        public static readonly PixelMapping World11_1Anchor_1 = new PixelMapping
+        {
+            X = 95,
+            Y = 137,
+            Color = 13531685,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping World11_1Anchor_2 = new PixelMapping
+        {
+            X = 645,
+            Y = 250,
+            Color = 9848873,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping World11_1Stage1 = new PixelMapping
+        {
+            X = 76,
+            Y = 275,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping World11_1Stage2 = new PixelMapping
+        {
+            X = 240,
+            Y = 388,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping World11_1Stage3 = new PixelMapping
+        {
+            X = 440,
+            Y = 417,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping World11_1Stage4 = new PixelMapping
+        {
+            X = 645,
+            Y = 390,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping World11_1Stage5 = new PixelMapping
+        {
+            X = 745,
+            Y = 250,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
         #endregion Public Fields
     }
 }
