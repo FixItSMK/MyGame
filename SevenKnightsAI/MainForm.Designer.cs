@@ -462,7 +462,7 @@
             // AD_continuousCheckBox
             // 
             this.AD_continuousCheckBox.AutoSize = true;
-            this.AD_continuousCheckBox.Location = new System.Drawing.Point(360, 54);
+            this.AD_continuousCheckBox.Location = new System.Drawing.Point(360, 52);
             this.AD_continuousCheckBox.Name = "AD_continuousCheckBox";
             this.AD_continuousCheckBox.Size = new System.Drawing.Size(128, 17);
             this.AD_continuousCheckBox.TabIndex = 5;
@@ -3064,7 +3064,8 @@
             this.RS_heroStarsComboBox.FormattingEnabled = true;
             this.RS_heroStarsComboBox.Items.AddRange(new object[] {
             "★",
-            "★★"});
+            "★★",
+            "★★★"});
             this.RS_heroStarsComboBox.Location = new System.Drawing.Point(235, 18);
             this.RS_heroStarsComboBox.Name = "RS_heroStarsComboBox";
             this.RS_heroStarsComboBox.Size = new System.Drawing.Size(78, 21);

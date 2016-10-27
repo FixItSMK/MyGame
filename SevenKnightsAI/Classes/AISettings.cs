@@ -295,11 +295,11 @@ namespace SevenKnightsAI.Classes
             this.AD_Continuous = false;
             this.AD_ElementHeroesOnly = false;
             this.AD_SkillType = SkillType.Both;
-            this.AD_StopOnFullHeroes = true;
+            this.AD_StopOnFullHeroes = false;
             this.AD_StopOnFullItems = true;
             this.RD_StopOnDragonFound = false;
             this.AD_StopOnLV30 = false;
-            this.AD_CheckingHeroes = false;
+            this.AD_CheckingHeroes = true;
             this.AD_Wave1Loop = false;
             this.AD_Wave2Loop = false;
             this.AD_Wave3Loop = false;

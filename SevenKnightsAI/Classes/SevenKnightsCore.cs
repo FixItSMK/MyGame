@@ -5749,10 +5749,12 @@ namespace SevenKnightsAI.Classes
                 if (this.MatchMapping(HeroStar.Star1Loca1, 2) || this.MatchMapping(HeroStar.Star1Loca2, 2)
                      || this.MatchMapping(HeroStar.Star1Loca3, 2) || this.MatchMapping(HeroStar.Star1Loca4, 2)
                      || this.MatchMapping(HeroStar.Star1Loca1R1, 2) || this.MatchMapping(HeroStar.Star1Loca2R1, 2)
-                     || this.MatchMapping(HeroStar.Star1Loca3R1, 2) || this.MatchMapping(HeroStar.Star1Loca4R1, 2))
+                     || this.MatchMapping(HeroStar.Star1Loca3R1, 2) || this.MatchMapping(HeroStar.Star1Loca4R1, 2)
+                     || this.MatchMapping(HeroStar.Star1Loca1R2, 2) || this.MatchMapping(HeroStar.Star1Loca2R2, 2)
+                     || this.MatchMapping(HeroStar.Star1Loca3R2, 2) || this.MatchMapping(HeroStar.Star1Loca4R2, 2))
                 {
                     monstar = 1;
-                    this.Log("มีมอนเตอร์ 1 ดาวในแถว");
+                    //this.Log("มีมอนเตอร์ 1 ดาวในแถว");
                 }
                 else if (this.MatchMapping(HeroStar.Star2Loca1, 2) || this.MatchMapping(HeroStar.Star2Loca2, 2)
                      || this.MatchMapping(HeroStar.Star2Loca3, 2) || this.MatchMapping(HeroStar.Star2Loca4, 2)
@@ -5764,12 +5766,22 @@ namespace SevenKnightsAI.Classes
                      || this.MatchMapping(HeroStar.Star2Loca3R5, 2) || this.MatchMapping(HeroStar.Star2Loca4R5, 2))
                 {
                     monstar = 2;
-                    this.Log("มีมอนเตอร์ 2 ดาวในแถว");
+                   // this.Log("มีมอนเตอร์ 2 ดาวในแถว");
+                }
+                else if (this.MatchMapping(HeroStar.Star3Loca1R1, 2) || this.MatchMapping(HeroStar.Star3Loca2R1, 2)
+                     || this.MatchMapping(HeroStar.Star3Loca3R1, 2) || this.MatchMapping(HeroStar.Star3Loca4R1, 2)
+                     || this.MatchMapping(HeroStar.Star3Loca3R2, 2) || this.MatchMapping(HeroStar.Star3Loca4R2, 2)
+                     || this.MatchMapping(HeroStar.Star3Loca3R2, 2) || this.MatchMapping(HeroStar.Star3Loca4R2, 2)
+                     || this.MatchMapping(HeroStar.Star3Loca3R3, 2) || this.MatchMapping(HeroStar.Star3Loca4R3, 2)
+                     || this.MatchMapping(HeroStar.Star3Loca3R3, 2) || this.MatchMapping(HeroStar.Star3Loca4R3, 2))
+                {
+                    monstar = 3;
+                    // this.Log("มีมอนเตอร์ 2 ดาวในแถว");
                 }
                 else
                 {
-                    monstar = 3;
-                    this.Log("ไม่มีมอนเตอร์ 1 หรือ 2 ดาวในแถว");
+                    monstar = 4;
+                    //this.Log("ไม่มีมอนเตอร์ 1 หรือ 2 ดาวเวล 30 ในแถว", this.COLOR_SELL_HEROES);
                 }
 
                 /************************************************************************************/
