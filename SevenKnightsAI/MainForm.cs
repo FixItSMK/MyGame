@@ -631,7 +631,7 @@ namespace SevenKnightsAI
 
         private void contactUsLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/Nulled-Daelus/SevenKnightsAI");
+            Process.Start("https://www.facebook.com/SevenKnightsAIBlack");
         }
 
         private void contactUsLinkLabel_TextChanged(object sender, EventArgs e)
@@ -765,6 +765,7 @@ namespace SevenKnightsAI
             this.AD_wave1LoopCheckBox.Checked = this.AISettings.AD_Wave1Loop;
             this.AD_wave2LoopCheckBox.Checked = this.AISettings.AD_Wave2Loop;
             this.AD_wave3LoopCheckBox.Checked = this.AISettings.AD_Wave3Loop;
+            this.AD_UseFriendCheckBox.Checked = this.AISettings.AD_UseFriend;
             if (this.AISettings.AD_HeroManagePositions != null)
             {
                 int[] aD_HeroManagePositions = this.AISettings.AD_HeroManagePositions;
@@ -850,6 +851,7 @@ namespace SevenKnightsAI
             this.GC_masteryComboBox.SelectedIndex = (int)this.AISettings.GC_Mastery;
             this.GC_wave1LoopCheckBox.Checked = this.AISettings.GC_Wave1Loop;
             this.GC_wave2LoopCheckBox.Checked = this.AISettings.GC_Wave2Loop;
+            this.GC_UseFriendCheckBox.Checked = this.AISettings.GC_UseFriend;
             switch (this.AISettings.GC_SkillType)
             {
                 case SkillType.Auto:
@@ -1877,7 +1879,7 @@ namespace SevenKnightsAI
             CheckBox checkBox = sender as CheckBox;
             this.AISettings.AD_CheckingHeroes = checkBox.Checked;
         }
-
+        // ***************************************
         private void ARD_enableCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = sender as CheckBox;
@@ -1888,9 +1890,68 @@ namespace SevenKnightsAI
             CheckBox checkBox = sender as CheckBox;
             this.AISettings.AD_HottimeEnable = checkBox.Checked;
         }
+        private void AD_UseFriendCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_UseFriend = checkBox.Checked;
+        }
+        private void GC_UseFriendCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.GC_UseFriend = checkBox.Checked;
+        }
 
+        // Link Thank.
+
+        private void linkLabel5_MouseClick(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.nulled.to");
+        }
+
+        private void linkLabel4_MouseClick(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.nulled.to/topic/143659-heartcold-seven-knights-ai-v23");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.nulled.to/topic/155474-seven-knights-ai");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/Nulled-Daelus/SevenKnightsAI");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/dreammed/SevenKnightsAI");
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.nulled.to/user/600594-xhum");
+        }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/dreammed/SevenKnightsAI");
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/groups/heartcold");
+        }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.youtube.com/channel/UCdVDcUYSMnfGY57ECqeGOkA");
+        }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/SevenKnightsAIBlack");
+        }
         #endregion Private Methods
-
-
     }
 }

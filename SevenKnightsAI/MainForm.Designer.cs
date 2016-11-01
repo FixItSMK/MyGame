@@ -20,6 +20,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.adventureTab = new System.Windows.Forms.TabPage();
+            this.AD_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_EnHottime_Checkbox = new System.Windows.Forms.CheckBox();
             this.AD_limitLabel = new System.Windows.Forms.Label();
             this.AD_StopOnLV30_Checkbox = new System.Windows.Forms.CheckBox();
@@ -98,6 +99,7 @@
             this.AD_elementHeroesCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.goldChamberTab = new System.Windows.Forms.TabPage();
+            this.GC_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.GC_limitLabel = new System.Windows.Forms.Label();
             this.GC_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.GC_limitCheckBox = new System.Windows.Forms.CheckBox();
@@ -278,6 +280,17 @@
             this.ST_delayValueLabel = new System.Windows.Forms.Label();
             this.ST_delayLabel = new System.Windows.Forms.Label();
             this.ST_delayTrackBar = new System.Windows.Forms.TrackBar();
+            this.Info = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.adminToolStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.profileToolStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -373,6 +386,7 @@
             this.ST_pushbulletGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ST_pushbulletPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ST_delayTrackBar)).BeginInit();
+            this.Info.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.summaryGroupBox.SuspendLayout();
             this.keysTableLayoutPanel.SuspendLayout();
@@ -400,6 +414,7 @@
             this.tabControl.Controls.Add(this.resourcesTab);
             this.tabControl.Controls.Add(this.logTab);
             this.tabControl.Controls.Add(this.settingsTab);
+            this.tabControl.Controls.Add(this.Info);
             this.tabControl.Location = new System.Drawing.Point(4, 86);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -408,6 +423,7 @@
             // 
             // adventureTab
             // 
+            this.adventureTab.Controls.Add(this.AD_UseFriendCheckBox);
             this.adventureTab.Controls.Add(this.AD_EnHottime_Checkbox);
             this.adventureTab.Controls.Add(this.AD_limitLabel);
             this.adventureTab.Controls.Add(this.AD_StopOnLV30_Checkbox);
@@ -428,10 +444,21 @@
             this.adventureTab.Text = "Adventure";
             this.adventureTab.UseVisualStyleBackColor = true;
             // 
+            // AD_UseFriendCheckBox
+            // 
+            this.AD_UseFriendCheckBox.AutoSize = true;
+            this.AD_UseFriendCheckBox.Location = new System.Drawing.Point(362, 31);
+            this.AD_UseFriendCheckBox.Name = "AD_UseFriendCheckBox";
+            this.AD_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.AD_UseFriendCheckBox.TabIndex = 28;
+            this.AD_UseFriendCheckBox.Text = "Use Friends";
+            this.AD_UseFriendCheckBox.UseVisualStyleBackColor = true;
+            this.AD_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.AD_UseFriendCheckBox_CheckedChanged);
+            // 
             // AD_EnHottime_Checkbox
             // 
             this.AD_EnHottime_Checkbox.AutoSize = true;
-            this.AD_EnHottime_Checkbox.Location = new System.Drawing.Point(24, 54);
+            this.AD_EnHottime_Checkbox.Location = new System.Drawing.Point(14, 54);
             this.AD_EnHottime_Checkbox.Name = "AD_EnHottime_Checkbox";
             this.AD_EnHottime_Checkbox.Size = new System.Drawing.Size(95, 17);
             this.AD_EnHottime_Checkbox.TabIndex = 27;
@@ -451,7 +478,7 @@
             // AD_StopOnLV30_Checkbox
             // 
             this.AD_StopOnLV30_Checkbox.AutoSize = true;
-            this.AD_StopOnLV30_Checkbox.Location = new System.Drawing.Point(125, 31);
+            this.AD_StopOnLV30_Checkbox.Location = new System.Drawing.Point(115, 31);
             this.AD_StopOnLV30_Checkbox.Name = "AD_StopOnLV30_Checkbox";
             this.AD_StopOnLV30_Checkbox.Size = new System.Drawing.Size(101, 17);
             this.AD_StopOnLV30_Checkbox.TabIndex = 25;
@@ -462,7 +489,7 @@
             // AD_continuousCheckBox
             // 
             this.AD_continuousCheckBox.AutoSize = true;
-            this.AD_continuousCheckBox.Location = new System.Drawing.Point(360, 52);
+            this.AD_continuousCheckBox.Location = new System.Drawing.Point(362, 52);
             this.AD_continuousCheckBox.Name = "AD_continuousCheckBox";
             this.AD_continuousCheckBox.Size = new System.Drawing.Size(128, 17);
             this.AD_continuousCheckBox.TabIndex = 5;
@@ -473,18 +500,18 @@
             // AD_CheckingHeroes_Checkbox
             // 
             this.AD_CheckingHeroes_Checkbox.AutoSize = true;
-            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(239, 31);
+            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(229, 31);
             this.AD_CheckingHeroes_Checkbox.Name = "AD_CheckingHeroes_Checkbox";
-            this.AD_CheckingHeroes_Checkbox.Size = new System.Drawing.Size(146, 17);
+            this.AD_CheckingHeroes_Checkbox.Size = new System.Drawing.Size(134, 17);
             this.AD_CheckingHeroes_Checkbox.TabIndex = 26;
-            this.AD_CheckingHeroes_Checkbox.Text = "Check Max Heroes Level";
+            this.AD_CheckingHeroes_Checkbox.Text = "Check Max Heroes Lvl";
             this.AD_CheckingHeroes_Checkbox.UseVisualStyleBackColor = true;
             this.AD_CheckingHeroes_Checkbox.CheckedChanged += new System.EventHandler(this.AD_CheckingHeroes_Checkbox_CheckedChanged);
             // 
             // AD_StopOnFullItems_Checkbox
             // 
             this.AD_StopOnFullItems_Checkbox.AutoSize = true;
-            this.AD_StopOnFullItems_Checkbox.Location = new System.Drawing.Point(239, 52);
+            this.AD_StopOnFullItems_Checkbox.Location = new System.Drawing.Point(229, 52);
             this.AD_StopOnFullItems_Checkbox.Name = "AD_StopOnFullItems_Checkbox";
             this.AD_StopOnFullItems_Checkbox.Size = new System.Drawing.Size(120, 17);
             this.AD_StopOnFullItems_Checkbox.TabIndex = 25;
@@ -504,7 +531,7 @@
             // AD_StopOnFullHeroes_Checkbox
             // 
             this.AD_StopOnFullHeroes_Checkbox.AutoSize = true;
-            this.AD_StopOnFullHeroes_Checkbox.Location = new System.Drawing.Point(125, 53);
+            this.AD_StopOnFullHeroes_Checkbox.Location = new System.Drawing.Point(115, 53);
             this.AD_StopOnFullHeroes_Checkbox.Name = "AD_StopOnFullHeroes_Checkbox";
             this.AD_StopOnFullHeroes_Checkbox.Size = new System.Drawing.Size(112, 17);
             this.AD_StopOnFullHeroes_Checkbox.TabIndex = 25;
@@ -1334,7 +1361,7 @@
             // AD_elementHeroesCheckBox
             // 
             this.AD_elementHeroesCheckBox.AutoSize = true;
-            this.AD_elementHeroesCheckBox.Location = new System.Drawing.Point(24, 31);
+            this.AD_elementHeroesCheckBox.Location = new System.Drawing.Point(14, 31);
             this.AD_elementHeroesCheckBox.Name = "AD_elementHeroesCheckBox";
             this.AD_elementHeroesCheckBox.Size = new System.Drawing.Size(86, 17);
             this.AD_elementHeroesCheckBox.TabIndex = 13;
@@ -1358,6 +1385,7 @@
             // 
             // goldChamberTab
             // 
+            this.goldChamberTab.Controls.Add(this.GC_UseFriendCheckBox);
             this.goldChamberTab.Controls.Add(this.GC_limitLabel);
             this.goldChamberTab.Controls.Add(this.GC_limitNumericBox);
             this.goldChamberTab.Controls.Add(this.GC_limitCheckBox);
@@ -1369,6 +1397,17 @@
             this.goldChamberTab.TabIndex = 2;
             this.goldChamberTab.Text = "Gold Chamber";
             this.goldChamberTab.UseVisualStyleBackColor = true;
+            // 
+            // GC_UseFriendCheckBox
+            // 
+            this.GC_UseFriendCheckBox.AutoSize = true;
+            this.GC_UseFriendCheckBox.Location = new System.Drawing.Point(14, 31);
+            this.GC_UseFriendCheckBox.Name = "GC_UseFriendCheckBox";
+            this.GC_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.GC_UseFriendCheckBox.TabIndex = 20;
+            this.GC_UseFriendCheckBox.Text = "Use Friends";
+            this.GC_UseFriendCheckBox.UseVisualStyleBackColor = true;
+            this.GC_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.GC_UseFriendCheckBox_CheckedChanged);
             // 
             // GC_limitLabel
             // 
@@ -1407,9 +1446,9 @@
             this.GC_mainPanel.Controls.Add(this.GC_formationPanel);
             this.GC_mainPanel.Controls.Add(this.GC_formationLabel);
             this.GC_mainPanel.Controls.Add(this.GC_teamLabel);
-            this.GC_mainPanel.Location = new System.Drawing.Point(0, 30);
+            this.GC_mainPanel.Location = new System.Drawing.Point(0, 53);
             this.GC_mainPanel.Name = "GC_mainPanel";
-            this.GC_mainPanel.Size = new System.Drawing.Size(487, 278);
+            this.GC_mainPanel.Size = new System.Drawing.Size(487, 255);
             this.GC_mainPanel.TabIndex = 14;
             // 
             // GC_skillGroupBox
@@ -2738,6 +2777,7 @@
             this.RS_sendHonorsInGame.TabIndex = 1;
             this.RS_sendHonorsInGame.Tag = "1";
             this.RS_sendHonorsInGame.Text = "To In-Game Friends";
+            this.toolTip.SetToolTip(this.RS_sendHonorsInGame, "BETA Function");
             this.RS_sendHonorsInGame.UseVisualStyleBackColor = true;
             this.RS_sendHonorsInGame.CheckedChanged += new System.EventHandler(this.RS_sendHonorsCheckBox_CheckedChanged);
             // 
@@ -2750,6 +2790,7 @@
             this.RS_sendHonorsFacebook.TabIndex = 0;
             this.RS_sendHonorsFacebook.Tag = "0";
             this.RS_sendHonorsFacebook.Text = "To Facebook Friends";
+            this.toolTip.SetToolTip(this.RS_sendHonorsFacebook, "BETA Function");
             this.RS_sendHonorsFacebook.UseVisualStyleBackColor = true;
             this.RS_sendHonorsFacebook.CheckedChanged += new System.EventHandler(this.RS_sendHonorsCheckBox_CheckedChanged);
             // 
@@ -3082,6 +3123,7 @@
             this.RS_sellHeroesCheckBox.TabIndex = 2;
             this.RS_sellHeroesCheckBox.Tag = "0";
             this.RS_sellHeroesCheckBox.Text = "Lv.30 heroes with ★ less than or equal to";
+            this.toolTip.SetToolTip(this.RS_sellHeroesCheckBox, "BETA Function");
             this.RS_sellHeroesCheckBox.UseVisualStyleBackColor = true;
             this.RS_sellHeroesCheckBox.CheckedChanged += new System.EventHandler(this.RS_sellCheckBox_CheckedChanged);
             // 
@@ -3511,8 +3553,142 @@
             this.ST_delayTrackBar.Value = 1500;
             this.ST_delayTrackBar.ValueChanged += new System.EventHandler(this.ST_delayTrackBar_ValueChanged);
             // 
+            // Info
+            // 
+            this.Info.Controls.Add(this.label3);
+            this.Info.Controls.Add(this.linkLabel10);
+            this.Info.Controls.Add(this.linkLabel9);
+            this.Info.Controls.Add(this.linkLabel8);
+            this.Info.Controls.Add(this.linkLabel5);
+            this.Info.Controls.Add(this.linkLabel4);
+            this.Info.Controls.Add(this.linkLabel3);
+            this.Info.Controls.Add(this.linkLabel7);
+            this.Info.Controls.Add(this.linkLabel6);
+            this.Info.Controls.Add(this.linkLabel1);
+            this.Info.Location = new System.Drawing.Point(4, 22);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(488, 309);
+            this.Info.TabIndex = 8;
+            this.Info.Text = "Info";
+            this.Info.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(31, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Special Thanks.";
+            // 
+            // linkLabel10
+            // 
+            this.linkLabel10.AutoSize = true;
+            this.linkLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.linkLabel10.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel10.Location = new System.Drawing.Point(86, 267);
+            this.linkLabel10.Name = "linkLabel10";
+            this.linkLabel10.Size = new System.Drawing.Size(289, 24);
+            this.linkLabel10.TabIndex = 5;
+            this.linkLabel10.TabStop = true;
+            this.linkLabel10.Text = "Seven Knight AI Black Facebook.";
+            this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked);
+            // 
+            // linkLabel9
+            // 
+            this.linkLabel9.AutoSize = true;
+            this.linkLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.linkLabel9.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel9.Location = new System.Drawing.Point(96, 232);
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.Size = new System.Drawing.Size(275, 24);
+            this.linkLabel9.TabIndex = 4;
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.Text = "Seven Knight AI Black Youtube.";
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
+            // 
+            // linkLabel8
+            // 
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.Location = new System.Drawing.Point(31, 38);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(224, 13);
+            this.linkLabel8.TabIndex = 3;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "https://www.facebook.com/groups/heartcold";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Location = new System.Drawing.Point(31, 110);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(110, 13);
+            this.linkLabel5.TabIndex = 2;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "https://www.nulled.to";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_MouseClick);
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(31, 158);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(170, 13);
+            this.linkLabel4.TabIndex = 2;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "https://www.nulled.to/user/4-lostit";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_MouseClick);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(31, 135);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(210, 13);
+            this.linkLabel3.TabIndex = 2;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "https://www.nulled.to/user/513548-daelus";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // linkLabel7
+            // 
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.Location = new System.Drawing.Point(31, 61);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(230, 13);
+            this.linkLabel7.TabIndex = 1;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "https://github.com/dreammed/SevenKnightsAI";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Location = new System.Drawing.Point(31, 184);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(204, 13);
+            this.linkLabel6.TabIndex = 1;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "https://www.nulled.to/user/600594-xhum";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(31, 86);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(247, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/Nulled-Daelus/SevenKnightsAI";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // statusStrip
             // 
+            this.statusStrip.BackColor = System.Drawing.Color.Silver;
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripLabel,
             this.profileToolStripLabel,
@@ -3601,6 +3777,7 @@
             // HeroCountLabel
             // 
             this.HeroCountLabel.AutoSize = true;
+            this.HeroCountLabel.ForeColor = System.Drawing.Color.Blue;
             this.HeroCountLabel.Location = new System.Drawing.Point(300, 45);
             this.HeroCountLabel.Name = "HeroCountLabel";
             this.HeroCountLabel.Size = new System.Drawing.Size(24, 13);
@@ -3635,7 +3812,7 @@
             // 
             this.arenaKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.arenaKeysLabel.AutoSize = true;
-            this.arenaKeysLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(62)))), ((int)(((byte)(23)))));
+            this.arenaKeysLabel.ForeColor = System.Drawing.Color.Blue;
             this.arenaKeysLabel.Location = new System.Drawing.Point(222, 5);
             this.arenaKeysLabel.Name = "arenaKeysLabel";
             this.arenaKeysLabel.Size = new System.Drawing.Size(10, 13);
@@ -3668,7 +3845,7 @@
             // 
             this.towerKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.towerKeysLabel.AutoSize = true;
-            this.towerKeysLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.towerKeysLabel.ForeColor = System.Drawing.Color.Blue;
             this.towerKeysLabel.Location = new System.Drawing.Point(125, 5);
             this.towerKeysLabel.Name = "towerKeysLabel";
             this.towerKeysLabel.Size = new System.Drawing.Size(10, 13);
@@ -3690,7 +3867,7 @@
             // 
             this.adventureKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.adventureKeysLabel.AutoSize = true;
-            this.adventureKeysLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.adventureKeysLabel.ForeColor = System.Drawing.Color.Blue;
             this.adventureKeysLabel.Location = new System.Drawing.Point(28, 5);
             this.adventureKeysLabel.Name = "adventureKeysLabel";
             this.adventureKeysLabel.Size = new System.Drawing.Size(10, 13);
@@ -3700,6 +3877,7 @@
             // GB_WaitForKeys
             // 
             this.GB_WaitForKeys.AutoSize = true;
+            this.GB_WaitForKeys.ForeColor = System.Drawing.Color.Blue;
             this.GB_WaitForKeys.Location = new System.Drawing.Point(294, 3);
             this.GB_WaitForKeys.Name = "GB_WaitForKeys";
             this.GB_WaitForKeys.Size = new System.Drawing.Size(72, 17);
@@ -3734,7 +3912,7 @@
             // arenaPictureBox
             // 
             this.arenaPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_arena;
-            this.arenaPictureBox.Location = new System.Drawing.Point(0, 63);
+            this.arenaPictureBox.Location = new System.Drawing.Point(8, 63);
             this.arenaPictureBox.Name = "arenaPictureBox";
             this.arenaPictureBox.Size = new System.Drawing.Size(19, 18);
             this.arenaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -3745,7 +3923,7 @@
             // adventurePictureBox
             // 
             this.adventurePictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_adventure;
-            this.adventurePictureBox.Location = new System.Drawing.Point(0, 43);
+            this.adventurePictureBox.Location = new System.Drawing.Point(8, 43);
             this.adventurePictureBox.Name = "adventurePictureBox";
             this.adventurePictureBox.Size = new System.Drawing.Size(19, 18);
             this.adventurePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -3756,6 +3934,7 @@
             // raidCountLabel
             // 
             this.raidCountLabel.AutoSize = true;
+            this.raidCountLabel.ForeColor = System.Drawing.Color.Blue;
             this.raidCountLabel.Location = new System.Drawing.Point(175, 65);
             this.raidCountLabel.Name = "raidCountLabel";
             this.raidCountLabel.Size = new System.Drawing.Size(24, 13);
@@ -3765,6 +3944,7 @@
             // goldChamberCountLabel
             // 
             this.goldChamberCountLabel.AutoSize = true;
+            this.goldChamberCountLabel.ForeColor = System.Drawing.Color.Blue;
             this.goldChamberCountLabel.Location = new System.Drawing.Point(175, 45);
             this.goldChamberCountLabel.Name = "goldChamberCountLabel";
             this.goldChamberCountLabel.Size = new System.Drawing.Size(31, 13);
@@ -3774,7 +3954,8 @@
             // arenaCountLabel
             // 
             this.arenaCountLabel.AutoSize = true;
-            this.arenaCountLabel.Location = new System.Drawing.Point(20, 65);
+            this.arenaCountLabel.ForeColor = System.Drawing.Color.Blue;
+            this.arenaCountLabel.Location = new System.Drawing.Point(28, 65);
             this.arenaCountLabel.Name = "arenaCountLabel";
             this.arenaCountLabel.Size = new System.Drawing.Size(75, 13);
             this.arenaCountLabel.TabIndex = 2;
@@ -3783,7 +3964,8 @@
             // adventureCountLabel
             // 
             this.adventureCountLabel.AutoSize = true;
-            this.adventureCountLabel.Location = new System.Drawing.Point(20, 45);
+            this.adventureCountLabel.ForeColor = System.Drawing.Color.Blue;
+            this.adventureCountLabel.Location = new System.Drawing.Point(28, 45);
             this.adventureCountLabel.Name = "adventureCountLabel";
             this.adventureCountLabel.Size = new System.Drawing.Size(35, 13);
             this.adventureCountLabel.TabIndex = 1;
@@ -3802,13 +3984,14 @@
             // contactUsLinkLabel
             // 
             this.contactUsLinkLabel.AutoSize = true;
-            this.contactUsLinkLabel.LinkColor = System.Drawing.Color.Blue;
-            this.contactUsLinkLabel.Location = new System.Drawing.Point(257, 67);
+            this.contactUsLinkLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.contactUsLinkLabel.LinkColor = System.Drawing.Color.White;
+            this.contactUsLinkLabel.Location = new System.Drawing.Point(385, 67);
             this.contactUsLinkLabel.Name = "contactUsLinkLabel";
-            this.contactUsLinkLabel.Size = new System.Drawing.Size(247, 13);
+            this.contactUsLinkLabel.Size = new System.Drawing.Size(119, 13);
             this.contactUsLinkLabel.TabIndex = 6;
             this.contactUsLinkLabel.TabStop = true;
-            this.contactUsLinkLabel.Text = "https://github.com/Nulled-Daelus/SevenKnightsAI";
+            this.contactUsLinkLabel.Text = "Seven Knights AI Black";
             this.contactUsLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.contactUsLinkLabel_LinkClicked);
             this.contactUsLinkLabel.TextChanged += new System.EventHandler(this.contactUsLinkLabel_TextChanged);
             // 
@@ -3827,7 +4010,7 @@
             // topheaderPictureBox
             // 
             this.topheaderPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.topheaderPictureBox.Image = global::SevenKnightsAI.Properties.Resources._7k_title;
+            this.topheaderPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("topheaderPictureBox.Image")));
             this.topheaderPictureBox.Location = new System.Drawing.Point(0, 0);
             this.topheaderPictureBox.Name = "topheaderPictureBox";
             this.topheaderPictureBox.Size = new System.Drawing.Size(504, 80);
@@ -3967,6 +4150,7 @@
             this.AcceptButton = this.aiButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(504, 561);
             this.Controls.Add(this.aiPause);
             this.Controls.Add(this.resourcesTableLayoutPanel);
@@ -3982,7 +4166,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Seven Knights AI";
+            this.Text = "Seven Knights AI Black";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
@@ -4062,6 +4246,8 @@
             this.ST_pushbulletGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ST_pushbulletPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ST_delayTrackBar)).EndInit();
+            this.Info.ResumeLayout(false);
+            this.Info.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.summaryGroupBox.ResumeLayout(false);
@@ -4955,5 +5141,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox ARD_enableCheckBox;
         private System.Windows.Forms.CheckBox AD_EnHottime_Checkbox;
+        private System.Windows.Forms.CheckBox AD_UseFriendCheckBox;
+        private System.Windows.Forms.CheckBox GC_UseFriendCheckBox;
+        private System.Windows.Forms.TabPage Info;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel7;
+        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.LinkLabel linkLabel10;
+        private System.Windows.Forms.LinkLabel linkLabel9;
+        private System.Windows.Forms.Label label3;
     }
 }
