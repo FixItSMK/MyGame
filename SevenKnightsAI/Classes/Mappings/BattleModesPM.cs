@@ -8,17 +8,17 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping ArenaButton = new PixelMapping
         {
-            X = 254,
-            Y = 200,
+            X = 180,
+            Y = 180,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping BorderBottomRight = new PixelMapping
         {
-            X = 884,
-            Y = 274,
-            Color = 5384470,
+            X = 842,
+            Y = 310,
+            Color = 16644567,
             Type = MappingType.ANCHOR
         };
 
@@ -32,9 +32,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping BorderTopLeft = new PixelMapping
         {
-            X = 365,
-            Y = 126,
-            Color = 15204094,
+            X = 190,
+            Y = 282,
+            Color = 2825740,
             Type = MappingType.ANCHOR
         };
 
@@ -48,16 +48,16 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping BossFightButton = new PixelMapping
         {
-            X = 704,
-            Y = 460,
+            X = 720,
+            Y = 425,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping CastleRushButton = new PixelMapping
         {
-            X = 704,
-            Y = 200,
+            X = 800,
+            Y = 190,
             Color = 0,
             Type = MappingType.BUTTON
         };
@@ -76,8 +76,8 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping GuildWarButton = new PixelMapping
         {
-            X = 254,
-            Y = 460,
+            X = 260,
+            Y = 400,
             Color = 0,
             Type = MappingType.BUTTON
         };

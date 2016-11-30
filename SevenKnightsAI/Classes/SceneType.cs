@@ -99,6 +99,7 @@ namespace SevenKnightsAI.Classes
         SEND_HONOR_FAILED_POPUP,
         SEND_HONOR_CONFIRM_POPUP,
         SEND_HONOR_FULL_POPUP,
+        SEND_HONOR_NO_FRIEND_TO_SEND,
         ADS_CLOSE,
         BLUESTACK_HOME,
         RAID_AWAKENED_LOBBY,
@@ -117,7 +118,9 @@ namespace SevenKnightsAI.Classes
         DAILY_QUEST_COMPLETE,
         SELL_HERO_LOBBY,
         EXCLUSIVE_POPUP,
+        EXCLUSIVE_CLOSE_POPUP,
         ELEMENT_POPUP,
+        RANK_UP,
         SELL_HERO_FINISH
     }
 }

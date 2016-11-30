@@ -9,17 +9,17 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping SPrachelNo = new PixelMapping
         {
-            X = 283,
-            Y = 455,
-            Color = 13581322,
+            X = 282,
+            Y = 456,
+            Color = 13253386,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping SPrachelBuy = new PixelMapping
         {
-            X = 555,
-            Y = 456,
-            Color = 16761637,
+            X = 578,
+            Y = 454,
+            Color = 14788355,
             Type = MappingType.ANCHOR
         };
 
@@ -33,9 +33,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping SPrachel = new PixelMapping
         {
-            X = 256,
-            Y = 169,
-            Color = 16768454,
+            X = 243,
+            Y = 160,
+            Color = 16767426,
             Type = MappingType.ANCHOR
         };
 
@@ -83,7 +83,15 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 745,
             Y = 126,
-            Color = 16107613,
+            Color = 16107360,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping AliceProColor = new PixelMapping
+        {
+            X = 180,
+            Y = 454,
+            Color = 12829635,
             Type = MappingType.ANCHOR
         };
 
@@ -161,17 +169,33 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping EvenBoderRight = new PixelMapping
         {
-            X = 861,
-            Y = 46,
-            Color = 8534579,
+            X = 760,
+            Y = 487,
+            Color = 16753314,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping DragonFace = new PixelMapping
+        public static readonly PixelMapping Exclucsive = new PixelMapping
         {
-            X = 98,
-            Y = 234,
-            Color = 15461622,
+            X = 134,
+            Y = 12,
+            Color = 16738665,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EvenBoderRightBG = new PixelMapping
+        {
+            X = 760,
+            Y = 487,
+            Color = 4927536,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ExclucsiveBG = new PixelMapping
+        {
+            X = 134,
+            Y = 12,
+            Color = 4923167,
             Type = MappingType.ANCHOR
         };
 
@@ -222,11 +246,28 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 400183,
             Type = MappingType.ANCHOR
         };
+
         public static readonly PixelMapping ExclusiveTick = new PixelMapping
         {
             X = 530,
             Y = 422,
             Color = 16759324,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ViewMoreCol = new PixelMapping
+        {
+            X = 143,
+            Y = 473,
+            Color = 1400252,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ExclusivePic = new PixelMapping
+        {
+            X = 181,
+            Y = 197,
+            Color = 15720432,
             Type = MappingType.ANCHOR
         };
 
@@ -237,12 +278,45 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 400440,
             Type = MappingType.ANCHOR
         };
+
         public static readonly PixelMapping ElementTick = new PixelMapping
         {
             X = 529,
             Y = 420,
             Color = 16761637,
             Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EventPackPic = new PixelMapping
+        {
+            X = 195,
+            Y = 53,
+            Color = 3515342,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EventPackColor = new PixelMapping
+        {
+            X = 220,
+            Y = 448,
+            Color = 12589851,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EventPackColorbg = new PixelMapping
+        {
+            X = 220,
+            Y = 448,
+            Color = 3672072,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EventPackOKBtn = new PixelMapping
+        {
+            X = 570,
+            Y = 420,
+            Color = 5448462,
+            Type = MappingType.BOTH
         };
     }
 }

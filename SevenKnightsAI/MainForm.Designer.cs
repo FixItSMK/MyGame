@@ -51,8 +51,8 @@
             this.AD_difficultyComboBox = new System.Windows.Forms.ComboBox();
             this.AD_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.AD_masteryComboBox = new System.Windows.Forms.ComboBox();
-            this.AD_masteryLabel = new System.Windows.Forms.Label();
             this.AD_bothSkillRadio = new System.Windows.Forms.RadioButton();
+            this.AD_masteryLabel = new System.Windows.Forms.Label();
             this.AD_wave3Panel = new System.Windows.Forms.Panel();
             this.AD_wave3LoopCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_w3Skill10Button = new System.Windows.Forms.Button();
@@ -99,14 +99,13 @@
             this.AD_elementHeroesCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.goldChamberTab = new System.Windows.Forms.TabPage();
-            this.GC_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.GC_limitLabel = new System.Windows.Forms.Label();
             this.GC_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.GC_limitCheckBox = new System.Windows.Forms.CheckBox();
             this.GC_mainPanel = new System.Windows.Forms.Panel();
-            this.GC_skillGroupBox = new System.Windows.Forms.GroupBox();
+            this.GC_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.GC_masteryComboBox = new System.Windows.Forms.ComboBox();
-            this.GC_masteryLabel = new System.Windows.Forms.Label();
+            this.GC_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.GC_bothSkillRadio = new System.Windows.Forms.RadioButton();
             this.GC_wave2Panel = new System.Windows.Forms.Panel();
             this.GC_wave2LoopCheckBox = new System.Windows.Forms.CheckBox();
@@ -136,6 +135,7 @@
             this.GC_w1Skill02Button = new System.Windows.Forms.Button();
             this.GC_wave1Label = new System.Windows.Forms.Label();
             this.GC_w1Skill01Button = new System.Windows.Forms.Button();
+            this.GC_masteryLabel = new System.Windows.Forms.Label();
             this.GC_formationComboBox = new System.Windows.Forms.ComboBox();
             this.GC_teamComboBox = new System.Windows.Forms.ComboBox();
             this.GC_formationPanel = new System.Windows.Forms.Panel();
@@ -149,28 +149,37 @@
             this.GC_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.arenaTab = new System.Windows.Forms.TabPage();
             this.AR_limitLabel = new System.Windows.Forms.Label();
+            this.AR_useRubyLabel = new System.Windows.Forms.Label();
             this.AR_limitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.AR_useRubyNumericBox = new System.Windows.Forms.NumericUpDown();
             this.AR_limitCheckBox = new System.Windows.Forms.CheckBox();
+            this.AR_useRubyCheckBox = new System.Windows.Forms.CheckBox();
             this.AR_mainPanel = new System.Windows.Forms.Panel();
             this.AR_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.AR_masteryComboBox = new System.Windows.Forms.ComboBox();
             this.AR_masteryLabel = new System.Windows.Forms.Label();
-            this.AR_useRubyLabel = new System.Windows.Forms.Label();
-            this.AR_useRubyNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.AR_useRubyCheckBox = new System.Windows.Forms.CheckBox();
             this.AR_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.raidTab = new System.Windows.Forms.TabPage();
+            this.RD_RoundNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.RD_DragonLimit_lbl = new System.Windows.Forms.Label();
-            this.RD_DragonLimitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.RD_mainPanel = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.RD_LevelCheckBox = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.RD_DragonLV = new System.Windows.Forms.NumericUpDown();
+            this.RD_DragonHP = new System.Windows.Forms.NumericUpDown();
+            this.RD_DragonLimitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.RD_OwnerDragon = new System.Windows.Forms.CheckBox();
+            this.RD_masteryComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.RD_Hp50Up_CheckBox = new System.Windows.Forms.CheckBox();
+            this.RD_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.ARD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_limitLabel = new System.Windows.Forms.Label();
-            this.RD_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.RD_limitCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_StopOnDragonFound_Checkbox = new System.Windows.Forms.CheckBox();
             this.RD_skillGroupBox = new System.Windows.Forms.GroupBox();
-            this.RD_masteryComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.RD_bothSkillRadio = new System.Windows.Forms.RadioButton();
             this.RD_team2Panel = new System.Windows.Forms.Panel();
             this.RD_team2LoopCheckBox = new System.Windows.Forms.CheckBox();
@@ -353,12 +362,16 @@
             this.GC_formationPanel.SuspendLayout();
             this.arenaTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AR_limitNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).BeginInit();
             this.AR_mainPanel.SuspendLayout();
             this.AR_skillGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).BeginInit();
             this.raidTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLimitNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_RoundNumericUpDown)).BeginInit();
             this.RD_mainPanel.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonHP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLimitNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RD_limitNumericBox)).BeginInit();
             this.RD_skillGroupBox.SuspendLayout();
             this.RD_team2Panel.SuspendLayout();
@@ -423,6 +436,7 @@
             // 
             // adventureTab
             // 
+            this.adventureTab.BackColor = System.Drawing.Color.Transparent;
             this.adventureTab.Controls.Add(this.AD_UseFriendCheckBox);
             this.adventureTab.Controls.Add(this.AD_EnHottime_Checkbox);
             this.adventureTab.Controls.Add(this.AD_limitLabel);
@@ -442,7 +456,6 @@
             this.adventureTab.Size = new System.Drawing.Size(488, 309);
             this.adventureTab.TabIndex = 1;
             this.adventureTab.Text = "Adventure";
-            this.adventureTab.UseVisualStyleBackColor = true;
             // 
             // AD_UseFriendCheckBox
             // 
@@ -811,8 +824,8 @@
             // AD_skillGroupBox
             // 
             this.AD_skillGroupBox.Controls.Add(this.AD_masteryComboBox);
-            this.AD_skillGroupBox.Controls.Add(this.AD_masteryLabel);
             this.AD_skillGroupBox.Controls.Add(this.AD_bothSkillRadio);
+            this.AD_skillGroupBox.Controls.Add(this.AD_masteryLabel);
             this.AD_skillGroupBox.Controls.Add(this.AD_wave3Panel);
             this.AD_skillGroupBox.Controls.Add(this.AD_wave2Panel);
             this.AD_skillGroupBox.Controls.Add(this.AD_manualSkillRadio);
@@ -829,32 +842,25 @@
             // AD_masteryComboBox
             // 
             this.AD_masteryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AD_masteryComboBox.Enabled = false;
             this.AD_masteryComboBox.FormattingEnabled = true;
             this.AD_masteryComboBox.Items.AddRange(new object[] {
             "--",
             "1",
             "2",
             "3"});
-            this.AD_masteryComboBox.Location = new System.Drawing.Point(197, 14);
+            this.AD_masteryComboBox.Location = new System.Drawing.Point(189, 215);
             this.AD_masteryComboBox.Name = "AD_masteryComboBox";
             this.AD_masteryComboBox.Size = new System.Drawing.Size(46, 21);
             this.AD_masteryComboBox.TabIndex = 14;
             this.AD_masteryComboBox.Tag = "0";
+            this.AD_masteryComboBox.Visible = false;
             this.AD_masteryComboBox.SelectedIndexChanged += new System.EventHandler(this.masteryComboBox_SelectedIndexChanged);
-            // 
-            // AD_masteryLabel
-            // 
-            this.AD_masteryLabel.AutoSize = true;
-            this.AD_masteryLabel.Location = new System.Drawing.Point(145, 18);
-            this.AD_masteryLabel.Name = "AD_masteryLabel";
-            this.AD_masteryLabel.Size = new System.Drawing.Size(44, 13);
-            this.AD_masteryLabel.TabIndex = 13;
-            this.AD_masteryLabel.Text = "Mastery";
             // 
             // AD_bothSkillRadio
             // 
             this.AD_bothSkillRadio.AutoSize = true;
-            this.AD_bothSkillRadio.Location = new System.Drawing.Point(187, 39);
+            this.AD_bothSkillRadio.Location = new System.Drawing.Point(189, 19);
             this.AD_bothSkillRadio.Name = "AD_bothSkillRadio";
             this.AD_bothSkillRadio.Size = new System.Drawing.Size(47, 17);
             this.AD_bothSkillRadio.TabIndex = 9;
@@ -862,6 +868,17 @@
             this.AD_bothSkillRadio.Text = "Both";
             this.AD_bothSkillRadio.UseVisualStyleBackColor = true;
             this.AD_bothSkillRadio.CheckedChanged += new System.EventHandler(this.skillTypeRadio_CheckedChanged);
+            // 
+            // AD_masteryLabel
+            // 
+            this.AD_masteryLabel.AutoSize = true;
+            this.AD_masteryLabel.Enabled = false;
+            this.AD_masteryLabel.Location = new System.Drawing.Point(137, 219);
+            this.AD_masteryLabel.Name = "AD_masteryLabel";
+            this.AD_masteryLabel.Size = new System.Drawing.Size(44, 13);
+            this.AD_masteryLabel.TabIndex = 13;
+            this.AD_masteryLabel.Text = "Mastery";
+            this.AD_masteryLabel.Visible = false;
             // 
             // AD_wave3Panel
             // 
@@ -877,7 +894,7 @@
             this.AD_wave3Panel.Controls.Add(this.AD_w3Skill02Button);
             this.AD_wave3Panel.Controls.Add(this.AD_wave3Label);
             this.AD_wave3Panel.Controls.Add(this.AD_w3Skill01Button);
-            this.AD_wave3Panel.Location = new System.Drawing.Point(7, 181);
+            this.AD_wave3Panel.Location = new System.Drawing.Point(9, 161);
             this.AD_wave3Panel.Name = "AD_wave3Panel";
             this.AD_wave3Panel.Size = new System.Drawing.Size(241, 51);
             this.AD_wave3Panel.TabIndex = 12;
@@ -1028,7 +1045,7 @@
             this.AD_wave2Panel.Controls.Add(this.AD_w2Skill02Button);
             this.AD_wave2Panel.Controls.Add(this.AD_wave2Label);
             this.AD_wave2Panel.Controls.Add(this.AD_w2Skill01Button);
-            this.AD_wave2Panel.Location = new System.Drawing.Point(7, 124);
+            this.AD_wave2Panel.Location = new System.Drawing.Point(9, 104);
             this.AD_wave2Panel.Name = "AD_wave2Panel";
             this.AD_wave2Panel.Size = new System.Drawing.Size(241, 51);
             this.AD_wave2Panel.TabIndex = 11;
@@ -1168,7 +1185,7 @@
             // AD_manualSkillRadio
             // 
             this.AD_manualSkillRadio.AutoSize = true;
-            this.AD_manualSkillRadio.Location = new System.Drawing.Point(95, 39);
+            this.AD_manualSkillRadio.Location = new System.Drawing.Point(97, 19);
             this.AD_manualSkillRadio.Name = "AD_manualSkillRadio";
             this.AD_manualSkillRadio.Size = new System.Drawing.Size(82, 17);
             this.AD_manualSkillRadio.TabIndex = 8;
@@ -1181,7 +1198,7 @@
             // 
             this.AD_autoSkillRadio.AutoSize = true;
             this.AD_autoSkillRadio.Checked = true;
-            this.AD_autoSkillRadio.Location = new System.Drawing.Point(16, 39);
+            this.AD_autoSkillRadio.Location = new System.Drawing.Point(18, 19);
             this.AD_autoSkillRadio.Name = "AD_autoSkillRadio";
             this.AD_autoSkillRadio.Size = new System.Drawing.Size(69, 17);
             this.AD_autoSkillRadio.TabIndex = 7;
@@ -1205,7 +1222,7 @@
             this.AD_wave1Panel.Controls.Add(this.AD_w1Skill02Button);
             this.AD_wave1Panel.Controls.Add(this.AD_wave1Label);
             this.AD_wave1Panel.Controls.Add(this.AD_w1Skill01Button);
-            this.AD_wave1Panel.Location = new System.Drawing.Point(7, 67);
+            this.AD_wave1Panel.Location = new System.Drawing.Point(9, 47);
             this.AD_wave1Panel.Name = "AD_wave1Panel";
             this.AD_wave1Panel.Size = new System.Drawing.Size(241, 51);
             this.AD_wave1Panel.TabIndex = 10;
@@ -1385,7 +1402,7 @@
             // 
             // goldChamberTab
             // 
-            this.goldChamberTab.Controls.Add(this.GC_UseFriendCheckBox);
+            this.goldChamberTab.BackColor = System.Drawing.Color.Transparent;
             this.goldChamberTab.Controls.Add(this.GC_limitLabel);
             this.goldChamberTab.Controls.Add(this.GC_limitNumericBox);
             this.goldChamberTab.Controls.Add(this.GC_limitCheckBox);
@@ -1396,18 +1413,6 @@
             this.goldChamberTab.Size = new System.Drawing.Size(488, 309);
             this.goldChamberTab.TabIndex = 2;
             this.goldChamberTab.Text = "Gold Chamber";
-            this.goldChamberTab.UseVisualStyleBackColor = true;
-            // 
-            // GC_UseFriendCheckBox
-            // 
-            this.GC_UseFriendCheckBox.AutoSize = true;
-            this.GC_UseFriendCheckBox.Location = new System.Drawing.Point(14, 31);
-            this.GC_UseFriendCheckBox.Name = "GC_UseFriendCheckBox";
-            this.GC_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
-            this.GC_UseFriendCheckBox.TabIndex = 20;
-            this.GC_UseFriendCheckBox.Text = "Use Friends";
-            this.GC_UseFriendCheckBox.UseVisualStyleBackColor = true;
-            this.GC_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.GC_UseFriendCheckBox_CheckedChanged);
             // 
             // GC_limitLabel
             // 
@@ -1440,21 +1445,51 @@
             // 
             // GC_mainPanel
             // 
+            this.GC_mainPanel.Controls.Add(this.GC_UseFriendCheckBox);
+            this.GC_mainPanel.Controls.Add(this.GC_masteryComboBox);
             this.GC_mainPanel.Controls.Add(this.GC_skillGroupBox);
+            this.GC_mainPanel.Controls.Add(this.GC_masteryLabel);
             this.GC_mainPanel.Controls.Add(this.GC_formationComboBox);
             this.GC_mainPanel.Controls.Add(this.GC_teamComboBox);
             this.GC_mainPanel.Controls.Add(this.GC_formationPanel);
             this.GC_mainPanel.Controls.Add(this.GC_formationLabel);
             this.GC_mainPanel.Controls.Add(this.GC_teamLabel);
-            this.GC_mainPanel.Location = new System.Drawing.Point(0, 53);
+            this.GC_mainPanel.Location = new System.Drawing.Point(0, 31);
             this.GC_mainPanel.Name = "GC_mainPanel";
-            this.GC_mainPanel.Size = new System.Drawing.Size(487, 255);
+            this.GC_mainPanel.Size = new System.Drawing.Size(487, 277);
             this.GC_mainPanel.TabIndex = 14;
+            // 
+            // GC_UseFriendCheckBox
+            // 
+            this.GC_UseFriendCheckBox.AutoSize = true;
+            this.GC_UseFriendCheckBox.Location = new System.Drawing.Point(14, 0);
+            this.GC_UseFriendCheckBox.Name = "GC_UseFriendCheckBox";
+            this.GC_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.GC_UseFriendCheckBox.TabIndex = 20;
+            this.GC_UseFriendCheckBox.Text = "Use Friends";
+            this.GC_UseFriendCheckBox.UseVisualStyleBackColor = true;
+            this.GC_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.GC_UseFriendCheckBox_CheckedChanged);
+            // 
+            // GC_masteryComboBox
+            // 
+            this.GC_masteryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GC_masteryComboBox.Enabled = false;
+            this.GC_masteryComboBox.FormattingEnabled = true;
+            this.GC_masteryComboBox.Items.AddRange(new object[] {
+            "--",
+            "1",
+            "2",
+            "3"});
+            this.GC_masteryComboBox.Location = new System.Drawing.Point(354, 215);
+            this.GC_masteryComboBox.Name = "GC_masteryComboBox";
+            this.GC_masteryComboBox.Size = new System.Drawing.Size(46, 21);
+            this.GC_masteryComboBox.TabIndex = 16;
+            this.GC_masteryComboBox.Tag = "1";
+            this.GC_masteryComboBox.Visible = false;
+            this.GC_masteryComboBox.SelectedIndexChanged += new System.EventHandler(this.masteryComboBox_SelectedIndexChanged);
             // 
             // GC_skillGroupBox
             // 
-            this.GC_skillGroupBox.Controls.Add(this.GC_masteryComboBox);
-            this.GC_skillGroupBox.Controls.Add(this.GC_masteryLabel);
             this.GC_skillGroupBox.Controls.Add(this.GC_bothSkillRadio);
             this.GC_skillGroupBox.Controls.Add(this.GC_wave2Panel);
             this.GC_skillGroupBox.Controls.Add(this.GC_manualSkillRadio);
@@ -1462,41 +1497,16 @@
             this.GC_skillGroupBox.Controls.Add(this.GC_wave1Panel);
             this.GC_skillGroupBox.Location = new System.Drawing.Point(228, 5);
             this.GC_skillGroupBox.Name = "GC_skillGroupBox";
-            this.GC_skillGroupBox.Size = new System.Drawing.Size(254, 195);
+            this.GC_skillGroupBox.Size = new System.Drawing.Size(254, 184);
             this.GC_skillGroupBox.TabIndex = 24;
             this.GC_skillGroupBox.TabStop = false;
             this.GC_skillGroupBox.Tag = "1";
             this.GC_skillGroupBox.Text = "Skill Management";
             // 
-            // GC_masteryComboBox
-            // 
-            this.GC_masteryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GC_masteryComboBox.FormattingEnabled = true;
-            this.GC_masteryComboBox.Items.AddRange(new object[] {
-            "--",
-            "1",
-            "2",
-            "3"});
-            this.GC_masteryComboBox.Location = new System.Drawing.Point(197, 14);
-            this.GC_masteryComboBox.Name = "GC_masteryComboBox";
-            this.GC_masteryComboBox.Size = new System.Drawing.Size(46, 21);
-            this.GC_masteryComboBox.TabIndex = 16;
-            this.GC_masteryComboBox.Tag = "1";
-            this.GC_masteryComboBox.SelectedIndexChanged += new System.EventHandler(this.masteryComboBox_SelectedIndexChanged);
-            // 
-            // GC_masteryLabel
-            // 
-            this.GC_masteryLabel.AutoSize = true;
-            this.GC_masteryLabel.Location = new System.Drawing.Point(145, 18);
-            this.GC_masteryLabel.Name = "GC_masteryLabel";
-            this.GC_masteryLabel.Size = new System.Drawing.Size(44, 13);
-            this.GC_masteryLabel.TabIndex = 15;
-            this.GC_masteryLabel.Text = "Mastery";
-            // 
             // GC_bothSkillRadio
             // 
             this.GC_bothSkillRadio.AutoSize = true;
-            this.GC_bothSkillRadio.Location = new System.Drawing.Point(187, 50);
+            this.GC_bothSkillRadio.Location = new System.Drawing.Point(186, 24);
             this.GC_bothSkillRadio.Name = "GC_bothSkillRadio";
             this.GC_bothSkillRadio.Size = new System.Drawing.Size(47, 17);
             this.GC_bothSkillRadio.TabIndex = 7;
@@ -1519,7 +1529,7 @@
             this.GC_wave2Panel.Controls.Add(this.GC_w2Skill02Button);
             this.GC_wave2Panel.Controls.Add(this.GC_wave2Label);
             this.GC_wave2Panel.Controls.Add(this.GC_w2Skill01Button);
-            this.GC_wave2Panel.Location = new System.Drawing.Point(7, 135);
+            this.GC_wave2Panel.Location = new System.Drawing.Point(6, 109);
             this.GC_wave2Panel.Name = "GC_wave2Panel";
             this.GC_wave2Panel.Size = new System.Drawing.Size(241, 51);
             this.GC_wave2Panel.TabIndex = 9;
@@ -1659,7 +1669,7 @@
             // GC_manualSkillRadio
             // 
             this.GC_manualSkillRadio.AutoSize = true;
-            this.GC_manualSkillRadio.Location = new System.Drawing.Point(95, 50);
+            this.GC_manualSkillRadio.Location = new System.Drawing.Point(94, 24);
             this.GC_manualSkillRadio.Name = "GC_manualSkillRadio";
             this.GC_manualSkillRadio.Size = new System.Drawing.Size(82, 17);
             this.GC_manualSkillRadio.TabIndex = 6;
@@ -1672,7 +1682,7 @@
             // 
             this.GC_autoSkillRadio.AutoSize = true;
             this.GC_autoSkillRadio.Checked = true;
-            this.GC_autoSkillRadio.Location = new System.Drawing.Point(16, 50);
+            this.GC_autoSkillRadio.Location = new System.Drawing.Point(15, 24);
             this.GC_autoSkillRadio.Name = "GC_autoSkillRadio";
             this.GC_autoSkillRadio.Size = new System.Drawing.Size(69, 17);
             this.GC_autoSkillRadio.TabIndex = 5;
@@ -1696,7 +1706,7 @@
             this.GC_wave1Panel.Controls.Add(this.GC_w1Skill02Button);
             this.GC_wave1Panel.Controls.Add(this.GC_wave1Label);
             this.GC_wave1Panel.Controls.Add(this.GC_w1Skill01Button);
-            this.GC_wave1Panel.Location = new System.Drawing.Point(7, 78);
+            this.GC_wave1Panel.Location = new System.Drawing.Point(6, 52);
             this.GC_wave1Panel.Name = "GC_wave1Panel";
             this.GC_wave1Panel.Size = new System.Drawing.Size(241, 51);
             this.GC_wave1Panel.TabIndex = 8;
@@ -1833,6 +1843,17 @@
             this.GC_w1Skill01Button.UseVisualStyleBackColor = true;
             this.GC_w1Skill01Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
+            // GC_masteryLabel
+            // 
+            this.GC_masteryLabel.AutoSize = true;
+            this.GC_masteryLabel.Enabled = false;
+            this.GC_masteryLabel.Location = new System.Drawing.Point(302, 219);
+            this.GC_masteryLabel.Name = "GC_masteryLabel";
+            this.GC_masteryLabel.Size = new System.Drawing.Size(44, 13);
+            this.GC_masteryLabel.TabIndex = 15;
+            this.GC_masteryLabel.Text = "Mastery";
+            this.GC_masteryLabel.Visible = false;
+            // 
             // GC_formationComboBox
             // 
             this.GC_formationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1843,7 +1864,7 @@
             "3 Front / 2 Back",
             "1 Front / 4 Back",
             "4 Front / 1 Back"});
-            this.GC_formationComboBox.Location = new System.Drawing.Point(74, 31);
+            this.GC_formationComboBox.Location = new System.Drawing.Point(81, 143);
             this.GC_formationComboBox.Name = "GC_formationComboBox";
             this.GC_formationComboBox.Size = new System.Drawing.Size(127, 21);
             this.GC_formationComboBox.TabIndex = 3;
@@ -1854,17 +1875,19 @@
             // GC_teamComboBox
             // 
             this.GC_teamComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GC_teamComboBox.Enabled = false;
             this.GC_teamComboBox.FormattingEnabled = true;
             this.GC_teamComboBox.Items.AddRange(new object[] {
             "--",
             "A",
             "B",
             "C"});
-            this.GC_teamComboBox.Location = new System.Drawing.Point(74, 4);
+            this.GC_teamComboBox.Location = new System.Drawing.Point(81, 111);
             this.GC_teamComboBox.Name = "GC_teamComboBox";
             this.GC_teamComboBox.Size = new System.Drawing.Size(52, 21);
             this.GC_teamComboBox.TabIndex = 2;
             this.GC_teamComboBox.Tag = "1";
+            this.GC_teamComboBox.Visible = false;
             this.GC_teamComboBox.SelectedIndexChanged += new System.EventHandler(this.teamComboBox_SelectedIndexChanged);
             // 
             // GC_formationPanel
@@ -1876,7 +1899,7 @@
             this.GC_formationPanel.Controls.Add(this.GC_pos3CheckBox);
             this.GC_formationPanel.Controls.Add(this.GC_pos2CheckBox);
             this.GC_formationPanel.Controls.Add(this.GC_pos1CheckBox);
-            this.GC_formationPanel.Location = new System.Drawing.Point(74, 58);
+            this.GC_formationPanel.Location = new System.Drawing.Point(81, 170);
             this.GC_formationPanel.Name = "GC_formationPanel";
             this.GC_formationPanel.Size = new System.Drawing.Size(80, 85);
             this.GC_formationPanel.TabIndex = 4;
@@ -1945,7 +1968,7 @@
             // 
             // GC_formationLabel
             // 
-            this.GC_formationLabel.Location = new System.Drawing.Point(5, 34);
+            this.GC_formationLabel.Location = new System.Drawing.Point(12, 146);
             this.GC_formationLabel.Name = "GC_formationLabel";
             this.GC_formationLabel.Size = new System.Drawing.Size(62, 13);
             this.GC_formationLabel.TabIndex = 20;
@@ -1954,11 +1977,13 @@
             // 
             // GC_teamLabel
             // 
-            this.GC_teamLabel.Location = new System.Drawing.Point(5, 7);
+            this.GC_teamLabel.Enabled = false;
+            this.GC_teamLabel.Location = new System.Drawing.Point(12, 114);
             this.GC_teamLabel.Name = "GC_teamLabel";
             this.GC_teamLabel.Size = new System.Drawing.Size(62, 13);
             this.GC_teamLabel.TabIndex = 19;
             this.GC_teamLabel.Text = "Team";
+            this.GC_teamLabel.Visible = false;
             // 
             // GC_enableCheckBox
             // 
@@ -1976,9 +2001,13 @@
             // 
             // arenaTab
             // 
+            this.arenaTab.BackColor = System.Drawing.Color.Transparent;
             this.arenaTab.Controls.Add(this.AR_limitLabel);
+            this.arenaTab.Controls.Add(this.AR_useRubyLabel);
             this.arenaTab.Controls.Add(this.AR_limitNumericBox);
+            this.arenaTab.Controls.Add(this.AR_useRubyNumericBox);
             this.arenaTab.Controls.Add(this.AR_limitCheckBox);
+            this.arenaTab.Controls.Add(this.AR_useRubyCheckBox);
             this.arenaTab.Controls.Add(this.AR_mainPanel);
             this.arenaTab.Controls.Add(this.AR_enableCheckBox);
             this.arenaTab.Location = new System.Drawing.Point(4, 22);
@@ -1986,7 +2015,6 @@
             this.arenaTab.Size = new System.Drawing.Size(488, 309);
             this.arenaTab.TabIndex = 3;
             this.arenaTab.Text = "Arena";
-            this.arenaTab.UseVisualStyleBackColor = true;
             // 
             // AR_limitLabel
             // 
@@ -1997,6 +2025,16 @@
             this.AR_limitLabel.TabIndex = 22;
             this.AR_limitLabel.Text = "times per visit";
             // 
+            // AR_useRubyLabel
+            // 
+            this.AR_useRubyLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AR_useRubyLabel.AutoSize = true;
+            this.AR_useRubyLabel.Location = new System.Drawing.Point(165, 32);
+            this.AR_useRubyLabel.Name = "AR_useRubyLabel";
+            this.AR_useRubyLabel.Size = new System.Drawing.Size(31, 13);
+            this.AR_useRubyLabel.TabIndex = 12;
+            this.AR_useRubyLabel.Text = "times";
+            // 
             // AR_limitNumericBox
             // 
             this.AR_limitNumericBox.Location = new System.Drawing.Point(365, 5);
@@ -2005,6 +2043,14 @@
             this.AR_limitNumericBox.TabIndex = 21;
             this.AR_limitNumericBox.Tag = "2";
             this.AR_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
+            // 
+            // AR_useRubyNumericBox
+            // 
+            this.AR_useRubyNumericBox.Location = new System.Drawing.Point(124, 29);
+            this.AR_useRubyNumericBox.Name = "AR_useRubyNumericBox";
+            this.AR_useRubyNumericBox.Size = new System.Drawing.Size(37, 20);
+            this.AR_useRubyNumericBox.TabIndex = 11;
+            this.AR_useRubyNumericBox.ValueChanged += new System.EventHandler(this.AR_useRubyNumericBox_ValueChanged);
             // 
             // AR_limitCheckBox
             // 
@@ -2017,32 +2063,42 @@
             this.AR_limitCheckBox.UseVisualStyleBackColor = true;
             this.AR_limitCheckBox.CheckedChanged += new System.EventHandler(this.limitCheckBox_CheckedChanged);
             // 
+            // AR_useRubyCheckBox
+            // 
+            this.AR_useRubyCheckBox.AutoSize = true;
+            this.AR_useRubyCheckBox.Location = new System.Drawing.Point(14, 31);
+            this.AR_useRubyCheckBox.Name = "AR_useRubyCheckBox";
+            this.AR_useRubyCheckBox.Size = new System.Drawing.Size(107, 17);
+            this.AR_useRubyCheckBox.TabIndex = 0;
+            this.AR_useRubyCheckBox.Text = "Enter using Ruby";
+            this.AR_useRubyCheckBox.UseVisualStyleBackColor = true;
+            this.AR_useRubyCheckBox.CheckedChanged += new System.EventHandler(this.AR_useRubyCheckBox_CheckedChanged);
+            // 
             // AR_mainPanel
             // 
             this.AR_mainPanel.Controls.Add(this.AR_skillGroupBox);
-            this.AR_mainPanel.Controls.Add(this.AR_useRubyLabel);
-            this.AR_mainPanel.Controls.Add(this.AR_useRubyNumericBox);
-            this.AR_mainPanel.Controls.Add(this.AR_useRubyCheckBox);
-            this.AR_mainPanel.Location = new System.Drawing.Point(0, 30);
+            this.AR_mainPanel.Location = new System.Drawing.Point(0, 61);
             this.AR_mainPanel.Name = "AR_mainPanel";
-            this.AR_mainPanel.Size = new System.Drawing.Size(487, 278);
+            this.AR_mainPanel.Size = new System.Drawing.Size(487, 247);
             this.AR_mainPanel.TabIndex = 15;
             // 
             // AR_skillGroupBox
             // 
             this.AR_skillGroupBox.Controls.Add(this.AR_masteryComboBox);
             this.AR_skillGroupBox.Controls.Add(this.AR_masteryLabel);
-            this.AR_skillGroupBox.Location = new System.Drawing.Point(228, 5);
+            this.AR_skillGroupBox.Location = new System.Drawing.Point(230, 80);
             this.AR_skillGroupBox.Name = "AR_skillGroupBox";
             this.AR_skillGroupBox.Size = new System.Drawing.Size(254, 43);
             this.AR_skillGroupBox.TabIndex = 26;
             this.AR_skillGroupBox.TabStop = false;
             this.AR_skillGroupBox.Tag = "2";
             this.AR_skillGroupBox.Text = "Skill Management";
+            this.AR_skillGroupBox.Visible = false;
             // 
             // AR_masteryComboBox
             // 
             this.AR_masteryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AR_masteryComboBox.Enabled = false;
             this.AR_masteryComboBox.FormattingEnabled = true;
             this.AR_masteryComboBox.Items.AddRange(new object[] {
             "--",
@@ -2059,40 +2115,12 @@
             // AR_masteryLabel
             // 
             this.AR_masteryLabel.AutoSize = true;
+            this.AR_masteryLabel.Enabled = false;
             this.AR_masteryLabel.Location = new System.Drawing.Point(145, 18);
             this.AR_masteryLabel.Name = "AR_masteryLabel";
             this.AR_masteryLabel.Size = new System.Drawing.Size(44, 13);
             this.AR_masteryLabel.TabIndex = 17;
             this.AR_masteryLabel.Text = "Mastery";
-            // 
-            // AR_useRubyLabel
-            // 
-            this.AR_useRubyLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.AR_useRubyLabel.AutoSize = true;
-            this.AR_useRubyLabel.Location = new System.Drawing.Point(175, 8);
-            this.AR_useRubyLabel.Name = "AR_useRubyLabel";
-            this.AR_useRubyLabel.Size = new System.Drawing.Size(31, 13);
-            this.AR_useRubyLabel.TabIndex = 12;
-            this.AR_useRubyLabel.Text = "times";
-            // 
-            // AR_useRubyNumericBox
-            // 
-            this.AR_useRubyNumericBox.Location = new System.Drawing.Point(134, 5);
-            this.AR_useRubyNumericBox.Name = "AR_useRubyNumericBox";
-            this.AR_useRubyNumericBox.Size = new System.Drawing.Size(37, 20);
-            this.AR_useRubyNumericBox.TabIndex = 11;
-            this.AR_useRubyNumericBox.ValueChanged += new System.EventHandler(this.AR_useRubyNumericBox_ValueChanged);
-            // 
-            // AR_useRubyCheckBox
-            // 
-            this.AR_useRubyCheckBox.AutoSize = true;
-            this.AR_useRubyCheckBox.Location = new System.Drawing.Point(24, 7);
-            this.AR_useRubyCheckBox.Name = "AR_useRubyCheckBox";
-            this.AR_useRubyCheckBox.Size = new System.Drawing.Size(107, 17);
-            this.AR_useRubyCheckBox.TabIndex = 0;
-            this.AR_useRubyCheckBox.Text = "Enter using Ruby";
-            this.AR_useRubyCheckBox.UseVisualStyleBackColor = true;
-            this.AR_useRubyCheckBox.CheckedChanged += new System.EventHandler(this.AR_useRubyCheckBox_CheckedChanged);
             // 
             // AR_enableCheckBox
             // 
@@ -2110,8 +2138,9 @@
             // 
             // raidTab
             // 
+            this.raidTab.BackColor = System.Drawing.Color.Transparent;
+            this.raidTab.Controls.Add(this.RD_RoundNumericUpDown);
             this.raidTab.Controls.Add(this.RD_DragonLimit_lbl);
-            this.raidTab.Controls.Add(this.RD_DragonLimitNumericBox);
             this.raidTab.Controls.Add(this.RD_mainPanel);
             this.raidTab.Controls.Add(this.RD_enableCheckBox);
             this.raidTab.Controls.Add(this.RD_DragonLimitCheckBox);
@@ -2120,7 +2149,19 @@
             this.raidTab.Size = new System.Drawing.Size(488, 309);
             this.raidTab.TabIndex = 4;
             this.raidTab.Text = "Raid";
-            this.raidTab.UseVisualStyleBackColor = true;
+            // 
+            // RD_RoundNumericUpDown
+            // 
+            this.RD_RoundNumericUpDown.Location = new System.Drawing.Point(360, 5);
+            this.RD_RoundNumericUpDown.Name = "RD_RoundNumericUpDown";
+            this.RD_RoundNumericUpDown.Size = new System.Drawing.Size(38, 20);
+            this.RD_RoundNumericUpDown.TabIndex = 36;
+            this.RD_RoundNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_RoundNumericUpDown.ValueChanged += new System.EventHandler(this.RD_RoundNumericUpDown_ValueChanged);
             // 
             // RD_DragonLimit_lbl
             // 
@@ -2131,9 +2172,114 @@
             this.RD_DragonLimit_lbl.TabIndex = 28;
             this.RD_DragonLimit_lbl.Text = "times per dragon";
             // 
+            // RD_mainPanel
+            // 
+            this.RD_mainPanel.Controls.Add(this.groupBox1);
+            this.RD_mainPanel.Controls.Add(this.RD_DragonLimitNumericBox);
+            this.RD_mainPanel.Controls.Add(this.RD_OwnerDragon);
+            this.RD_mainPanel.Controls.Add(this.RD_masteryComboBox);
+            this.RD_mainPanel.Controls.Add(this.label2);
+            this.RD_mainPanel.Controls.Add(this.RD_Hp50Up_CheckBox);
+            this.RD_mainPanel.Controls.Add(this.RD_limitNumericBox);
+            this.RD_mainPanel.Controls.Add(this.ARD_enableCheckBox);
+            this.RD_mainPanel.Controls.Add(this.RD_limitLabel);
+            this.RD_mainPanel.Controls.Add(this.RD_limitCheckBox);
+            this.RD_mainPanel.Controls.Add(this.RD_StopOnDragonFound_Checkbox);
+            this.RD_mainPanel.Controls.Add(this.RD_skillGroupBox);
+            this.RD_mainPanel.Location = new System.Drawing.Point(0, 31);
+            this.RD_mainPanel.Name = "RD_mainPanel";
+            this.RD_mainPanel.Size = new System.Drawing.Size(487, 255);
+            this.RD_mainPanel.TabIndex = 15;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.RD_LevelCheckBox);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.RD_DragonLV);
+            this.groupBox1.Controls.Add(this.RD_DragonHP);
+            this.groupBox1.Location = new System.Drawing.Point(27, 81);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(186, 82);
+            this.groupBox1.TabIndex = 38;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dragon Option";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label5.Location = new System.Drawing.Point(157, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 16);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "%";
+            // 
+            // RD_LevelCheckBox
+            // 
+            this.RD_LevelCheckBox.AutoSize = true;
+            this.RD_LevelCheckBox.Location = new System.Drawing.Point(6, 23);
+            this.RD_LevelCheckBox.Name = "RD_LevelCheckBox";
+            this.RD_LevelCheckBox.Size = new System.Drawing.Size(105, 17);
+            this.RD_LevelCheckBox.TabIndex = 34;
+            this.RD_LevelCheckBox.Text = "Dragon Level >=";
+            this.RD_LevelCheckBox.UseVisualStyleBackColor = true;
+            this.RD_LevelCheckBox.CheckedChanged += new System.EventHandler(this.RD_LevelCheckBox_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Dragon HP    >=";
+            // 
+            // RD_DragonLV
+            // 
+            this.RD_DragonLV.Location = new System.Drawing.Point(116, 22);
+            this.RD_DragonLV.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.RD_DragonLV.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_DragonLV.Name = "RD_DragonLV";
+            this.RD_DragonLV.Size = new System.Drawing.Size(38, 20);
+            this.RD_DragonLV.TabIndex = 35;
+            this.RD_DragonLV.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_DragonLV.ValueChanged += new System.EventHandler(this.RD_DragonLV_ValueChanged);
+            // 
+            // RD_DragonHP
+            // 
+            this.RD_DragonHP.Location = new System.Drawing.Point(116, 49);
+            this.RD_DragonHP.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_DragonHP.Name = "RD_DragonHP";
+            this.RD_DragonHP.Size = new System.Drawing.Size(38, 20);
+            this.RD_DragonHP.TabIndex = 36;
+            this.RD_DragonHP.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_DragonHP.ValueChanged += new System.EventHandler(this.RD_DragonHP_ValueChanged);
+            // 
             // RD_DragonLimitNumericBox
             // 
-            this.RD_DragonLimitNumericBox.Location = new System.Drawing.Point(357, 5);
+            this.RD_DragonLimitNumericBox.Enabled = false;
+            this.RD_DragonLimitNumericBox.Location = new System.Drawing.Point(86, 183);
             this.RD_DragonLimitNumericBox.Name = "RD_DragonLimitNumericBox";
             this.RD_DragonLimitNumericBox.Size = new System.Drawing.Size(37, 20);
             this.RD_DragonLimitNumericBox.TabIndex = 27;
@@ -2143,25 +2289,78 @@
             0,
             0,
             0});
+            this.RD_DragonLimitNumericBox.Visible = false;
             this.RD_DragonLimitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
             // 
-            // RD_mainPanel
+            // RD_OwnerDragon
             // 
-            this.RD_mainPanel.Controls.Add(this.ARD_enableCheckBox);
-            this.RD_mainPanel.Controls.Add(this.RD_limitLabel);
-            this.RD_mainPanel.Controls.Add(this.RD_limitNumericBox);
-            this.RD_mainPanel.Controls.Add(this.RD_limitCheckBox);
-            this.RD_mainPanel.Controls.Add(this.RD_StopOnDragonFound_Checkbox);
-            this.RD_mainPanel.Controls.Add(this.RD_skillGroupBox);
-            this.RD_mainPanel.Location = new System.Drawing.Point(0, 31);
-            this.RD_mainPanel.Name = "RD_mainPanel";
-            this.RD_mainPanel.Size = new System.Drawing.Size(487, 255);
-            this.RD_mainPanel.TabIndex = 15;
+            this.RD_OwnerDragon.AutoSize = true;
+            this.RD_OwnerDragon.Location = new System.Drawing.Point(23, 50);
+            this.RD_OwnerDragon.Name = "RD_OwnerDragon";
+            this.RD_OwnerDragon.Size = new System.Drawing.Size(169, 17);
+            this.RD_OwnerDragon.TabIndex = 33;
+            this.RD_OwnerDragon.Text = "Fight My Dragon When Found";
+            this.RD_OwnerDragon.UseVisualStyleBackColor = true;
+            this.RD_OwnerDragon.CheckedChanged += new System.EventHandler(this.RD_OwnerDragon_CheckedChanged);
+            // 
+            // RD_masteryComboBox
+            // 
+            this.RD_masteryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RD_masteryComboBox.Enabled = false;
+            this.RD_masteryComboBox.FormattingEnabled = true;
+            this.RD_masteryComboBox.Items.AddRange(new object[] {
+            "--",
+            "1",
+            "2",
+            "3"});
+            this.RD_masteryComboBox.Location = new System.Drawing.Point(402, 211);
+            this.RD_masteryComboBox.Name = "RD_masteryComboBox";
+            this.RD_masteryComboBox.Size = new System.Drawing.Size(46, 21);
+            this.RD_masteryComboBox.TabIndex = 16;
+            this.RD_masteryComboBox.Tag = "3";
+            this.RD_masteryComboBox.Visible = false;
+            this.RD_masteryComboBox.SelectedIndexChanged += new System.EventHandler(this.masteryComboBox_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Enabled = false;
+            this.label2.Location = new System.Drawing.Point(350, 215);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Mastery";
+            this.label2.Visible = false;
+            // 
+            // RD_Hp50Up_CheckBox
+            // 
+            this.RD_Hp50Up_CheckBox.AutoSize = true;
+            this.RD_Hp50Up_CheckBox.Enabled = false;
+            this.RD_Hp50Up_CheckBox.Location = new System.Drawing.Point(204, 211);
+            this.RD_Hp50Up_CheckBox.Name = "RD_Hp50Up_CheckBox";
+            this.RD_Hp50Up_CheckBox.Size = new System.Drawing.Size(130, 17);
+            this.RD_Hp50Up_CheckBox.TabIndex = 32;
+            this.RD_Hp50Up_CheckBox.Text = "Only Raid HP 50% Up";
+            this.toolTip.SetToolTip(this.RD_Hp50Up_CheckBox, "BETA Function");
+            this.RD_Hp50Up_CheckBox.UseVisualStyleBackColor = true;
+            this.RD_Hp50Up_CheckBox.Visible = false;
+            this.RD_Hp50Up_CheckBox.CheckedChanged += new System.EventHandler(this.RD_Hp50Up_CheckBox_CheckedChanged);
+            // 
+            // RD_limitNumericBox
+            // 
+            this.RD_limitNumericBox.Enabled = false;
+            this.RD_limitNumericBox.Location = new System.Drawing.Point(86, 209);
+            this.RD_limitNumericBox.Name = "RD_limitNumericBox";
+            this.RD_limitNumericBox.Size = new System.Drawing.Size(37, 20);
+            this.RD_limitNumericBox.TabIndex = 24;
+            this.RD_limitNumericBox.Tag = "2";
+            this.RD_limitNumericBox.Visible = false;
+            this.RD_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
             // 
             // ARD_enableCheckBox
             // 
             this.ARD_enableCheckBox.AutoSize = true;
-            this.ARD_enableCheckBox.Location = new System.Drawing.Point(23, 3);
+            this.ARD_enableCheckBox.Location = new System.Drawing.Point(23, 4);
             this.ARD_enableCheckBox.Name = "ARD_enableCheckBox";
             this.ARD_enableCheckBox.Size = new System.Drawing.Size(120, 17);
             this.ARD_enableCheckBox.TabIndex = 31;
@@ -2173,28 +2372,17 @@
             // 
             this.RD_limitLabel.AutoSize = true;
             this.RD_limitLabel.Enabled = false;
-            this.RD_limitLabel.Location = new System.Drawing.Point(115, 112);
+            this.RD_limitLabel.Location = new System.Drawing.Point(125, 211);
             this.RD_limitLabel.Name = "RD_limitLabel";
             this.RD_limitLabel.Size = new System.Drawing.Size(70, 13);
             this.RD_limitLabel.TabIndex = 25;
             this.RD_limitLabel.Text = "times per visit";
             this.RD_limitLabel.Visible = false;
             // 
-            // RD_limitNumericBox
-            // 
-            this.RD_limitNumericBox.Enabled = false;
-            this.RD_limitNumericBox.Location = new System.Drawing.Point(73, 109);
-            this.RD_limitNumericBox.Name = "RD_limitNumericBox";
-            this.RD_limitNumericBox.Size = new System.Drawing.Size(37, 20);
-            this.RD_limitNumericBox.TabIndex = 24;
-            this.RD_limitNumericBox.Tag = "2";
-            this.RD_limitNumericBox.Visible = false;
-            this.RD_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
-            // 
             // RD_limitCheckBox
             // 
             this.RD_limitCheckBox.Enabled = false;
-            this.RD_limitCheckBox.Location = new System.Drawing.Point(23, 111);
+            this.RD_limitCheckBox.Location = new System.Drawing.Point(33, 210);
             this.RD_limitCheckBox.Name = "RD_limitCheckBox";
             this.RD_limitCheckBox.Size = new System.Drawing.Size(47, 17);
             this.RD_limitCheckBox.TabIndex = 23;
@@ -2207,7 +2395,7 @@
             // RD_StopOnDragonFound_Checkbox
             // 
             this.RD_StopOnDragonFound_Checkbox.AutoSize = true;
-            this.RD_StopOnDragonFound_Checkbox.Location = new System.Drawing.Point(23, 26);
+            this.RD_StopOnDragonFound_Checkbox.Location = new System.Drawing.Point(23, 27);
             this.RD_StopOnDragonFound_Checkbox.Name = "RD_StopOnDragonFound_Checkbox";
             this.RD_StopOnDragonFound_Checkbox.Size = new System.Drawing.Size(144, 17);
             this.RD_StopOnDragonFound_Checkbox.TabIndex = 29;
@@ -2217,8 +2405,6 @@
             // 
             // RD_skillGroupBox
             // 
-            this.RD_skillGroupBox.Controls.Add(this.RD_masteryComboBox);
-            this.RD_skillGroupBox.Controls.Add(this.label2);
             this.RD_skillGroupBox.Controls.Add(this.RD_bothSkillRadio);
             this.RD_skillGroupBox.Controls.Add(this.RD_team2Panel);
             this.RD_skillGroupBox.Controls.Add(this.RD_manualSkillRadio);
@@ -2232,35 +2418,10 @@
             this.RD_skillGroupBox.Tag = "2";
             this.RD_skillGroupBox.Text = "Skill Management";
             // 
-            // RD_masteryComboBox
-            // 
-            this.RD_masteryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RD_masteryComboBox.FormattingEnabled = true;
-            this.RD_masteryComboBox.Items.AddRange(new object[] {
-            "--",
-            "1",
-            "2",
-            "3"});
-            this.RD_masteryComboBox.Location = new System.Drawing.Point(203, 12);
-            this.RD_masteryComboBox.Name = "RD_masteryComboBox";
-            this.RD_masteryComboBox.Size = new System.Drawing.Size(46, 21);
-            this.RD_masteryComboBox.TabIndex = 16;
-            this.RD_masteryComboBox.Tag = "3";
-            this.RD_masteryComboBox.SelectedIndexChanged += new System.EventHandler(this.masteryComboBox_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(151, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Mastery";
-            // 
             // RD_bothSkillRadio
             // 
             this.RD_bothSkillRadio.AutoSize = true;
-            this.RD_bothSkillRadio.Location = new System.Drawing.Point(187, 44);
+            this.RD_bothSkillRadio.Location = new System.Drawing.Point(189, 24);
             this.RD_bothSkillRadio.Name = "RD_bothSkillRadio";
             this.RD_bothSkillRadio.Size = new System.Drawing.Size(47, 17);
             this.RD_bothSkillRadio.TabIndex = 7;
@@ -2283,7 +2444,7 @@
             this.RD_team2Panel.Controls.Add(this.RD_t2Skill02Button);
             this.RD_team2Panel.Controls.Add(this.RD_team2Label);
             this.RD_team2Panel.Controls.Add(this.RD_t2Skill01Button);
-            this.RD_team2Panel.Location = new System.Drawing.Point(7, 129);
+            this.RD_team2Panel.Location = new System.Drawing.Point(9, 109);
             this.RD_team2Panel.Name = "RD_team2Panel";
             this.RD_team2Panel.Size = new System.Drawing.Size(241, 51);
             this.RD_team2Panel.TabIndex = 9;
@@ -2423,7 +2584,7 @@
             // RD_manualSkillRadio
             // 
             this.RD_manualSkillRadio.AutoSize = true;
-            this.RD_manualSkillRadio.Location = new System.Drawing.Point(95, 44);
+            this.RD_manualSkillRadio.Location = new System.Drawing.Point(97, 24);
             this.RD_manualSkillRadio.Name = "RD_manualSkillRadio";
             this.RD_manualSkillRadio.Size = new System.Drawing.Size(82, 17);
             this.RD_manualSkillRadio.TabIndex = 6;
@@ -2436,7 +2597,7 @@
             // 
             this.RD_autoSkillRadio.AutoSize = true;
             this.RD_autoSkillRadio.Checked = true;
-            this.RD_autoSkillRadio.Location = new System.Drawing.Point(16, 44);
+            this.RD_autoSkillRadio.Location = new System.Drawing.Point(18, 24);
             this.RD_autoSkillRadio.Name = "RD_autoSkillRadio";
             this.RD_autoSkillRadio.Size = new System.Drawing.Size(69, 17);
             this.RD_autoSkillRadio.TabIndex = 5;
@@ -2460,7 +2621,7 @@
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill02Button);
             this.RD_team1Panel.Controls.Add(this.RD_team1Label);
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill01Button);
-            this.RD_team1Panel.Location = new System.Drawing.Point(7, 72);
+            this.RD_team1Panel.Location = new System.Drawing.Point(9, 52);
             this.RD_team1Panel.Name = "RD_team1Panel";
             this.RD_team1Panel.Size = new System.Drawing.Size(241, 51);
             this.RD_team1Panel.TabIndex = 8;
@@ -2613,6 +2774,8 @@
             // 
             // RD_DragonLimitCheckBox
             // 
+            this.RD_DragonLimitCheckBox.Checked = true;
+            this.RD_DragonLimitCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RD_DragonLimitCheckBox.Location = new System.Drawing.Point(315, 7);
             this.RD_DragonLimitCheckBox.Name = "RD_DragonLimitCheckBox";
             this.RD_DragonLimitCheckBox.Size = new System.Drawing.Size(47, 17);
@@ -2624,6 +2787,7 @@
             // 
             // resourcesTab
             // 
+            this.resourcesTab.BackColor = System.Drawing.Color.Transparent;
             this.resourcesTab.Controls.Add(this.RS_collectQuestsGroupBox);
             this.resourcesTab.Controls.Add(this.RS_sendHonorsGroupBox);
             this.resourcesTab.Controls.Add(this.RS_buyKeysGroupBox);
@@ -2635,7 +2799,6 @@
             this.resourcesTab.Size = new System.Drawing.Size(488, 309);
             this.resourcesTab.TabIndex = 6;
             this.resourcesTab.Text = "Resources";
-            this.resourcesTab.UseVisualStyleBackColor = true;
             // 
             // RS_collectQuestsGroupBox
             // 
@@ -3178,6 +3341,7 @@
             // 
             // logTab
             // 
+            this.logTab.BackColor = System.Drawing.Color.Transparent;
             this.logTab.Controls.Add(this.LG_SaveScreen);
             this.logTab.Controls.Add(this.LG_LogPixel);
             this.logTab.Controls.Add(this.LG_scrollCheckBox);
@@ -3189,7 +3353,6 @@
             this.logTab.Size = new System.Drawing.Size(488, 309);
             this.logTab.TabIndex = 7;
             this.logTab.Text = "Logs";
-            this.logTab.UseVisualStyleBackColor = true;
             // 
             // LG_SaveScreen
             // 
@@ -3274,6 +3437,7 @@
             // 
             // settingsTab
             // 
+            this.settingsTab.BackColor = System.Drawing.Color.Transparent;
             this.settingsTab.Controls.Add(this.ST_blueStacksGroupBox);
             this.settingsTab.Controls.Add(this.ST_profileGroupBox);
             this.settingsTab.Controls.Add(this.ST_foregroundMode);
@@ -3290,7 +3454,6 @@
             this.settingsTab.Size = new System.Drawing.Size(488, 309);
             this.settingsTab.TabIndex = 5;
             this.settingsTab.Text = "Settings";
-            this.settingsTab.UseVisualStyleBackColor = true;
             // 
             // ST_blueStacksGroupBox
             // 
@@ -3444,7 +3607,7 @@
             // ST_opacityTrackBar
             // 
             this.ST_opacityTrackBar.AutoSize = false;
-            this.ST_opacityTrackBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ST_opacityTrackBar.BackColor = System.Drawing.SystemColors.Control;
             this.ST_opacityTrackBar.Location = new System.Drawing.Point(381, 283);
             this.ST_opacityTrackBar.Maximum = 100;
             this.ST_opacityTrackBar.Minimum = 20;
@@ -3539,7 +3702,7 @@
             // ST_delayTrackBar
             // 
             this.ST_delayTrackBar.AutoSize = false;
-            this.ST_delayTrackBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ST_delayTrackBar.BackColor = System.Drawing.SystemColors.Control;
             this.ST_delayTrackBar.LargeChange = 100;
             this.ST_delayTrackBar.Location = new System.Drawing.Point(56, 19);
             this.ST_delayTrackBar.Maximum = 2000;
@@ -3555,6 +3718,7 @@
             // 
             // Info
             // 
+            this.Info.BackColor = System.Drawing.Color.Transparent;
             this.Info.Controls.Add(this.label3);
             this.Info.Controls.Add(this.linkLabel10);
             this.Info.Controls.Add(this.linkLabel9);
@@ -3570,7 +3734,6 @@
             this.Info.Size = new System.Drawing.Size(488, 309);
             this.Info.TabIndex = 8;
             this.Info.Text = "Info";
-            this.Info.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -3588,7 +3751,7 @@
             this.linkLabel10.AutoSize = true;
             this.linkLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.linkLabel10.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel10.Location = new System.Drawing.Point(86, 267);
+            this.linkLabel10.Location = new System.Drawing.Point(90, 243);
             this.linkLabel10.Name = "linkLabel10";
             this.linkLabel10.Size = new System.Drawing.Size(289, 24);
             this.linkLabel10.TabIndex = 5;
@@ -3601,7 +3764,7 @@
             this.linkLabel9.AutoSize = true;
             this.linkLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.linkLabel9.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel9.Location = new System.Drawing.Point(96, 232);
+            this.linkLabel9.Location = new System.Drawing.Point(96, 272);
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.Size = new System.Drawing.Size(275, 24);
             this.linkLabel9.TabIndex = 4;
@@ -3778,7 +3941,7 @@
             // 
             this.HeroCountLabel.AutoSize = true;
             this.HeroCountLabel.ForeColor = System.Drawing.Color.Blue;
-            this.HeroCountLabel.Location = new System.Drawing.Point(300, 45);
+            this.HeroCountLabel.Location = new System.Drawing.Point(282, 65);
             this.HeroCountLabel.Name = "HeroCountLabel";
             this.HeroCountLabel.Size = new System.Drawing.Size(24, 13);
             this.HeroCountLabel.TabIndex = 14;
@@ -3793,7 +3956,7 @@
             this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.keysTableLayoutPanel.Controls.Add(this.arenaKeysLabel, 5, 0);
             this.keysTableLayoutPanel.Controls.Add(this.adventureKeyPictureBox, 0, 0);
             this.keysTableLayoutPanel.Controls.Add(this.arenaKeyPictureBox, 4, 0);
@@ -3813,7 +3976,7 @@
             this.arenaKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.arenaKeysLabel.AutoSize = true;
             this.arenaKeysLabel.ForeColor = System.Drawing.Color.Blue;
-            this.arenaKeysLabel.Location = new System.Drawing.Point(222, 5);
+            this.arenaKeysLabel.Location = new System.Drawing.Point(212, 5);
             this.arenaKeysLabel.Name = "arenaKeysLabel";
             this.arenaKeysLabel.Size = new System.Drawing.Size(10, 13);
             this.arenaKeysLabel.TabIndex = 10;
@@ -3833,7 +3996,7 @@
             // arenaKeyPictureBox
             // 
             this.arenaKeyPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_key_arena;
-            this.arenaKeyPictureBox.Location = new System.Drawing.Point(197, 3);
+            this.arenaKeyPictureBox.Location = new System.Drawing.Point(187, 3);
             this.arenaKeyPictureBox.Name = "arenaKeyPictureBox";
             this.arenaKeyPictureBox.Size = new System.Drawing.Size(19, 18);
             this.arenaKeyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -3846,7 +4009,7 @@
             this.towerKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.towerKeysLabel.AutoSize = true;
             this.towerKeysLabel.ForeColor = System.Drawing.Color.Blue;
-            this.towerKeysLabel.Location = new System.Drawing.Point(125, 5);
+            this.towerKeysLabel.Location = new System.Drawing.Point(120, 5);
             this.towerKeysLabel.Name = "towerKeysLabel";
             this.towerKeysLabel.Size = new System.Drawing.Size(10, 13);
             this.towerKeysLabel.TabIndex = 9;
@@ -3855,7 +4018,7 @@
             // towerKeyPictureBox
             // 
             this.towerKeyPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_key_tower;
-            this.towerKeyPictureBox.Location = new System.Drawing.Point(100, 3);
+            this.towerKeyPictureBox.Location = new System.Drawing.Point(95, 3);
             this.towerKeyPictureBox.Name = "towerKeyPictureBox";
             this.towerKeyPictureBox.Size = new System.Drawing.Size(19, 18);
             this.towerKeyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -3878,7 +4041,7 @@
             // 
             this.GB_WaitForKeys.AutoSize = true;
             this.GB_WaitForKeys.ForeColor = System.Drawing.Color.Blue;
-            this.GB_WaitForKeys.Location = new System.Drawing.Point(294, 3);
+            this.GB_WaitForKeys.Location = new System.Drawing.Point(279, 3);
             this.GB_WaitForKeys.Name = "GB_WaitForKeys";
             this.GB_WaitForKeys.Size = new System.Drawing.Size(72, 17);
             this.GB_WaitForKeys.TabIndex = 11;
@@ -4186,6 +4349,7 @@
             this.goldChamberTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GC_limitNumericBox)).EndInit();
             this.GC_mainPanel.ResumeLayout(false);
+            this.GC_mainPanel.PerformLayout();
             this.GC_skillGroupBox.ResumeLayout(false);
             this.GC_skillGroupBox.PerformLayout();
             this.GC_wave2Panel.ResumeLayout(false);
@@ -4195,16 +4359,20 @@
             this.arenaTab.ResumeLayout(false);
             this.arenaTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AR_limitNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).EndInit();
             this.AR_mainPanel.ResumeLayout(false);
-            this.AR_mainPanel.PerformLayout();
             this.AR_skillGroupBox.ResumeLayout(false);
             this.AR_skillGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).EndInit();
             this.raidTab.ResumeLayout(false);
             this.raidTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLimitNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_RoundNumericUpDown)).EndInit();
             this.RD_mainPanel.ResumeLayout(false);
             this.RD_mainPanel.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonHP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLimitNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RD_limitNumericBox)).EndInit();
             this.RD_skillGroupBox.ResumeLayout(false);
             this.RD_skillGroupBox.PerformLayout();
@@ -5124,7 +5292,6 @@
         private System.Windows.Forms.CheckBox GB_WaitForKeys;
 		private System.Windows.Forms.ToolStripStatusLabel tsslCursorPosition;
 		private System.Windows.Forms.Label RD_DragonLimit_lbl;
-		private System.Windows.Forms.NumericUpDown RD_DragonLimitNumericBox;
 		private System.Windows.Forms.CheckBox RD_DragonLimitCheckBox;
 		private System.Windows.Forms.CheckBox AD_StopOnFullHeroes_Checkbox;
         private System.Windows.Forms.Button LG_SaveScreen;
@@ -5154,5 +5321,15 @@
         private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox RD_Hp50Up_CheckBox;
+        private System.Windows.Forms.CheckBox RD_OwnerDragon;
+        private System.Windows.Forms.NumericUpDown RD_DragonLV;
+        private System.Windows.Forms.CheckBox RD_LevelCheckBox;
+        private System.Windows.Forms.NumericUpDown RD_RoundNumericUpDown;
+        private System.Windows.Forms.NumericUpDown RD_DragonLimitNumericBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown RD_DragonHP;
+        private System.Windows.Forms.Label label5;
     }
 }
